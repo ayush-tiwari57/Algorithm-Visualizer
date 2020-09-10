@@ -141,6 +141,8 @@ document.addEventListener('click', (event) => {
     //   console.log(curr);
       let row = parseInt(curr.getAttribute("row"));
       let col = parseInt(curr.getAttribute("col"));
+      let wall = parseInt(curr.getAttribute("wall"));
+      if(wall==1) continue;
       // Check up down left right
       let nextRow = row + 1;
       let prevRow = row - 1;
@@ -171,21 +173,6 @@ document.addEventListener('click', (event) => {
       refreshBtn.style.visibility = "visible";
     }, counter * 100 + 100);
   } // End start
-  
-  // Algo Explanation tabs | Source https://www.w3schools.com/howto/howto_js_tabs.asp
-  // function openTab(evt, id) {
-  //   var i, tabcontent, tablinks;
-  //   tabcontent = document.getElementsByClassName("tabcontent");
-  //   for (i = 0; i < tabcontent.length; i++) {
-  //     tabcontent[i].style.display = "none";
-  //   }
-  //   tablinks = document.getElementsByClassName("tablinks");
-  //   for (i = 0; i < tablinks.length; i++) {
-  //     tablinks[i].className = tablinks[i].className.replace(" active", "");
-  //   }
-  //   document.getElementById(id).style.display = "block";
-  //   evt.currentTarget.className += " active";
-  // } // End openTab
   
   // Initialize
   window.onload = () => {
