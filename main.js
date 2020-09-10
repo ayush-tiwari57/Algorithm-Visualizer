@@ -96,13 +96,13 @@ document.addEventListener('click', (event) => {
   // Animate the nodes
   function changeColor(node, counter, cost) {
     setTimeout(() => {
-      node.style.backgroundColor = "#e5edb7";
+      node.style.backgroundColor = "#00FF00";
       if (cost) {
         node.innerHTML = cost;
       }
     }, counter * 100);
     setTimeout(() => {
-      node.style.backgroundColor = "#f1c5c5";
+      node.style.backgroundColor = "#006400";
     }, counter * 100 + 100);
   } // End changeColor
   
@@ -147,9 +147,9 @@ document.addEventListener('click', (event) => {
   
     // Draw out best route
     setTimeout(() => {
-      startNode.style.backgroundColor = "#faf0af";
+      startNode.style.backgroundColor = "#00FF00";
       while (endNode.getAttribute("parent") != "null") {
-        endNode.style.backgroundColor = "#faf0af";
+        endNode.style.backgroundColor = "#00FF00";
         var coor = endNode.getAttribute("parent").split("|");
         var prow = parseInt(coor[0]);
         var pcol = parseInt(coor[1]);
@@ -163,19 +163,19 @@ document.addEventListener('click', (event) => {
   } // End start
   
   // Algo Explanation tabs | Source https://www.w3schools.com/howto/howto_js_tabs.asp
-  function openTab(evt, id) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(id).style.display = "block";
-    evt.currentTarget.className += " active";
-  } // End openTab
+  // function openTab(evt, id) {
+  //   var i, tabcontent, tablinks;
+  //   tabcontent = document.getElementsByClassName("tabcontent");
+  //   for (i = 0; i < tabcontent.length; i++) {
+  //     tabcontent[i].style.display = "none";
+  //   }
+  //   tablinks = document.getElementsByClassName("tablinks");
+  //   for (i = 0; i < tablinks.length; i++) {
+  //     tablinks[i].className = tablinks[i].className.replace(" active", "");
+  //   }
+  //   document.getElementById(id).style.display = "block";
+  //   evt.currentTarget.className += " active";
+  // } // End openTab
   
   // Initialize
   window.onload = () => {
