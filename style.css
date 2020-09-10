@@ -7,6 +7,8 @@ body {
   }
   .container {
     display: grid;
+    margin-left: auto;
+    margin-right: auto;
     grid-template-columns: repeat(10, 50px);
     grid-template-rows: repeat(10, 50px);
      grid-row-gap: 2px;
@@ -14,16 +16,21 @@ body {
   }
   
   button {
-    width: 5em;
-    border-radius: 1em;
+    width: auto;
     height: auto;
+    padding: 5px;
+    box-shadow: 1px 1px 1px black;
     color: white;
-    border: 4px solid white;
+    border: 2px solid white;
     font-size: 20px;
-    background-color: #f7977a;
+    font-weight: bolder;
+    background-color: black ;
     cursor: pointer;
     margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
   }
+
   a {
     color: #f7977a;
   }
@@ -39,9 +46,13 @@ body {
 
   /* Wall */
   .wall{
-      background-color: black;
+      background-color: rgb(83, 80, 80);
+      color: rgb(83, 80, 80);
   }
-  
+  .pathcell{
+    background-color: #00FF00;
+    color: #000000;
+  }
   .explanation {
     max-width: 55vh;
   }

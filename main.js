@@ -108,7 +108,8 @@ document.addEventListener('click', (event) => {
       }
     }, counter * 100);
     setTimeout(() => {
-      node.style.backgroundColor = "#006400";
+      node.style.backgroundColor = "#DC143C";
+      node.style.color = "#ffffff";
     }, counter * 100 + 100);
   } // End changeColor
   
@@ -155,8 +156,10 @@ document.addEventListener('click', (event) => {
     // Draw out best route
     setTimeout(() => {
       startNode.style.backgroundColor = "#00FF00";
+      startNode.style.color = "#000000";
       while (endNode.getAttribute("parent") != "null") {
         endNode.style.backgroundColor = "#00FF00";
+        endNode.style.color = "#000000";
         var coor = endNode.getAttribute("parent").split("|");
         var prow = parseInt(coor[0]);
         var pcol = parseInt(coor[1]);
