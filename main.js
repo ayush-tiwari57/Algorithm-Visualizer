@@ -74,21 +74,25 @@ document.addEventListener('click', (event) => {
   function checkNode(row, col, curr, checker, seen, counter) {
     if (row >= 0 && col >= 0 && row <= 9 && col <= 9) {
       var node = document.querySelector(`div[row="${row}"][col="${col}"]`);
-  
-      var cost = Math.min(
-        parseInt(curr.getAttribute("cost")) +
-          parseInt(node.getAttribute("weight")),
-        node.getAttribute("cost")
-      );
-      if (cost < node.getAttribute("cost")) {
-        node.setAttribute(
-          "parent",
-          curr.getAttribute("row") + "|" + curr.getAttribute("col")
+      let wall = parseInt(node.getAttribute("wall"));
+      console.log(wall);
+      if (wall != 1) {
+        var cost = Math.min(
+          parseInt(curr.getAttribute("cost")) +
+            parseInt(node.getAttribute("weight")),
+          node.getAttribute("cost")
         );
-        node.setAttribute("cost", cost);
+        if (cost < node.getAttribute("cost")) {
+          node.setAttribute(
+            "parent",
+            curr.getAttribute("row") + "|" + curr.getAttribute("col")
+          );
+          node.setAttribute("cost", cost);
+        }
+  
+        changeColor(node, counter, cost);
+        changeColor(curr, counter, false);
       }
-      changeColor(node, counter, cost);
-      changeColor(curr, counter, false);
       if (!seen.includes(node)) {
         checker.push(node);
       }
@@ -98,6 +102,7 @@ document.addEventListener('click', (event) => {
       return false;
     }
   } // End checkNode
+  
   
   // Animate the nodes
   function changeColor(node, counter, cost) {
