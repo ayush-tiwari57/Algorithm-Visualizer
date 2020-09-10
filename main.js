@@ -53,6 +53,12 @@ document.addEventListener('click', (event) => {
         event.target.classList.toggle('wall');
         console.log('clicked');
     }
+    if(event.target.classList.contains('wall')){
+        event.target.setAttribute('wall',1)
+    }
+    else{
+        event.target.setAttribute('wall',0)
+    }
 } )
 
 
@@ -131,6 +137,7 @@ document.addEventListener('click', (event) => {
       });
       let curr = checker.pop();
       // Important to parse string to integer
+    //   console.log(curr);
       let row = parseInt(curr.getAttribute("row"));
       let col = parseInt(curr.getAttribute("col"));
       // Check up down left right
