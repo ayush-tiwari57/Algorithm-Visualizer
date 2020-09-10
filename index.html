@@ -1,0 +1,64 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@531&display=swap"
+      rel="stylesheet"
+    />
+    <title>ShortestPathAlgo Visualizer</title>
+  </head>
+  <body>
+    <nav>
+      <button class="start nav" onClick="start()">Start</button>
+      <button class="refresh nav" onClick="refresh();">Refresh</button>
+      <!-- <button class="wall nav" onClick="wall();">Wall</button> -->
+      <!-- <a
+        href="https://github.com/tlylt/path-finding-visualization"
+        target="_blank"
+        >Repo</a
+      >
+      |
+      <a href="https://dev.to/tlylt" target="_blank">Article</a>|
+      <a href="https://tlylt.github.io/" target="_blank">Author</a> -->
+    </nav>
+    <div class="container"></div>
+    <!-- <div class="explanation">
+      <h2>Algo Explanation</h2>
+      <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'setup')">
+          Set-up
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'Steps')">
+          Steps
+        </button>
+        <a href="https://youtu.be/K_1urzWrzLs" target="_blank">Reference</a>
+      </div>
+      <div id="setup" class="tabcontent">
+        <p>
+          - Every square is a node.<br />
+          - Every node is connected to the four nodes on its north, east, south,
+          west direction.<br />
+          - Initial number on the node is randomly generated and represents the
+          difficulty in reaching that node from its surrounding nodes.<br />
+          Final number updated on the node is the cost of reaching that node
+          from the starting point. Initial cost to every node except the first,
+          is infinity.
+        </p>
+      </div>
+      <div id="Steps" class="tabcontent">
+        <p>
+          1. Starting with the chosen node, update the cost of reachable nodes
+          by taking minimum of ( (cost to reach the "coming from" node +
+          difficulty to the visiting node), previously updated cost to the
+          visiting node), set the "coming from" node as parent if the cost is
+          less to come from that node. <br />
+          2. Repeat the steps for reachable nodes in the sequence of least cost
+          to most cost, until all nodes have been visited.
+        </p>
+      </div>
+    </div> -->
+    <script src="main.js"></script>
+  </body>
+</html>
