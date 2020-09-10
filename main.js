@@ -48,8 +48,9 @@ document.addEventListener('click', (event) => {
     // console.log(event.explicit   );
     if(event.target.classList.contains('node')){
         let node = this.document.querySelector('.node')
-        console.log(event.target.getAttribute("row"));
-        event.target.classList.toggle('clicked');
+        const row = event.target.getAttribute("row");
+        const col = event.target.getAttribute("col");
+        event.target.classList.toggle('wall');
         console.log('clicked');
     }
 } )
