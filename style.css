@@ -9,8 +9,8 @@ body {
     display: grid;
     grid-template-columns: repeat(10, 50px);
     grid-template-rows: repeat(10, 50px);
-    /* grid-row-gap: 5px;
-    grid-column-gap: 5px; */
+     grid-row-gap: 2px;
+    grid-column-gap: 2px; 
   }
   
   button {
@@ -28,9 +28,9 @@ body {
     color: #f7977a;
   }
   .node {
-    background-color: #8bcdcd;
+    background-color: #00000;
     text-align: center;
-    border: 3px solid black;
+    border: 2px solid black;
     /* border-radius: 10px; */
     display: flex;
     justify-content: center;
