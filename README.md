@@ -22,8 +22,8 @@ Currently 1.0: Supports only Dikstra's Algorithm
 
 ## Authors
 
-* **Anubhav Singhal** - [@anubhavitis](github.com/anubhavitis)
-* **Ayush Tiwari** - [@servermonk](github.com/servermonk)
+* **Anubhav Singhal** - [@anubhavitis](https://github.com/anubhavitis)
+* **Ayush Tiwari** - [@servermonk](https://github.com/servermonk)
 
 ## Thanks for visiting
 
