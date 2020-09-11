@@ -42,28 +42,31 @@ function createBoard() {
 
 //Wall
 
-var container = document.querySelector('.container');
-document.addEventListener('click', (event) => {
+// function for setting wall attribute
+function setWallAttribute(event){
   console.log(event);
-  // console.log(event.explicit   );
-  if (event.target.classList.contains('node')) {
-    let node = this.document.querySelector('.node')
-    const row = event.target.getAttribute("row");
-    const col = event.target.getAttribute("col");
-    event.target.classList.toggle('wall');
-    console.log('clicked');
-  }
-  if (event.target.classList.contains('wall')) {
-    event.target.setAttribute('wall', 1)
-  } else {
-    event.target.setAttribute('wall', 0)
-  }
-})
-
+    // console.log(event.explicit   );
+    if(event.target.classList.contains('node')){
+        let node = document.querySelector('.node')
+        const row = event.target.getAttribute("row");
+        const col = event.target.getAttribute("col");
+        event.target.classList.toggle('wall');
+        console.log('clicked');
+    }
+    if(event.target.classList.contains('wall')){
+        event.target.setAttribute('wall',1)
+    }
+    else{
+        event.target.setAttribute('wall',0)
+    }
+}
+var container = document.querySelector('.container');
+container.addEventListener('click',setWallAttribute);
 
 //End Wall
 // Refresh Button
 function refresh() {
+  container.addEventListener('click',setWallAttribute);
   var btn = document.querySelector(".start");
   btn.style.visibility = "visible";
   createBoard();
@@ -119,6 +122,7 @@ function changeColor(node, counter, cost) {
 
 // Start path-finding
 function start() {
+  container.removeEventListener('click', setWallAttribute);
   var startNode = document.querySelector("div[row='0'][col='0']");
   var endNode = document.querySelector("div[row='9'][col='9']");
   // Hide button
@@ -180,6 +184,7 @@ function start() {
 
 // Initialize
 window.onload = () => {
+  container.addEventListener('click',setWallAttribute);
   createBoard();
   // document.querySelectorAll("button")[2].click();
 };
