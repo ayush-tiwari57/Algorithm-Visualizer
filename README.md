@@ -12,7 +12,7 @@ Adequate insterest in graph algorithms.```
 
 ## Built With
 
-* JS Grids
+* JS 
 * HTML | CSS
 * Love and Passion
 
