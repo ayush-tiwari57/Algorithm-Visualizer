@@ -12,6 +12,7 @@ function getRandomArbitrary(min, max) {
     node.setAttribute("cost", Number.POSITIVE_INFINITY);
     node.setAttribute("parent", null);
     node.setAttribute("weight", weight);
+    node.setAttribute("wall", 0);
     node.innerText = weight.toString();
     return node;
   } // End createNode
@@ -42,12 +43,12 @@ function getRandomArbitrary(min, max) {
 
 //Wall
 
-var container = document.querySelector('.container');
-document.addEventListener('click', (event) => {
-    console.log(event);
+// function for setting wall attribute
+function addWallAttribute(event){
+  console.log(event);
     // console.log(event.explicit   );
     if(event.target.classList.contains('node')){
-        let node = this.document.querySelector('.node')
+        let node = document.querySelector('.node')
         const row = event.target.getAttribute("row");
         const col = event.target.getAttribute("col");
         event.target.classList.toggle('wall');
@@ -59,8 +60,9 @@ document.addEventListener('click', (event) => {
     else{
         event.target.setAttribute('wall',0)
     }
-} )
-
+}
+var container = document.querySelector('.container');
+container.addEventListener('click',addWallAttribute);
 
 //End Wall
   // Refresh Button
@@ -113,13 +115,13 @@ document.addEventListener('click', (event) => {
       }
     }, counter * 100);
     setTimeout(() => {
-      node.style.backgroundColor = "#DC143C";
-      node.style.color = "#ffffff";
+      node.style.backgroundColor = "#006400";
     }, counter * 100 + 100);
   } // End changeColor
   
   // Start path-finding
   function start() {
+    container.removeEventListener('click', addWallAttribute);
     var startNode = document.querySelector("div[row='0'][col='0']");
     var endNode = document.querySelector("div[row='9'][col='9']");
     // Hide button
@@ -163,10 +165,8 @@ document.addEventListener('click', (event) => {
     // Draw out best route
     setTimeout(() => {
       startNode.style.backgroundColor = "#00FF00";
-      startNode.style.color = "#000000";
       while (endNode.getAttribute("parent") != "null") {
         endNode.style.backgroundColor = "#00FF00";
-        endNode.style.color = "#000000";
         var coor = endNode.getAttribute("parent").split("|");
         var prow = parseInt(coor[0]);
         var pcol = parseInt(coor[1]);
