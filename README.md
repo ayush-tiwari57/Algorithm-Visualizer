@@ -1,5 +1,30 @@
-# Algorithm-Visualizer
+# Algorithm-Visualiser
 
-Created by: Ayush Tiwari @servermonk & Anubhav Singhal @anubhavitis
+Visulaize working of standard graph algorithms, and get good grasp of their working and traversal through all the nodes.
 
-Currenty supporting : Dikstra's Algorithm for calculating minimum cost path in weighted graph.
+## Getting Started
+
+It's hosted on github, you can visted the link and enjoy the algorithm.
+
+### Prerequisites
+
+Adequate insterest in graph algorithms.```
+
+## Built With
+
+* JS Grids
+* HTML | CSS
+* Love and Passion
+
+## Versioning
+
+Currently 1.0: Supports only Dikstra's Algorithm
+
+## Authors
+
+* **Anubhav Singhal** - [@anubhavitis](github.com/anubhavitis)
+* **Ayush Tiwari** - [@servermonk](github.com/servermonk)
+
+## Thanks for visiting
+
+Give us a star if you like it.
