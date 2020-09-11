@@ -18,7 +18,7 @@ Adequate insterest in graph algorithms.```
 
 ## Versioning
 
-Currently 1.0: Supports only Dikstra's Algorithm
+Currently 1.0: Supports only Dijkstra's Algorithm
 
 ## Authors
 
