@@ -4,7 +4,7 @@ Visulaize working of standard graph algorithms, and get good grasp of their work
 
 ## Getting Started
 
-It's hosted on github, you can visted the link and enjoy the algorithm.
+Click [here](https://servermonk.github.io/Algorithm-Visualizer/) to get directed to the hosted page.
 
 ### Prerequisites
 
