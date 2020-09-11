@@ -44,7 +44,7 @@ function getRandomArbitrary(min, max) {
 //Wall
 
 // function for setting wall attribute
-function addWallAttribute(event){
+function setWallAttribute(event){
   console.log(event);
     // console.log(event.explicit   );
     if(event.target.classList.contains('node')){
@@ -62,11 +62,12 @@ function addWallAttribute(event){
     }
 }
 var container = document.querySelector('.container');
-container.addEventListener('click',addWallAttribute);
+container.addEventListener('click',setWallAttribute);
 
 //End Wall
   // Refresh Button
   function refresh() {
+    container.addEventListener('click', setWallAttribute);
     var btn = document.querySelector(".start");
     btn.style.visibility = "visible";
     createBoard();
@@ -121,7 +122,7 @@ container.addEventListener('click',addWallAttribute);
   
   // Start path-finding
   function start() {
-    container.removeEventListener('click', addWallAttribute);
+    container.removeEventListener('click', setWallAttribute);
     var startNode = document.querySelector("div[row='0'][col='0']");
     var endNode = document.querySelector("div[row='9'][col='9']");
     // Hide button
@@ -181,6 +182,7 @@ container.addEventListener('click',addWallAttribute);
   
   // Initialize
   window.onload = () => {
+    container.addEventListener('click',setWallAttribute);
     createBoard();
     // document.querySelectorAll("button")[2].click();
   };
