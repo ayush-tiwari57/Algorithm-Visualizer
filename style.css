@@ -1,88 +1,97 @@
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f4f6ff;
-    font-family: "Roboto Slab", serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f6ff;
+  font-family: "Roboto Slab", serif;
+}
+
+.container {
+  display: grid;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: repeat(10, 50px);
+  grid-template-rows: repeat(10, 50px);
+  grid-row-gap: 2px;
+  grid-column-gap: 2px;
+}
+
+button {
+  width: auto;
+  height: auto;
+  padding: 5px;
+  box-shadow: 1px 1px 1px black;
+  color: white;
+  border: 2px solid white;
+  font-size: 20px;
+  font-weight: bolder;
+  background-color: black;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #f7977a;
+}
+
+.node {
+  background-color: #00000;
+  text-align: center;
+  border: 2px solid black;
+  /* border-radius: 10px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Wall */
+.wall {
+  background-color: rgb(83, 80, 80);
+  color: rgb(83, 80, 80);
+}
+
+.pathcell {
+  background-color: #00FF00;
+  color: #000000;
+}
+
+.explanation {
+  max-width: 55vh;
+}
+
+.tab button {
+  background-color: #ccc;
+}
+
+.tab button.active {
+  background-color: #f7977a;
+}
+
+.tabcontent {
+  display: none;
+  border: 1px solid #ccc;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    margin-top: 1em;
+    font-size: small;
   }
+
+  button {
+    border: 4px solid white;
+    font-size: 10px;
+    text-align: center;
+  }
+
   .container {
     display: grid;
-    margin-left: auto;
-    margin-right: auto;
-    grid-template-columns: repeat(10, 50px);
-    grid-template-rows: repeat(10, 50px);
-     grid-row-gap: 2px;
-    grid-column-gap: 2px; 
+    grid-template-columns: repeat(10, 28px);
+    grid-template-rows: repeat(10, 28px);
+    grid-row-gap: 8px;
+    grid-column-gap: 8px;
   }
-  
-  button {
-    width: auto;
-    height: auto;
-    padding: 5px;
-    box-shadow: 1px 1px 1px black;
-    color: white;
-    border: 2px solid white;
-    font-size: 20px;
-    font-weight: bolder;
-    background-color: black ;
-    cursor: pointer;
-    margin-bottom: 2rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  a {
-    color: #f7977a;
-  }
-  .node {
-    background-color: #00000;
-    text-align: center;
-    border: 2px solid black;
-    /* border-radius: 10px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* Wall */
-  .wall{
-      background-color: rgb(83, 80, 80);
-      color: rgb(83, 80, 80);
-  }
-  .pathcell{
-    background-color: #00FF00;
-    color: #000000;
-  }
-  .explanation {
-    max-width: 55vh;
-  }
-  
-  .tab button {
-    background-color: #ccc;
-  }
-  .tab button.active {
-    background-color: #f7977a;
-  }
-  .tabcontent {
-    display: none;
-    border: 1px solid #ccc;
-  }
-  
-  @media only screen and (max-width: 600px) {
-    body {
-      margin-top: 1em;
-      font-size: small;
-    }
-    button {
-      border: 4px solid white;
-      font-size: 10px;
-      text-align: center;
-    }
-    .container {
-      display: grid;
-      grid-template-columns: repeat(10, 28px);
-      grid-template-rows: repeat(10, 28px);
-      grid-row-gap: 8px;
-      grid-column-gap: 8px;
-    }
-  }
+}
