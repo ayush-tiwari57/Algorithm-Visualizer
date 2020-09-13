@@ -12,10 +12,10 @@
   <div class="navbar">
     <logo>Algorithm Visualizer</logo>
   </div>
-  <div class="flex-container">
-    <div>
-      <div>
-        <form action="/action_page.php">
+  <div>
+    <form action="/action_page.php">
+      <div class="flex-container">
+        <div class="flex-container">
           <div>
             <label for="algo">Algorithm:</label>
             <select id="algo" name="algo">
@@ -32,17 +32,14 @@
               <option value="Unweighted">Unweighted</option>
             </select>
           </div>
-        </form>
-        <div class="flex-container">
-          <div> <button class="start">START</button> </div>
-          <div> <button class="refresh">RELOAD</button> </div>
+
         </div>
+        <div> <button class="start">START</button> </div>
+        <div> <button class="refresh">RELOAD</button> </div>
       </div>
-    </div>
-    <div>
-      <div class="container"></div>
-    </div>
+    </form>
   </div>
+  <div class="container"></div>
   <!-- <script type="module" src="./js/createGrid.js"></script> -->
   <script type="module" src="public/js/main.js"></script>
 </body>

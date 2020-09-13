@@ -11,6 +11,7 @@ body {
   */ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+
 .container {
   display: grid;
   border: 2px solid black;
@@ -33,9 +34,11 @@ button {
   font-size: 20px;
   background-color: white;
   cursor: pointer;
-  margin-bottom: 2rem;
 }
 
+.form{
+  /* margin: auto; */
+}
 button:hover {
   box-shadow: 0.15px 0.15px 6px grey;
   color: white;
@@ -58,6 +61,10 @@ button:hover {
   background: linear-gradient(to right, #E9E4F0, #D3CCE3);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+}
+
+.form{
+  align-items: center;
 }
 
 .flex-container{
