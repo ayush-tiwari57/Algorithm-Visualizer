@@ -12,13 +12,39 @@
   <div class="navbar">
     <logo>Algorithm Visualizer</logo>
   </div>
-  <div class="NavB">
-    <button class="start nav">START</button>
-    <button class="refresh nav">RELOAD</button>
+  <div class="flex-container">
+    <div>
+      <div>
+        <form action="/action_page.php">
+          <div>
+            <label for="algo">Algorithm:</label>
+            <select id="algo" name="algo">
+              <option value="none">Choose</option>
+              <option value="Dstr">Dijkstra's</option>
+              <option value="Astr">A*</option>
+              <option value="Fywa">Floyd Warshal</option>
+            </select>
+          </div>
+          <div>
+            <label for="weight">Graph Type:</label>
+            <select id="weight" name="weight">
+              <option value="weighted">Weighted</option>
+              <option value="Unweighted">Unweighted</option>
+            </select>
+          </div>
+        </form>
+        <div class="flex-container">
+          <div> <button class="start">START</button> </div>
+          <div> <button class="refresh">RELOAD</button> </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="container"></div>
+    </div>
   </div>
-  <div class="container"></div>
-
   <!-- <script type="module" src="./js/createGrid.js"></script> -->
   <script type="module" src="public/js/main.js"></script>
 </body>
+
 </html>
