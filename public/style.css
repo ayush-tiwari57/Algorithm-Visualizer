@@ -1,8 +1,6 @@
 body {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  /* background-color: #f4f6ff; 
   background: #D3CCE3;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
   /* Chrome 10-25, Safari 5.1-6 */
@@ -14,42 +12,40 @@ body {
 
 .container {
   display: grid;
+  /* width:50%; */
   padding: 20px;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
   grid-template-columns: repeat(10, 50px);
   grid-template-rows: repeat(10, 50px);
-  grid-row-gap: 2px;
-  grid-column-gap: 2px;
+  grid-row-gap: 3px;
+  grid-column-gap: 3px;
 }
 
 button {
   width: auto;
   height: auto;
-  padding: 5px;
   box-shadow: 0.15px 0.15px 4px black;
   color: black;
   border: 2px solid white;
   font-size: 20px;
-  /* font-weight: bolder; */
   background-color: white;
   cursor: pointer;
   margin-bottom: 2rem;
-  /* margin-left: auto;
-  margin-right: auto; */
 }
 
 button:hover{
-  box-shadow: 0.15px 0.15px 10px white;
+  box-shadow: 0.15px 0.15px 10px black;
   color: white;
   font-weight: bolder;
   border: 2px solid grey;
   background-color: grey;  
 }
 
-p {
-  padding: 5px 20px 5px 20px;
+.navbar {
+  padding: 10px;
   font-size: larger;
+  text-align: center;
   font-weight: inherit;
   box-shadow: 0.15px 0.15px 4px grey;
   background: #ADA996;
