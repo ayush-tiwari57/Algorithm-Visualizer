@@ -35,7 +35,7 @@ button {
 }
 
 button:hover{
-  box-shadow: 0.15px 0.15px 10px black;
+  box-shadow: 0.15px 0.15px 6px grey;
   color: white;
   font-weight: bolder;
   border: 2px solid grey;
