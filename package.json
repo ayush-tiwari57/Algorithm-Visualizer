@@ -1,0 +1,27 @@
+{
+  "name": "algorithm-visualizer",
+  "version": "1.0.0",
+  "description": "simple pathfinding visualiser",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/servermonk/Algorithm-Visualizer.git"
+  },
+  "keywords": [
+    "graphs",
+    "pathfinding-visualiser"
+  ],
+  "author": "servermonk, zeddie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/servermonk/Algorithm-Visualizer/issues"
+  },
+  "homepage": "https://github.com/servermonk/Algorithm-Visualizer#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
