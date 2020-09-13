@@ -2,8 +2,7 @@
 
 // function for setting wall attribute
 export function setWallAttribute(event) {
-	console.log(event);
-	// console.log(event.explicit   );
+	// console.log(event);
 	if (event.target.classList.contains('node')) {
 		let node = document.querySelector('.node');
 		const row = event.target.getAttribute('row');

@@ -9,6 +9,7 @@ function createNode(row, col, weight) {
 	node.setAttribute('class', 'node');
 	node.setAttribute('row', row);
 	node.setAttribute('col', col);
+	node.setAttribute('wall', 0);
 	node.setAttribute('cost', Number.POSITIVE_INFINITY);
 	node.setAttribute('parent', null);
 	node.setAttribute('weight', weight);
@@ -25,7 +26,6 @@ export function createBoard() {
 			let weight = Math.round(getRandomArbitrary(1, 100));
 			let temp = createNode(row, col, weight);
 			let shadow = weight / 10;
-			// temp.style.boxShadow = `${shadow}px ${shadow}px ${shadow}px rgba(0,0,0,0.8)`;
 			grid.appendChild(temp);
 		}
 	}
@@ -36,5 +36,4 @@ export function createBoard() {
 	startNode.setAttribute('cost', 0);
 	startNode.innerHTML = 'start';
 	endNode.innerHTML = 'end';
-	// startNode.style.boxShadow = `${0}px ${0}px ${0}px rgba(0,0,0,0.5)`;
 } // End createBoard

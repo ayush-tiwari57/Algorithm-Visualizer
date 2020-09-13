@@ -32,5 +32,4 @@ function start() {
 window.onload = () => {
 	container.addEventListener('click', setWallAttribute);
 	createBoard();
-	// document.querySelectorAll("button")[2].click();
 };
