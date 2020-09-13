@@ -1,7 +1,8 @@
 body {
   display: flex;
   flex-direction: column;
-  background: #D3CCE3;  /* fallback for old browsers */
+  background: #D3CCE3;
+  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #E9E4F0, #D3CCE3);
@@ -12,8 +13,9 @@ body {
 
 .container {
   display: grid;
-  /* width:50%; */
-  padding: 20px;
+  border: 2px solid black;
+  margin: auto;
+  padding: 3px;
   /* margin-left: auto;
   margin-right: auto; */
   grid-template-columns: repeat(10, 50px);
@@ -34,12 +36,12 @@ button {
   margin-bottom: 2rem;
 }
 
-button:hover{
+button:hover {
   box-shadow: 0.15px 0.15px 6px grey;
   color: white;
   font-weight: bolder;
   border: 2px solid grey;
-  background-color: grey;  
+  background-color: grey;
 }
 
 .navbar {
