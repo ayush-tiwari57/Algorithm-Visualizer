@@ -22,23 +22,6 @@ container.addEventListener('click', function () {
 // container.addEventListener('mouseup', function(){mouseIsDown = false})
 container.addEventListener('mouseover', setWallAttribute);
 
-// speed
-// export var time;
-// var speed = document.querySelector('#speed');
-// var speedval = document.querySelector('#speed').value;
-// function speed(speedval){
-// 	console.log(speedval);
-// 	if(speedval==="fast") {
-// 		time = 15;
-// 	}
-// 	else if(speedval==="normal") {
-// 		time = 22;
-// 	}
-// 	else {
-// 		time = 10;
-// 	}
-// }
-
 // refresh function
 function refresh() {
 	container.addEventListener('click', setWallAttribute);
