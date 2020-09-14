@@ -1,6 +1,6 @@
 // Returns a random number between min (inclusive) and max (exclusive)
-function getRandomArbitrary(min, max) {
-	return Math.random() * (max - min) + min;
+function getRandomArbitrary(max) {
+	return (Math.random()*(max-1))%max;
 } // End getRandomArbitrary
 
 // Create a Node
@@ -23,7 +23,7 @@ export function createBoard() {
 	grid.innerHTML = '';
 	for (var row = 0; row < 20; row++) {
 		for (var col = 0; col < 50; col++) {
-			let weight = Math.round(getRandomArbitrary(1, 100));
+			let weight = Math.round(getRandomArbitrary(5));
 			let temp = createNode(row, col, weight);
 			let shadow = weight / 10;
 			grid.appendChild(temp);
