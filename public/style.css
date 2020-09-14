@@ -28,7 +28,7 @@ body {
 button {
   width: auto;
   height: auto;
-  box-shadow: 0.15px 0.15px 4px black;
+  box-shadow: 0px 0px 4px black;
   color: black;
   border: 2px solid white;
   font-size: 20px;
@@ -66,24 +66,22 @@ button:hover {
   padding-right: 5px;
   
 }
-
-box{
+a:link, a:visited {
   background: transparent;
-  border: 0px;
-  box-shadow: 0px 0px 4px white;
-  font-size: large;
-  box-shadow: 0.15px 0.15px 4px black;
-  color: black;
-  /* width: auto;
-  height: auto; */
+  box-shadow: 0px 0px 8px grey;
   padding: 5px;
+  color:black;
+  text-decoration: none;
+  display: inline-block;
 }
 
-box:hover{
+a:hover, a:active {
   background: grey;
   color:white;
   font-weight: bold;
 }
+
+
 
 .flex-nav {
   margin-left: auto;
