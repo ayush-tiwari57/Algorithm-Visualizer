@@ -34,6 +34,6 @@ export function createBoard() {
 	var startNode = document.querySelector("div[row='0'][col='0']");
 	var endNode = document.querySelector("div[row='19'][col='49']");
 	startNode.setAttribute('cost', 0);
-	startNode.innerHTML = 'start';
-	endNode.innerHTML = 'end';
+	startNode.innerHTML = '>';
+	endNode.innerHTML = '@';
 } // End createBoard

@@ -79,6 +79,7 @@ button:hover {
 .node {
   background: transparent;
   text-align: center;
+  font-size: small;
   border: 2px solid black;
   /* border-radius: 10px; */
   display: flex;
