@@ -1,6 +1,6 @@
 // variables
 export var rowsize = 20;
-export var colsize = 50;
+export var colsize = 40;
 
 // Returns a random number between min (inclusive) and max (exclusive)
 function getRandomArbitrary(max) {
