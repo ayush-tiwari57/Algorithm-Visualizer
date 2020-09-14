@@ -3,11 +3,32 @@
 // importing functions
 import { setWallAttribute } from '../wall.js';
 import { rowsize, colsize } from '../createGrid.js';
-
 // variables
 var container = document.querySelector('.container');
-var time = 15;
+var time;
+var initial_speedval = document.querySelector('#speed').value;
 
+// Initializing time value
+if (initial_speedval === 'fast') {
+	time = 15;
+} else if (initial_speedval === 'normal') {
+	time = 22;
+} else {
+	time = 10;
+}
+
+// Value of time after change
+export function speed(event) {
+	var speedval = this.value;
+	console.log(speedval);
+	if (speedval === 'fast') {
+		time = 15;
+	} else if (speedval === 'normal') {
+		time = 22;
+	} else {
+		time = 10;
+	}
+}
 // Check and update node
 function checkNode(row, col, curr, checker, seen, counter) {
 	if (row >= 0 && col >= 0 && row < rowsize && col < colsize) {
@@ -55,12 +76,12 @@ function changeColor(node, counter, cost) {
 	}, counter * time + 100);
 } // End changeColor
 
-export function dijkstra(x1=0,y1=0,x2=rowsize-1,y2=colsize-1) {
+export function dijkstra(x1 = 0, y1 = 0, x2 = rowsize - 1, y2 = colsize - 1) {
+	console.log(time);
 	container.removeEventListener('click', setWallAttribute);
+	container.removeEventListener('mouseover', setWallAttribute);
 	var startNode = document.querySelector(`div[row='${x1}'][col='${y1}']`);
-	var endNode = document.querySelector(
-		`div[row='${x2}'][col='${y2}']`
-	);
+	var endNode = document.querySelector(`div[row='${x2}'][col='${y2}']`);
 	// Hide button
 	var btn = document.querySelector('.start');
 	var refreshBtn = document.querySelector('.refresh');
