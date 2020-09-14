@@ -27,7 +27,7 @@ export function createBoard() {
 	grid.innerHTML = '';
 	for (var row = 0; row < rowsize; row++) {
 		for (var col = 0; col < colsize; col++) {
-			let weight = Math.round(getRandomArbitrary(9));
+			let weight = Math.round(getRandomArbitrary(5));
 			let temp = createNode(row, col, weight);
 			let shadow = weight / 10;
 			grid.appendChild(temp);

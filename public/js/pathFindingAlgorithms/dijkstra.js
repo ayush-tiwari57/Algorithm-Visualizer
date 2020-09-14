@@ -6,11 +6,11 @@ import { rowsize, colsize } from '../createGrid.js';
 
 // variables
 var container = document.querySelector('.container');
-var time = 20;
+var time = 15;
 
 // Check and update node
 function checkNode(row, col, curr, checker, seen, counter) {
-	if (row >= 0 && col >= 0 && row <= rowsize - 1 && col <= colsize - 1) {
+	if (row >= 0 && col >= 0 && row < rowsize && col < colsize) {
 		var node = document.querySelector(`div[row="${row}"][col="${col}"]`);
 		let wall = parseInt(node.getAttribute('wall'));
 		// console.log(wall);
@@ -55,11 +55,11 @@ function changeColor(node, counter, cost) {
 	}, counter * time + 100);
 } // End changeColor
 
-export function dijkstra() {
+export function dijkstra(x1=0,y1=0,x2=rowsize-1,y2=colsize-1) {
 	container.removeEventListener('click', setWallAttribute);
-	var startNode = document.querySelector(`div[row='0'][col='0']`);
+	var startNode = document.querySelector(`div[row='${x1}'][col='${y1}']`);
 	var endNode = document.querySelector(
-		`div[row='${rowsize - 1}'][col='${colsize - 1}']`
+		`div[row='${x2}'][col='${y2}']`
 	);
 	// Hide button
 	var btn = document.querySelector('.start');
@@ -103,9 +103,11 @@ export function dijkstra() {
 	setTimeout(() => {
 		startNode.style.backgroundColor = '#00FF00';
 		startNode.style.color = '#000000';
+		startNode.style.boxShadow = '3px 3px 6px #000000';
 		while (endNode.getAttribute('parent') != 'null') {
 			endNode.style.backgroundColor = '#00FF00';
 			endNode.style.color = '#000000';
+			endNode.style.boxShadow = '3px 3px 6px #000000';
 			var coor = endNode.getAttribute('parent').split('|');
 			var prow = parseInt(coor[0]);
 			var pcol = parseInt(coor[1]);

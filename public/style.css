@@ -14,15 +14,15 @@ body {
 
 .container {
   display: grid;
-  border: 2px solid black;
+  border: 1px solid black;
   /* margin: auto; */
-  padding: 3px;
+  padding: 2px;
   margin-left: auto;
   margin-right: auto;
   grid-template-rows: repeat(20, 29px);
   grid-template-columns: repeat(40, 29px);
-  grid-row-gap: 3px;
-  grid-column-gap: 3px;
+  grid-row-gap: 2px;
+  grid-column-gap: 2px;
 }
 
 button {
@@ -41,7 +41,7 @@ button {
 }
 button:hover {
   box-shadow: 0.15px 0.15px 6px grey;
-  color: white;
+  color: #ffffff;
   font-weight: bolder;
   border: 2px solid grey;
   background-color: grey;
@@ -70,8 +70,9 @@ button:hover {
 .flex-container{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
+  align-content: center;
   padding: 10px;
 }
 
@@ -80,7 +81,7 @@ button:hover {
   background: transparent;
   text-align: center;
   font-size: small;
-  border: 2px solid black;
+  border: 1px solid black;
   /* border-radius: 10px; */
   display: flex;
   justify-content: center;
@@ -92,7 +93,7 @@ button:hover {
 .wall {
   background-color: rgb(83, 80, 80);
   color: rgb(83, 80, 80);
-  border: 2px solid rgb(83, 80, 80);
+  border: 1px solid black;
 }
 
 .pathcell {
