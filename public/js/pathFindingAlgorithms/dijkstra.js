@@ -127,11 +127,11 @@ export function dijkstra(x1 = 0, y1 = 0, x2 = rowsize - 1, y2 = colsize - 1) {
 	setTimeout(() => {
 		startNode.style.backgroundColor = '#00FF00';
 		startNode.style.color = '#000000';
-		startNode.style.boxShadow = '0px 0px 10px #000000';
+		startNode.style.boxShadow = '3px 3px 5px #006400';
 		while (endNode.getAttribute('parent') != 'null') {
 			endNode.style.backgroundColor = '#00FF00';
 			endNode.style.color = '#000000';
-			endNode.style.boxShadow = '0px 0px 10px #000000';
+			endNode.style.boxShadow = '3px 3px 5px #006400';
 			var coor = endNode.getAttribute('parent').split('|');
 			var prow = parseInt(coor[0]);
 			var pcol = parseInt(coor[1]);

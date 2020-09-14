@@ -77,7 +77,7 @@ button:hover {
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
-  padding: 10px;
+  padding-bottom: 5px;
 }
 .flex-container2 {
   margin-left: auto;
@@ -86,9 +86,7 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  /* align-items: center;
-  align-content: center; */
-  padding: 10px;
+  padding-bottom: 5px;
 }
 .flex-item {
   margin: auto;
