@@ -21,8 +21,8 @@ function createNode(row, col, weight) {
 export function createBoard() {
 	var grid = document.querySelector('.container');
 	grid.innerHTML = '';
-	for (var row = 0; row < 10; row++) {
-		for (var col = 0; col < 10; col++) {
+	for (var row = 0; row < 20; row++) {
+		for (var col = 0; col < 50; col++) {
 			let weight = Math.round(getRandomArbitrary(1, 100));
 			let temp = createNode(row, col, weight);
 			let shadow = weight / 10;
@@ -32,7 +32,7 @@ export function createBoard() {
 
 	// Set start and end node
 	var startNode = document.querySelector("div[row='0'][col='0']");
-	var endNode = document.querySelector("div[row='9'][col='9']");
+	var endNode = document.querySelector("div[row='19'][col='49']");
 	startNode.setAttribute('cost', 0);
 	startNode.innerHTML = 'start';
 	endNode.innerHTML = 'end';

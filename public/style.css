@@ -15,12 +15,12 @@ body {
 .container {
   display: grid;
   border: 2px solid black;
-  margin: auto;
+  /* margin: auto; */
   padding: 3px;
   margin-left: auto;
   margin-right: auto;
-  grid-template-columns: repeat(10, 50px);
-  grid-template-rows: repeat(10, 50px);
+  grid-template-columns: repeat(50, 30px);
+  grid-template-rows: repeat(20, 30px);
   grid-row-gap: 3px;
   grid-column-gap: 3px;
 }

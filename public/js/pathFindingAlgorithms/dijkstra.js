@@ -8,7 +8,7 @@ var container = document.querySelector('.container');
 
 // Check and update node
 function checkNode(row, col, curr, checker, seen, counter) {
-	if (row >= 0 && col >= 0 && row <= 9 && col <= 9) {
+	if (row >= 0 && col >= 0 && row <= 19 && col <= 49) {
 		var node = document.querySelector(`div[row="${row}"][col="${col}"]`);
 		let wall = parseInt(node.getAttribute('wall'));
 		// console.log(wall);
@@ -46,17 +46,17 @@ function changeColor(node, counter, cost) {
 		if (cost) {
 			node.innerHTML = cost;
 		}
-	}, counter * 100);
+	}, counter * 10);
 	setTimeout(() => {
 		node.style.backgroundColor = '#DC143C';
 		node.style.color = '#ffffff';
-	}, counter * 100 + 100);
+	}, counter * 10 + 100);
 } // End changeColor
 
 export function dijkstra() {
 	container.removeEventListener('click', setWallAttribute);
 	var startNode = document.querySelector("div[row='0'][col='0']");
-	var endNode = document.querySelector("div[row='9'][col='9']");
+	var endNode = document.querySelector("div[row='19'][col='49']");
 	// Hide button
 	var btn = document.querySelector('.start');
 	var refreshBtn = document.querySelector('.refresh');
@@ -107,9 +107,9 @@ export function dijkstra() {
 			var pcol = parseInt(coor[1]);
 			endNode = document.querySelector(`div[row="${prow}"][col="${pcol}"]`);
 		}
-	}, counter * 100 + 100);
+	}, counter * 10 + 100);
 	// Show refresh button again
 	setTimeout(() => {
 		refreshBtn.style.visibility = 'visible';
-	}, counter * 100 + 100);
+	}, counter * 10 + 100);
 } // End start
