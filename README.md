@@ -12,8 +12,9 @@ Adequate insterest in graph algorithms.```
 
 ## Built With
 
-* JS 
 * HTML | CSS
+* JS
+* NodeJs (Server hosting)
 * Love and Passion
 
 ## Versioning
