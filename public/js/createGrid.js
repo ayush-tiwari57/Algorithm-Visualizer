@@ -1,6 +1,10 @@
+// variables
+export var rowsize = 20;
+export var colsize = 30;
+
 // Returns a random number between min (inclusive) and max (exclusive)
 function getRandomArbitrary(max) {
-	return (Math.random()*(max-1))%max;
+	return (Math.random() * (max - 1)) % max;
 } // End getRandomArbitrary
 
 // Create a Node
@@ -21,9 +25,9 @@ function createNode(row, col, weight) {
 export function createBoard() {
 	var grid = document.querySelector('.container');
 	grid.innerHTML = '';
-	for (var row = 0; row < 20; row++) {
-		for (var col = 0; col < 50; col++) {
-			let weight = Math.round(getRandomArbitrary(5));
+	for (var row = 0; row < rowsize; row++) {
+		for (var col = 0; col < colsize; col++) {
+			let weight = Math.round(getRandomArbitrary(9));
 			let temp = createNode(row, col, weight);
 			let shadow = weight / 10;
 			grid.appendChild(temp);
@@ -32,7 +36,7 @@ export function createBoard() {
 
 	// Set start and end node
 	var startNode = document.querySelector("div[row='0'][col='0']");
-	var endNode = document.querySelector("div[row='19'][col='49']");
+	var endNode = document.querySelector(`div[row='${rowsize-1}'][col='${colsize-1}']`);
 	startNode.setAttribute('cost', 0);
 	startNode.innerHTML = '>';
 	endNode.innerHTML = '@';

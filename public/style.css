@@ -19,8 +19,8 @@ body {
   padding: 3px;
   margin-left: auto;
   margin-right: auto;
-  grid-template-columns: repeat(50, 30px);
-  grid-template-rows: repeat(20, 30px);
+  grid-template-columns: repeat(30, 29px);
+  grid-template-rows: repeat(20, 29px);
   grid-row-gap: 3px;
   grid-column-gap: 3px;
 }
@@ -131,8 +131,8 @@ button:hover {
 
   .container {
     display: grid;
-    grid-template-columns: repeat(10, 28px);
     grid-template-rows: repeat(10, 28px);
+    grid-template-columns: repeat(10, 28px);
     grid-row-gap: 8px;
     grid-column-gap: 8px;
   }
