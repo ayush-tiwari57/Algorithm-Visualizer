@@ -23,12 +23,13 @@ export function speed(event) {
 	console.log(speedval);
 	if (speedval === 'fast') {
 		time = 20;
+	} else if (initial_speedval === 'noneSpeed') {
+		window.alert('choose speed');
 	} else if (speedval === 'normal') {
 		time = 40;
-	} else if (speedval === 'flash'){
+	} else if (speedval === 'flash') {
 		time = 1;
-	}
-	else{
+	} else {
 		time = 100;
 	}
 }

@@ -7,6 +7,7 @@ import { dijkstra, speed } from './pathFindingAlgorithms/dijkstra.js';
 var refreshbtn = document.querySelector('.refresh');
 var startbtn = document.querySelector('.start');
 var container = document.querySelector('.container');
+var speed_id = document.querySelector('speed');
 // var speed_id = document.querySelector('#speed');
 var algorithm = 'dijkstra';
 export var mouseIsDown = false;
@@ -24,6 +25,7 @@ container.addEventListener('mouseover', setWallAttribute);
 
 // refresh function
 function refresh() {
+	location.reload();
 	container.addEventListener('click', setWallAttribute);
 	container.addEventListener('mouseover', setWallAttribute);
 	var btn = document.querySelector('.start');
@@ -32,6 +34,7 @@ function refresh() {
 } // End refresh
 
 // Start path-finding
+
 function start() {
 	if (algorithm === 'dijkstra') dijkstra();
 } // End start
