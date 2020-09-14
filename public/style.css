@@ -69,6 +69,9 @@ button:hover {
 }
 
 .flex-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -76,7 +79,17 @@ button:hover {
   align-content: center;
   padding: 10px;
 }
-
+.flex-container2 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* align-items: center;
+  align-content: center; */
+  padding: 10px;
+}
 .flex-item {
   margin: auto;
   padding: 10px;
