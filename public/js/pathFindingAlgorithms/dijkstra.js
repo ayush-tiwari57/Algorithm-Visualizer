@@ -10,13 +10,13 @@ var initial_speedval = document.querySelector('#speed').value;
 
 // Initializing time value
 if (initial_speedval === 'fast') {
-	time = 15;
+	time = 10;
 } else if (initial_speedval === 'normal') {
-	time = 22;
+	time = 30;
 } else if (initial_speedval === 'sloth') {
 	time = 60;
 } else {
-	time = 10;
+	time = 1;
 }
 
 // Value of time after change
