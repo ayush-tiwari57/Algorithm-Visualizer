@@ -71,6 +71,7 @@ button:hover {
 select {
   background:#E0E5EC ;
   border-radius: 5px;
+  padding: 5px;
   box-shadow:
     3px 3px -5px #5a5c5e,
     -3px -3px -5px #ffffff;
