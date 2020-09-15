@@ -16,10 +16,8 @@ export var mouseIsDown = false;
 refreshbtn.addEventListener('click', refresh);
 startbtn.addEventListener('click', start);
 // speed_id.addEventListener('click',speed)
-container.addEventListener('click', function () {
-	if (mouseIsDown) mouseIsDown = false;
-	else mouseIsDown = true;
-});
+container.addEventListener('mousedown', function () {mouseIsDown = true});
+container.addEventListener('mouseup', function () {mouseIsDown = false});
 // container.addEventListener('mouseup', function(){mouseIsDown = false})
 container.addEventListener('mouseover', setWallAttribute);
 
@@ -36,7 +34,8 @@ function start() {
 
 // Initialize
 window.onload = () => {
-	container.addEventListener('click', setWallAttribute);
+	container.addEventListener('mousedown', setWallAttribute);
+	container.addEventListener('mouseup', setWallAttribute);
 	container.addEventListener('mouseover', setWallAttribute);
 	document.querySelector('#speed').addEventListener('change', speed);
 	createBoard();
