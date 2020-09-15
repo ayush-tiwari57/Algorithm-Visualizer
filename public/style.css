@@ -221,13 +221,14 @@ a:active {
 
   .container {
     display: grid;
+    padding: 5px;
     grid-template-rows: repeat(20, minmax(10px, 1fr));
     grid-template-columns: repeat(40, minmax(10px, 1fr));
-    grid-row-gap: 1px;
-    grid-column-gap: 1px;
+    grid-row-gap: 1fr;
+    grid-column-gap: 1fr;
   }
 
   .node {
-    font-size: xx-small;
+    font-size: 0.5ch;
   }
 }
