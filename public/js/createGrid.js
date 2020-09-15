@@ -22,7 +22,7 @@ function createNode(row, col, weight) {
 } // End createNode
 
 // Create Board and insert into HTML
-export function createBoard(x1 = 0, y1 = 0, x2 = rowsize - 1, y2 = colsize - 1) {
+export function createBoard() {
 	var grid = document.querySelector('.container');
 	grid.innerHTML = '';
 	for (var row = 0; row < rowsize; row++) {
@@ -33,11 +33,20 @@ export function createBoard(x1 = 0, y1 = 0, x2 = rowsize - 1, y2 = colsize - 1) 
 			grid.appendChild(temp);
 		}
 	}
-
-	// Set start and end node
+}
+// Set start and end node
+export function changeStart(x1 = 0, y1 = 0) {
 	var startNode = document.querySelector(`div[row='${x1}'][col='${y1}']`);
-	var endNode = document.querySelector(`div[row='${x2}'][col='${y2}']`);
 	startNode.setAttribute('cost', 0);
-	startNode.innerHTML = '>';
-	endNode.innerHTML = '@';
+	startNode.innerHTML = 'S';
+	startNode.style.background="#26466D";
+	startNode.style.color="#ffffff";
+	startNode.style.fontWeight="bolder";
+}
+export function changeEnd(x2 = rowsize - 1, y2 = colsize - 1) {
+	var endNode = document.querySelector(`div[row='${x2}'][col='${y2}']`);
+	endNode.innerHTML = 'E';
+	endNode.style.background="#26466D";
+	endNode.style.color="#ffffff";
+	endNode.style.fontWeight="bolder";
 } // End createBoard

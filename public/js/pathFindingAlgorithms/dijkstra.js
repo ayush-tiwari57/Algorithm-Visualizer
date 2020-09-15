@@ -126,10 +126,12 @@ export function dijkstra(x1 = 0, y1 = 0, x2 = rowsize - 1, y2 = colsize - 1) {
 		counter++;
 	}
 
-	// Draw out best route
+	// Draw out cabest route
 	setTimeout(() => {
-		startNode.style.backgroundColor = '#00FF00';
+		startNode.style.backgroundColor = '#26466D';
 		startNode.style.color = '#000000';
+		startNode.style.color="#ffffff";
+		startNode.style.fontWeight="bolder";
 		startNode.style.boxShadow = '3px 3px 5px #006400';
 		while (endNode.getAttribute('parent') != 'null') {
 			endNode.style.backgroundColor = '#00FF00';
@@ -140,6 +142,10 @@ export function dijkstra(x1 = 0, y1 = 0, x2 = rowsize - 1, y2 = colsize - 1) {
 			var pcol = parseInt(coor[1]);
 			endNode = document.querySelector(`div[row="${prow}"][col="${pcol}"]`);
 		}
+		endNode = document.querySelector(`div[row="${x2}"][col="${y2}"]`);
+		endNode.style.backgroundColor = '#26466D';
+		endNode.style.color="#ffffff";
+		endNode.style.fontWeight="bolder";
 	}, counter * time + 100);
 	// Show refresh button again
 	setTimeout(() => {
