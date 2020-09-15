@@ -1,6 +1,4 @@
-// variables
-export var rowsize = 20;
-export var colsize = 40;
+import { rowsize, colsize } from './main.js';
 
 // Returns a random number between min (inclusive) and max (exclusive)
 function getRandomArbitrary(max) {
@@ -39,14 +37,14 @@ export function changeStart(x1 = 0, y1 = 0) {
 	var startNode = document.querySelector(`div[row='${x1}'][col='${y1}']`);
 	startNode.setAttribute('cost', 0);
 	startNode.innerHTML = 'S';
-	startNode.style.background="#26466D";
-	startNode.style.color="#ffffff";
-	startNode.style.fontWeight="bolder";
+	startNode.style.background = '#26466D';
+	startNode.style.color = '#ffffff';
+	startNode.style.fontWeight = 'bolder';
 }
 export function changeEnd(x2 = rowsize - 1, y2 = colsize - 1) {
 	var endNode = document.querySelector(`div[row='${x2}'][col='${y2}']`);
 	endNode.innerHTML = 'E';
-	endNode.style.background="#26466D";
-	endNode.style.color="#ffffff";
-	endNode.style.fontWeight="bolder";
+	endNode.style.background = '#26466D';
+	endNode.style.color = '#ffffff';
+	endNode.style.fontWeight = 'bolder';
 } // End createBoard

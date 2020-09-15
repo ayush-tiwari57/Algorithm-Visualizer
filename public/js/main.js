@@ -8,9 +8,16 @@ var refreshbtn = document.querySelector('.refresh');
 var startbtn = document.querySelector('.start');
 var container = document.querySelector('.container');
 var speed_id = document.querySelector('speed');
-// var speed_id = document.querySelector('#speed');
-var algorithm = 'dijkstra';
-export var mouseIsDown = false;
+
+// export variables
+export var rowsize = 20;
+export var colsize = 40;
+export var startRow = 10;
+export var endRow = 10;
+export var startCol = 10;
+export var endCol = 30;
+export var algorithm = 'dijkstra';
+export var mouseIsDown = false;	
 
 //Initializing eventListeners
 refreshbtn.addEventListener('click', refresh);
@@ -29,7 +36,7 @@ function refresh() {
 // Start path-finding
 
 function start() {
-	if (algorithm === 'dijkstra') dijkstra(10,10,10,30);
+	if (algorithm === 'dijkstra') dijkstra(startRow,startCol,endRow,endCol);
 } // End start
 
 // Initialize

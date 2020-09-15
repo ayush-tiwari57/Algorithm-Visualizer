@@ -2,7 +2,7 @@
 
 // importing functions
 import { setWallAttribute } from '../wall.js';
-import { rowsize, colsize } from '../createGrid.js';
+import { rowsize, colsize } from '../main.js';
 // variables
 var container = document.querySelector('.container');
 var time;
