@@ -50,8 +50,8 @@ button:hover {
   font-size: larger;
   text-align: center;
   font-weight: inherit;
-  border: 1px solid grey;
-  /* box-shadow: 0.15px 0.15px 4px grey; */
+  /* border: 1px solid grey; */
+  box-shadow: 0.15px 0.15px 4px grey;
   background: #ADA996;
   background: #D3CCE3;
   /* fallback for old browsers */
@@ -69,8 +69,8 @@ button:hover {
 }
 a:link, a:visited {
   background: transparent;
-  /* box-shadow: 0px 0px 8px grey; */
-  border: 1px solid grey;
+  box-shadow: 0px 0px 8px grey;
+  /* border: 1px solid grey; */
   padding: 5px;
   color:black;
   text-decoration: none;
