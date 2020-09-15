@@ -158,7 +158,7 @@ a:active {
     3px 3px 5px #5a5c5e,
     -3px -3px 5px #ffffff;
   border-radius: 5px;
-  padding: 3px;
+  padding: 15px;
   margin-left: auto;
   margin-right: auto;
   grid-template-rows: repeat(20, 29px);
