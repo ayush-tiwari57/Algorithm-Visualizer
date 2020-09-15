@@ -16,7 +16,7 @@ body {
   font-size: larger;
   text-align: center;
   font-weight: inherit;
-  background-color: #E0E5EC;
+  background: #E0E5EC;
   border-radius: 5px;
   box-shadow:
     3px 3px 5px #5A5C5E,
@@ -74,8 +74,8 @@ select {
   border-radius: 5px;
   padding: 5px;
   box-shadow:
-    3px 3px -5px #5A5C5E,
-    -3px -3px -5px #ffffff;
+    inset 1px 1px 2px #5A5C5E,
+    inset -1px -1px 2px #ffffff;
 }
 
 
@@ -139,15 +139,15 @@ a:active {
 
 .flex-item1 {
   border-radius: 5px;
-  margin-left: 2%;
-  margin-right: 2%;
+  margin-left: auto;
+  margin-right: auto;
   margin: 5px;
 }
 
 .flex-item2 {
   border-radius: 5px;
-  margin-left: 2%;
-  margin-right: 2%;
+  margin-left: auto;
+  margin-right: auto;
   padding: 5px;
   margin: 5px;
   box-shadow:
@@ -187,6 +187,9 @@ a:active {
 /* Wall */
 .wall {
   background-color: #5A5C5E;
+  box-shadow:
+    inset 3px 3px 5px #464849,
+    inset -3px -3px 5px #cccaca;
   color: #5A5C5E;
 }
 
@@ -208,11 +211,11 @@ a:active {
     padding: 5px;
     grid-template-rows: repeat(20, minmax(10px, 1px));
     grid-template-columns: repeat(40, minmax(10px, 1px));
-    grid-row-gap: 2px;
-    grid-column-gap: 2px;
+    grid-row-gap: 1px;
+    grid-column-gap: 1px;
   }
 
   .node {
-    font-size: 0.5ch;
+    font-size: 0.75ch;
   }
 }
