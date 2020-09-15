@@ -19,7 +19,7 @@ body {
   background-color: #E0E5EC;
   border-radius: 5px;
   box-shadow:
-    3px 3px 5px #5a5c5e,
+    3px 3px 5px #5A5C5E,
     -3px -3px 5px #ffffff;
   background: transparent;
 }
@@ -31,7 +31,7 @@ button {
   color: black;
   border-radius: 5px;
   box-shadow:
-    3px 3px 5px #5a5c5e,
+    3px 3px 5px #5A5C5E,
     -3px -3px 5px #ffffff;
   font-size: 20px;
   background: transparent;
@@ -44,36 +44,37 @@ button {
 button:hover {
   border-radius: 5px;
   box-shadow:
-    5px 5px 11px #5a5c5e,
+    5px 5px 11px #5A5C5E,
     -5px -5px 11px #ffffff;
   background-color: transparent;
 }
 
 .element {
-  padding: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
   background: transparent;
   align-items: center;
   border-radius: 5px;
   box-shadow:
-    3px 3px 5px #5a5c5e,
+    3px 3px 5px #5A5C5E,
     -3px -3px 5px #ffffff;
   display: flex;
   justify-content: center;
-  
+
 }
 
-.element:hover{
+.element:hover {
   box-shadow:
-    5px 5px 11px #5a5c5e,
+    5px 5px 11px #5A5C5E,
     -5px -5px 11px #ffffff;
 }
 
 select {
-  background:#E0E5EC ;
+  background: #E0E5EC;
   border-radius: 5px;
   padding: 5px;
   box-shadow:
-    3px 3px -5px #5a5c5e,
+    3px 3px -5px #5A5C5E,
     -3px -3px -5px #ffffff;
 }
 
@@ -98,7 +99,7 @@ a:hover,
 a:active {
   background: transparent;
   box-shadow:
-    5px 5px 11px #5a5c5e,
+    5px 5px 11px #5A5C5E,
     -5px -5px 11px #ffffff;
 }
 
@@ -133,29 +134,31 @@ a:active {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 10px;
+  padding: 5px;
 }
 
 .flex-item1 {
   border-radius: 5px;
   margin-left: 2%;
   margin-right: 2%;
-  padding: 5px;
+  margin: 5px;
 }
+
 .flex-item2 {
   border-radius: 5px;
   margin-left: 2%;
   margin-right: 2%;
-  padding: 10px;
+  padding: 5px;
   margin: 5px;
   box-shadow:
-    3px 3px 5px #5a5c5e,
+    3px 3px 5px #5A5C5E,
     -3px -3px 5px #ffffff;
 }
+
 .container {
   display: grid;
   box-shadow:
-    3px 3px 5px #5a5c5e,
+    3px 3px 5px #5A5C5E,
     -3px -3px 5px #ffffff;
   border-radius: 5px;
   padding: 15px;
@@ -172,7 +175,7 @@ a:active {
   text-align: center;
   font-size: small;
   box-shadow:
-    3px 3px 5px #5a5c5e,
+    3px 3px 5px #5A5C5E,
     -3px -3px 5px #ffffff;
   border-radius: 5px;
   display: flex;
@@ -183,9 +186,8 @@ a:active {
 
 /* Wall */
 .wall {
-  background-color: rgb(83, 80, 80);
-  color: rgb(83, 80, 80);
-  border: 1px solid black;
+  background-color: #5A5C5E;
+  color: #5A5C5E;
 }
 
 .pathcell {
