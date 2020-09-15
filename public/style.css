@@ -58,14 +58,19 @@ button:hover {
   background: transparent;
   align-items: center;
   box-shadow:
-    5px 5px 11px #5a5c5e,
-    -5px -5px 11px #ffffff;
+  3px 3px 9px #5a5c5e,
+  -3px -3px 9px #ffffff;
   display: flex;
   height: auto;
   justify-content: center;
   width: auto;
 }
 
+.element:hover{
+  box-shadow:
+    5px 5px 11px #5a5c5e,
+    -5px -5px 11px #ffffff;
+}
 .navbar {
   padding: 10px;
   font-size: larger;
@@ -88,7 +93,6 @@ button:hover {
 a:link,
 a:visited {
   background: transparent;
-  /* border: 1px solid grey; */
   padding: 5px;
   color: black;
   text-decoration: none;
