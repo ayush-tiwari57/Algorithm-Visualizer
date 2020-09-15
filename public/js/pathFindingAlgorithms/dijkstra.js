@@ -22,15 +22,15 @@ export function speed(event) {
 	var speedval = this.value;
 	console.log(speedval);
 	if (speedval === 'fast') {
-		time = 20;
+		time = 10;
 	} else if (initial_speedval === 'noneSpeed') {
 		window.alert('choose speed');
 	} else if (speedval === 'normal') {
-		time = 40;
+		time = 30;
 	} else if (speedval === 'flash') {
 		time = 1;
 	} else {
-		time = 100;
+		time = 60;
 	}
 }
 // Check and update node
