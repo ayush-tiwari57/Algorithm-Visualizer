@@ -13,6 +13,8 @@ if (initial_speedval === 'fast') {
 	time = 15;
 } else if (initial_speedval === 'normal') {
 	time = 22;
+} else if (initial_speedval === 'sloth') {
+	time = 60;
 } else {
 	time = 10;
 }
