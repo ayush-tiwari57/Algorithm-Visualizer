@@ -195,22 +195,6 @@ a:active {
   color: #000000;
 }
 
-.explanation {
-  max-width: 55vh;
-}
-
-.tab button {
-  background-color: #ccc;
-}
-
-.tab button.active {
-  background-color: #f7977a;
-}
-
-.tabcontent {
-  display: none;
-  border: 1px solid #ccc;
-}
 
 @media only screen and (max-width: 600px) {
   /* body {
@@ -222,10 +206,10 @@ a:active {
   .container {
     display: grid;
     padding: 5px;
-    grid-template-rows: repeat(20, minmax(10px, 1fr));
-    grid-template-columns: repeat(40, minmax(10px, 1fr));
-    grid-row-gap: 1fr;
-    grid-column-gap: 1fr;
+    grid-template-rows: repeat(20, minmax(10px, 1px));
+    grid-template-columns: repeat(40, minmax(10px, 1px));
+    grid-row-gap: 2px;
+    grid-column-gap: 2px;
   }
 
   .node {
