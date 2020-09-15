@@ -88,7 +88,7 @@ function changeColor(node, counter, cost) {
 
 export function dijkstra(x1 = 0, y1 = 0, x2 = rowsize - 1, y2 = colsize - 1) {
 	console.log(time);
-	container.removeEventListener('click', setWallAttribute);
+	container.removeEventListener('mousedown', setWallAttribute);
 	container.removeEventListener('mouseover', setWallAttribute);
 	var startNode = document.querySelector(`div[row='${x1}'][col='${y1}']`);
 	var endNode = document.querySelector(`div[row='${x2}'][col='${y2}']`);
