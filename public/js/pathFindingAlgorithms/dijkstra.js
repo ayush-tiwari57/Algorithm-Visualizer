@@ -39,6 +39,10 @@ export function speed(event) {
 function checkNode(row, col, curr, checker, seen, counter) {
 	if (row >= 0 && col >= 0 && row < rowsize && col < colsize) {
 		var node = document.querySelector(`div[row="${row}"][col="${col}"]`);
+		if(row==rowsize-1 && col==colsize-1){
+			checker = [node];
+			return false
+		}
 		let wall = parseInt(node.getAttribute('wall'));
 		// console.log(wall);
 		if (wall != 1) {
@@ -93,6 +97,7 @@ export function dijkstra(x1 = 0, y1 = 0, x2 = rowsize - 1, y2 = colsize - 1) {
 	var refreshBtn = document.querySelector('.refresh');
 	btn.style.visibility = 'hidden';
 	// refreshBtn.style.visibility = 'hidden';
+
 	// Algo here
 	var seen = [startNode];
 	var checker = [startNode];
@@ -107,12 +112,13 @@ export function dijkstra(x1 = 0, y1 = 0, x2 = rowsize - 1, y2 = colsize - 1) {
 			}
 			return 0;
 		});
+		console.log(checker)
 		let curr = checker.pop();
 		// Important to parse string to integer
 		//   console.log(curr);
 		let row = parseInt(curr.getAttribute('row'));
 		let col = parseInt(curr.getAttribute('col'));
-		if(row===x2 && col===y2 ) break;
+		if(row==x2 && col==y2 ) break;
 		let wall = parseInt(curr.getAttribute('wall'));
 		if (wall == 1) continue;
 		// Check up down left right
@@ -127,7 +133,7 @@ export function dijkstra(x1 = 0, y1 = 0, x2 = rowsize - 1, y2 = colsize - 1) {
 		counter++;
 	}
 
-	// Draw out cabest route
+	// Draw out best route
 	setTimeout(() => {
 		startNode.style.backgroundColor = '#26466D';
 		startNode.style.color = '#000000';
