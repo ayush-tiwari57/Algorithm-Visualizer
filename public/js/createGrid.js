@@ -22,7 +22,7 @@ function createNode(row, col, weight) {
 } // End createNode
 
 // Create Board and insert into HTML
-export function createBoard() {
+export function createBoard(x1 = 0, y1 = 0, x2 = rowsize - 1, y2 = colsize - 1) {
 	var grid = document.querySelector('.container');
 	grid.innerHTML = '';
 	for (var row = 0; row < rowsize; row++) {
@@ -35,8 +35,8 @@ export function createBoard() {
 	}
 
 	// Set start and end node
-	var startNode = document.querySelector("div[row='0'][col='0']");
-	var endNode = document.querySelector(`div[row='${rowsize-1}'][col='${colsize-1}']`);
+	var startNode = document.querySelector(`div[row='${x1}'][col='${y1}']`);
+	var endNode = document.querySelector(`div[row='${x2}'][col='${y2}']`);
 	startNode.setAttribute('cost', 0);
 	startNode.innerHTML = '>';
 	endNode.innerHTML = '@';

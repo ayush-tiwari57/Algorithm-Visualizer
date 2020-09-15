@@ -26,11 +26,11 @@ container.addEventListener('mouseover', setWallAttribute);
 // refresh function
 function refresh() {
 	location.reload();
-	container.addEventListener('click', setWallAttribute);
-	container.addEventListener('mouseover', setWallAttribute);
-	var btn = document.querySelector('.start');
-	btn.style.visibility = 'visible';
-	createBoard();
+	// container.addEventListener('click', setWallAttribute);
+	// container.addEventListener('mouseover', setWallAttribute);
+	// var btn = document.querySelector('.start');
+	// btn.style.visibility = 'visible';
+	// createBoard();
 } // End refresh
 
 // Start path-finding
