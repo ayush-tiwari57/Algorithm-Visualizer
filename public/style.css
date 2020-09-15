@@ -7,11 +7,12 @@ body {
   user-select: none;
   display: flex;
   flex-direction: column;
-  background: #D3CCE3;
+  background: #E0E5EC;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
+  /* background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #E9E4F0, #D3CCE3);
+  /* background: linear-gradient(to right, #E9E4F0, #D3CCE3); */
+  */
   /* W3C, IE 10+/ Edge, Firefox  -m 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
@@ -34,21 +35,35 @@ body {
 button {
   width: auto;
   height: auto;
-  box-shadow: 0px 0px 4px black;
   color: black;
-  border: 2px solid white;
+  box-shadow:
+    3px 3px 9px #5a5c5e,
+    -3px -3px 9px #ffffff;
   font-size: 20px;
-  background-color: white;
+  background: transparent;
+  align-items: center;
+  display: flex;
+  justify-content: center;
   cursor: pointer;
 }
 
-
 button:hover {
-  box-shadow: 0.15px 0.15px 6px grey;
-  color: #ffffff;
-  font-weight: bolder;
-  border: 2px solid grey;
-  background-color: grey;
+  box-shadow:
+    7px 7px 14px #5a5c5e,
+    -7px -7px 14px #ffffff;
+  background-color: transparent;
+}
+
+.element {
+  background: transparent;
+  align-items: center;
+  box-shadow:
+    5px 5px 11px #5a5c5e,
+    -5px -5px 11px #ffffff;
+  display: flex;
+  height: auto;
+  justify-content: center;
+  width: auto;
 }
 
 .navbar {
@@ -56,40 +71,37 @@ button:hover {
   font-size: larger;
   text-align: center;
   font-weight: inherit;
-  /* border: 1px solid grey; */
-  box-shadow: 0.15px 0.15px 4px grey;
-  background: #ADA996;
-  background: #D3CCE3;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #E9E4F0, #D3CCE3);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background-color: #E0E5EC;
+  box-shadow:
+    5px 5px 11px #5a5c5e,
+    -5px -5px 11px #ffffff;
+  background: transparent;
 }
 
-.fas, .fab{
+.fas,
+.fab {
   padding-left: 1px;
   padding-right: 5px;
-  
+
 }
-a:link, a:visited {
+
+a:link,
+a:visited {
   background: transparent;
-  box-shadow: 0px 0px 8px grey;
   /* border: 1px solid grey; */
   padding: 5px;
-  color:black;
+  color: black;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flexbox;
 }
 
-a:hover, a:active {
-  background: grey;
-  color:white;
-  font-weight: bold;
+a:hover,
+a:active {
+  background: transparent;
+  box-shadow:
+    5px 5px 11px #5a5c5e,
+    -5px -5px 11px #ffffff;
 }
-
-
 
 .flex-nav {
   margin-left: auto;
@@ -114,6 +126,7 @@ a:hover, a:active {
   align-content: center;
   padding: 5px;
 }
+
 .flex-container2 {
   margin-left: auto;
   margin-right: auto;
@@ -123,6 +136,7 @@ a:hover, a:active {
   justify-content: space-around;
   padding: 5px;
 }
+
 .flex-item {
   margin-left: 2%;
   margin-right: 2%;
