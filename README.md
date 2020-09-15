@@ -1,6 +1,6 @@
 # Algorithm-Visualiser
 
-Visulaize working of standard graph algorithms, and get good grasp of their working and traversal through all the nodes.
+Visualize working of standard graph algorithms, and get good grasp of their working and traversal through all the nodes.
 
 ## Getting Started
 
