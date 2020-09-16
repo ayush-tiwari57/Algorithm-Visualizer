@@ -22,11 +22,12 @@ body {
   font-size: larger;
   text-align: center;
   font-weight: inherit;
-  background: transparent;
-  border-radius: 5px;
+  border-radius: 15px;
+  background: #c6d3e7;
   box-shadow:
-    0px 2px 0px #5A5C5E,
-    0px 2px 0px #ffffff;
+      3px 3px 5px #5A5C5E,
+      -3px -3px 5px #ffffff;
+
 }
 
 .element {
@@ -34,23 +35,12 @@ body {
   margin-left: 10px;
   padding-left: 5px;
   padding-right: 5px;
-  padding-top: 2px;
-  padding-bottom: 2px;
   background: transparent;
   align-items: center;
   border-radius: 5px;
-  box-shadow:
-    3px 3px 5px #5A5C5E,
-    -3px -3px 5px #ffffff;
   display: flex;
   justify-content: center;
 
-}
-
-.element:hover {
-  box-shadow:
-    5px 5px 11px #5A5C5E,
-    -5px -5px 11px #ffffff;
 }
 
 button {
@@ -108,6 +98,9 @@ a:visited {
   display: inline-flexbox;
 }
 
+a:hover{
+  text-shadow: 0px 0px 4px white;
+}
 
 .flex-container {
   margin-left: auto;
@@ -148,9 +141,8 @@ a:visited {
   margin-right: auto;
   padding: 5px;
   margin: 10px;
-  /* box-shadow:
-    3px 3px 5px #5A5C5E,
-    -3px -3px 5px #ffffff; */
+  border:1px solid black;
+
 }
 
 .container {

@@ -23,10 +23,10 @@ body {
     text-align: center;
     font-weight: inherit;
     border-radius: 15px;
-    background: #e6e9ec;
+    background: #c6d3e7;
     box-shadow:
-        0px 2px 0px #5A5C5E,
-        0px 2px 0px #ffffff;
+        3px 3px 5px #5A5C5E,
+        -3px -3px 5px #ffffff;
 
 }
 
@@ -35,32 +35,14 @@ body {
     margin-left: 10px;
     padding-left: 5px;
     padding-right: 5px;
-    padding-top: 2px;
-    padding-bottom: 2px;
     background: transparent;
     align-items: center;
     border-radius: 5px;
-    box-shadow:
-        3px 3px 5px #5A5C5E,
-        -3px -3px 5px #ffffff;
     display: flex;
     justify-content: center;
 
 }
 
-.element:hover {
-    box-shadow:
-        5px 5px 11px #5A5C5E,
-        -5px -5px 11px #ffffff;
-}
-
-
-.logo{
-    box-shadow:
-    3px 3px 5px #b5b5b6,
-    -3px -3px 5px #ffffff;
-    background: #c6d3e7;
-}
 .fas,
 .fab {
     padding-left: 1px;
@@ -75,6 +57,10 @@ a:visited {
     color: black;
     text-decoration: none;
     display: inline-flexbox;
+}
+
+a:hover {
+    text-shadow: 0px 0px 4px white;
 }
 
 
