@@ -12,16 +12,45 @@ body {
 }
 
 .navbar {
-  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+
   font-size: larger;
   text-align: center;
   font-weight: inherit;
-  background: #E0E5EC;
+  background: transparent;
+  border-radius: 5px;
+  box-shadow:
+    0px 2px 0px #5A5C5E,
+    0px 2px 0px #ffffff;
+}
+
+.element {
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background: transparent;
+  align-items: center;
   border-radius: 5px;
   box-shadow:
     3px 3px 5px #5A5C5E,
     -3px -3px 5px #ffffff;
-  background: transparent;
+  display: flex;
+  justify-content: center;
+
+}
+
+.element:hover {
+  box-shadow:
+    5px 5px 11px #5A5C5E,
+    -5px -5px 11px #ffffff;
 }
 
 button {
@@ -51,34 +80,15 @@ button:hover {
   background-color: transparent;
 }
 
-.element {
-  margin-right: 5px;
-  margin-left: 5px;
-  background: transparent;
-  align-items: center;
-  border-radius: 5px;
-  box-shadow:
-    3px 3px 5px #5A5C5E,
-    -3px -3px 5px #ffffff;
-  display: flex;
-  justify-content: center;
-
-}
-
-.element:hover {
-  box-shadow:
-    5px 5px 11px #5A5C5E,
-    -5px -5px 11px #ffffff;
-}
-
 select {
-  background: #E0E5EC;
-  border-radius: 5px;
+  background: transparent;
+  border: 0px solid black;
   padding: 5px;
   width: 150px;
   box-shadow:
-    inset 1px 1px 2px #5A5C5E,
-    inset -1px -1px 2px #ffffff;
+    3px 3px 5px #5A5C5E,
+    -3px -3px 5px #ffffff;
+  cursor: pointer;
 }
 
 
@@ -98,25 +108,6 @@ a:visited {
   display: inline-flexbox;
 }
 
-a:hover,
-a:active {
-  background: transparent;
-  box-shadow:
-    5px 5px 11px #5A5C5E,
-    -5px -5px 11px #ffffff;
-}
-
-.flex-nav {
-  margin-left: auto;
-  margin-right: auto;
-  width: 95%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  padding: 5px;
-}
 
 .flex-container {
   margin-left: auto;
@@ -157,18 +148,18 @@ a:active {
   margin-right: auto;
   padding: 5px;
   margin: 10px;
-  box-shadow:
+  /* box-shadow:
     3px 3px 5px #5A5C5E,
-    -3px -3px 5px #ffffff;
+    -3px -3px 5px #ffffff; */
 }
 
 .container {
   display: grid;
   box-shadow:
-    3px 3px 5px #5A5C5E,
-    -3px -3px 5px #ffffff;
+    3px 3px 4px #5A5C5E,
+    -3px -3px 4px #ffffff;
   border-radius: 5px;
-  padding: 15px;
+  padding: 12px;
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
@@ -183,8 +174,8 @@ a:active {
   text-align: center;
   font-size: small;
   box-shadow:
-    3px 3px 5px #5A5C5E,
-    -3px -3px 5px #ffffff;
+    3px 3px 4px #5A5C5E,
+    -3px -3px 4px #ffffff;
   border-radius: 5px;
   display: flex;
   justify-content: center;
