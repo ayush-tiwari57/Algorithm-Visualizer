@@ -188,8 +188,8 @@ a:active {
 .wall {
   background-color: #5A5C5E;
   box-shadow:
-    inset 3px 3px 5px #464849,
-    inset -3px -3px 5px #cccaca;
+    inset 5px 5px 7px #464849,
+    inset -1px -1px 2px #cccaca;
   color: #5A5C5E;
 }
 
