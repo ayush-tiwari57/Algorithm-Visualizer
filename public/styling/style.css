@@ -18,15 +18,15 @@ body {
   justify-content: space-between;
   align-items: center;
   align-content: center;
-
+  border: none;
   font-size: larger;
   text-align: center;
   font-weight: inherit;
   border-radius: 15px;
   background: #c6d3e7;
   box-shadow:
-      3px 3px 5px #5A5C5E,
-      -3px -3px 5px #ffffff;
+    3px 3px 5px #5A5C5E,
+    -3px -3px 5px #ffffff;
 
 }
 
@@ -50,6 +50,7 @@ button {
   padding-left: 10px;
   padding-right: 10px;
   color: black;
+  border: none;
   border-radius: 5px;
   box-shadow:
     3px 3px 5px #5A5C5E,
@@ -72,13 +73,13 @@ button:hover {
 
 select {
   background: transparent;
-  border: 0px solid black;
   padding: 5px;
   width: 150px;
   box-shadow:
     3px 3px 5px #5A5C5E,
     -3px -3px 5px #ffffff;
   cursor: pointer;
+  border: none;
 }
 
 
@@ -96,9 +97,10 @@ a:visited {
   color: black;
   text-decoration: none;
   display: inline-flexbox;
+  border: none;
 }
 
-a:hover{
+a:hover {
   text-shadow: 0px 0px 4px white;
 }
 
@@ -112,6 +114,7 @@ a:hover{
   align-items: center;
   align-content: center;
   margin-top: 10px;
+  border: none;
 }
 
 .flex-container2 {
@@ -122,6 +125,7 @@ a:hover{
   flex-wrap: wrap;
   justify-content: center;
   padding: 5px;
+  border: none;
 }
 
 .flex-item1 {
@@ -129,6 +133,7 @@ a:hover{
   margin-left: auto;
   margin-right: auto;
   margin: 5px;
+  border: none;
 }
 
 .flex-item2 {
@@ -141,7 +146,7 @@ a:hover{
   margin-right: auto;
   padding: 5px;
   margin: 10px;
-  border:1px solid black;
+  border: none;
 
 }
 
@@ -159,6 +164,7 @@ a:hover{
   grid-template-columns: repeat(40, 29px);
   grid-row-gap: 5px;
   grid-column-gap: 5px;
+  border: none;
 }
 
 .node {
@@ -173,6 +179,7 @@ a:hover{
   justify-content: center;
   align-items: center;
   cursor: cell;
+  border: none;
 }
 
 /* Wall */

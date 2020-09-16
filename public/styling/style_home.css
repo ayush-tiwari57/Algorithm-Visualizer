@@ -18,7 +18,7 @@ body {
     justify-content: space-between;
     align-items: center;
     align-content: center;
-
+    border: none;
     font-size: larger;
     text-align: center;
     font-weight: inherit;
@@ -40,7 +40,7 @@ body {
     border-radius: 5px;
     display: flex;
     justify-content: center;
-
+    border: none;
 }
 
 .fas,
@@ -57,6 +57,7 @@ a:visited {
     color: black;
     text-decoration: none;
     display: inline-flexbox;
+    border: none;
 }
 
 a:hover {
@@ -67,9 +68,7 @@ a:hover {
 .flex-container {
     margin: auto;
     width: 80%;
-    /* box-shadow:
-        3px 3px 5px #5A5C5E,
-        -3px -3px 5px #ffffff; */
+    border: none;
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
@@ -84,11 +83,11 @@ a:hover {
 .flex-item2 {
     flex: 1 1 0;
     border-radius: 5px;
-    /* text-align: center; */
     margin-left: auto;
     margin-right: auto;
     padding: 5px;
     margin: 10px;
+    border: none;
     box-shadow:
         3px 3px 5px #5A5C5E,
         -3px -3px 5px #ffffff;
@@ -112,6 +111,7 @@ li {
 }
 
 .flex-container2 {
+    border: none;
     margin-left: auto;
     margin-right: auto;
     width: 20%;
@@ -122,6 +122,7 @@ li {
 }
 
 .flex-item1 {
+    border: none;
     border-radius: 5px;
     margin-left: auto;
     margin-right: auto;
@@ -129,6 +130,7 @@ li {
 }
 
 .flex-item-in {
+    border: none;
     border-radius: 5px;
     margin-left: auto;
     margin-right: auto;
