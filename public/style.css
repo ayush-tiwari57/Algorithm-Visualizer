@@ -127,7 +127,7 @@ a:active {
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  padding: 10px;
+  margin-top: 10px;
 }
 
 .flex-container2 {
@@ -152,7 +152,6 @@ a:active {
   display: flex;
   justify-content: space-evenly;
   text-align: center;
-  
   border-radius: 5px;
   margin-left: auto;
   margin-right: auto;
@@ -170,7 +169,7 @@ a:active {
     -3px -3px 5px #ffffff;
   border-radius: 5px;
   padding: 15px;
-  margin-top: 5px;
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
   grid-template-rows: repeat(20, 29px);
