@@ -28,6 +28,8 @@ button {
   width: auto;
   height: auto;
   padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
   color: black;
   border-radius: 5px;
   box-shadow:
@@ -121,7 +123,7 @@ a:active {
   width: 75%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   align-content: center;
   padding: 10px;
@@ -130,10 +132,10 @@ a:active {
 .flex-container2 {
   margin-left: auto;
   margin-right: auto;
-  width: 20%;
+  /* width: 4%; */
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   padding: 5px;
 }
 
@@ -145,11 +147,13 @@ a:active {
 }
 
 .flex-item2 {
+  flex: 1 1 0;
+  text-align: center;
   border-radius: 5px;
   margin-left: auto;
   margin-right: auto;
   padding: 5px;
-  margin: 5px;
+  margin: 10px;
   box-shadow:
     3px 3px 5px #5A5C5E,
     -3px -3px 5px #ffffff;
