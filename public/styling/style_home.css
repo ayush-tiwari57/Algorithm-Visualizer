@@ -22,11 +22,12 @@ body {
     font-size: larger;
     text-align: center;
     font-weight: inherit;
-    background: transparent;
-    border-radius: 5px;
+    border-radius: 15px;
+    background: #e6e9ec;
     box-shadow:
         0px 2px 0px #5A5C5E,
         0px 2px 0px #ffffff;
+
 }
 
 .element {
@@ -53,6 +54,13 @@ body {
         -5px -5px 11px #ffffff;
 }
 
+
+.logo{
+    box-shadow:
+    3px 3px 5px #b5b5b6,
+    -3px -3px 5px #ffffff;
+    background: #c6d3e7;
+}
 .fas,
 .fab {
     padding-left: 1px;
