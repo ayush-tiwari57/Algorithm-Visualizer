@@ -16,10 +16,9 @@ body {
     font-size: larger;
     text-align: center;
     font-weight: inherit;
-    background: #E0E5EC;
     border-radius: 5px;
     box-shadow:
-        3px 3px 5px #5A5C5E,
+        3px 3px 5px #b0b0b1,
         -3px -3px 5px #ffffff;
     background: transparent;
 }
@@ -44,7 +43,12 @@ body {
         -5px -5px 11px #ffffff;
 }
 
-
+.logo{
+    box-shadow:
+    3px 3px 5px #b5b5b6,
+    -3px -3px 5px #ffffff;
+    background: #d2dae6;
+}
 .fas,
 .fab {
     padding-left: 1px;
