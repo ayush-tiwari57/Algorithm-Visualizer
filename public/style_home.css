@@ -1,0 +1,157 @@
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    background: #E0E5EC;
+    font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
+}
+
+.navbar {
+    padding: 10px;
+    font-size: larger;
+    text-align: center;
+    font-weight: inherit;
+    background: #E0E5EC;
+    border-radius: 5px;
+    box-shadow:
+        3px 3px 5px #5A5C5E,
+        -3px -3px 5px #ffffff;
+    background: transparent;
+}
+
+.element {
+    margin-right: 5px;
+    margin-left: 5px;
+    background: transparent;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow:
+        3px 3px 5px #5A5C5E,
+        -3px -3px 5px #ffffff;
+    display: flex;
+    justify-content: center;
+
+}
+
+.element:hover {
+    box-shadow:
+        5px 5px 11px #5A5C5E,
+        -5px -5px 11px #ffffff;
+}
+
+
+.fas,
+.fab {
+    padding-left: 1px;
+    padding-right: 5px;
+
+}
+
+a:link,
+a:visited {
+    background: transparent;
+    padding: 5px;
+    color: black;
+    text-decoration: none;
+    display: inline-flexbox;
+}
+
+a:hover,
+a:active {
+    background: transparent;
+    box-shadow:
+        5px 5px 11px #5A5C5E,
+        -5px -5px 11px #ffffff;
+}
+
+.flex-nav {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 5px;
+}
+
+.flex-container {
+    margin: auto;
+    width: 80%;
+    /* box-shadow:
+        3px 3px 5px #5A5C5E,
+        -3px -3px 5px #ffffff; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+
+.flex-item2 {
+    flex: 1 1 0;
+    border-radius: 5px;
+    /* text-align: center; */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    margin: 10px;
+    box-shadow:
+        3px 3px 5px #5A5C5E,
+        -3px -3px 5px #ffffff;
+    cursor: pointer;
+}
+
+.flex-item2:hover {
+    box-shadow:
+        5px 5px 11px #5A5C5E,
+        -5px -5px 11px #ffffff;
+}
+
+heading {
+    font-size: larger;
+    padding: 10px;
+}
+
+
+li {
+    padding: 5px;
+}
+
+.flex-container2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+.flex-item1 {
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 5px;
+}
+
+.flex-item-in {
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    margin: 5px;
+    box-shadow:
+        inset 2px 2px 3px #5A5C5E,
+        inset -2px -2px 3px #ffffff;
+}
