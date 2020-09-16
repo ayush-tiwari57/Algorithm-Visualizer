@@ -75,6 +75,7 @@ select {
   background: #E0E5EC;
   border-radius: 5px;
   padding: 5px;
+  width: 150px;
   box-shadow:
     inset 1px 1px 2px #5A5C5E,
     inset -1px -1px 2px #ffffff;
@@ -148,7 +149,10 @@ a:active {
 
 .flex-item2 {
   flex: 1 1 0;
+  display: flex;
+  justify-content: space-evenly;
   text-align: center;
+  
   border-radius: 5px;
   margin-left: auto;
   margin-right: auto;
