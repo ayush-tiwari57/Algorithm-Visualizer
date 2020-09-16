@@ -16,11 +16,9 @@ body {
     font-size: larger;
     text-align: center;
     font-weight: inherit;
-    border-radius: 5px;
-    box-shadow:
-        3px 3px 5px #b0b0b1,
-        -3px -3px 5px #ffffff;
-    background: transparent;
+    border-radius: 15px;
+
+    background: #e6e9ec;
 }
 
 .element {
@@ -47,7 +45,7 @@ body {
     box-shadow:
     3px 3px 5px #b5b5b6,
     -3px -3px 5px #ffffff;
-    background: #d2dae6;
+    background: #c6d3e7;
 }
 .fas,
 .fab {
