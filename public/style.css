@@ -162,6 +162,7 @@ a:active {
     -3px -3px 5px #ffffff;
   border-radius: 5px;
   padding: 15px;
+  margin-top: 5px;
   margin-left: auto;
   margin-right: auto;
   grid-template-rows: repeat(20, 29px);
