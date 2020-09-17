@@ -14,6 +14,7 @@ body {
 
 .navbar {
     width: 100%;
+    padding: 5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -43,7 +44,7 @@ body {
     border: none;
 }
 
-.element:hover{
+.element:hover {
     box-shadow:
         inset 2px 2px 3px #5A5C5E,
         inset -2px -2px 3px #ffffff;
@@ -68,8 +69,9 @@ a:visited {
 }
 
 
-
 .flex-container {
+    margin-left: auto;
+    margin-right: auto;
     margin: auto;
     width: 80%;
     border: none;
@@ -81,8 +83,8 @@ a:visited {
     align-content: center;
     padding: 5px;
     margin-top: 20px;
+    border: none;
 }
-
 
 .flex-item2 {
     flex: 1 1 0;
@@ -92,16 +94,18 @@ a:visited {
     padding: 5px;
     margin: 10px;
     border: none;
+    align-items: center;
+    text-align: center;
     box-shadow:
-        3px 3px 5px #5A5C5E,
-        -3px -3px 5px #ffffff;
+    3px 3px 5px #5A5C5E,
+    -3px -3px 5px #ffffff;
     cursor: pointer;
 }
 
 .flex-item2:hover {
     box-shadow:
-        5px 5px 11px #5A5C5E,
-        -5px -5px 11px #ffffff;
+    2px 2px 3px #5A5C5E,
+    -2px -2px 3px #ffffff;
 }
 
 heading {
@@ -123,24 +127,4 @@ li {
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 5px;
-}
-
-.flex-item1 {
-    border: none;
-    border-radius: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    margin: 5px;
-}
-
-.flex-item-in {
-    border: none;
-    border-radius: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5px;
-    margin: 5px;
-    box-shadow:
-        inset 2px 2px 3px #5A5C5E,
-        inset -2px -2px 3px #ffffff;
 }

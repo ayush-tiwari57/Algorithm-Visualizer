@@ -15,6 +15,7 @@ body {
 .navbar {
   width: 100%;
   display: flex;
+  padding: 5px;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
@@ -95,12 +96,13 @@ select:hover, button:hover{
 
 a:link,
 a:visited {
-  background: transparent;
-  padding: 5px;
-  color: black;
-  text-decoration: none;
-  display: inline-flexbox;
-  border: none;
+    background: transparent;
+    padding: 5px;
+    color: black;
+    text-decoration: none;
+    font-size: larger;
+    display: inline-flexbox;
+    border: none;
 }
 
 
