@@ -28,8 +28,8 @@ function GenerateArr(n) {
         divs[2 * i].style = "width: " + width + "%;";
         divs[2 * i + 1].style =
             // " margin: 0% " + margin_size + "%;" +
-            " background: grey; width:" + width + "%;" +
-            "box-shadow: 3px 3px 5px grey, 3px 3px 5px white; " +
+            " background: #808080; width:" + width + "%;" +
+            "box-shadow: 2px -2px 3px #5F5F5F, 2px -2px 3px white; " +
             " height:" + arr[i] + "%;";
     }
 }
