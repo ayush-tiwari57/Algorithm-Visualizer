@@ -1,40 +1,19 @@
 // dijkstra algorithm
 
 // importing functions
-import { setWallAttribute } from '../wall.js';
-import { rowsize, colsize } from '../main.js';
+import {
+	setWallAttribute
+} from '../wall.js';
+import {
+	rowsize,
+	colsize
+} from '../main.js';
 // variables
 var container = document.querySelector('.container');
-var time;
-var initial_speedval = document.querySelector('#speed').value;
+var slider = document.getElementById("speed");
+var time = slider.value;
+console.log(time);
 
-// Initializing time value
-if (initial_speedval === 'fast') {
-	time = 10;
-} else if (initial_speedval === 'normal') {
-	time = 30;
-} else if (initial_speedval === 'sloth') {
-	time = 60;
-} else {
-	time = 1;
-}
-
-// Value of time after change
-export function speed(event) {
-	var speedval = this.value;
-	console.log(speedval);
-	if (speedval === 'fast') {
-		time = 10;
-	} else if (initial_speedval === 'noneSpeed') {
-		window.alert('choose speed');
-	} else if (speedval === 'normal') {
-		time = 30;
-	} else if (speedval === 'flash') {
-		time = 1;
-	} else {
-		time = 60;
-	}
-}
 // Check and update node
 function checkNode(row, col, curr, checker, seen, counter) {
 	if (row >= 0 && col >= 0 && row < rowsize && col < colsize) {
@@ -48,7 +27,7 @@ function checkNode(row, col, curr, checker, seen, counter) {
 		if (wall != 1) {
 			var cost = Math.min(
 				parseInt(curr.getAttribute('cost')) +
-					parseInt(node.getAttribute('weight')),
+				parseInt(node.getAttribute('weight')),
 				node.getAttribute('cost')
 			);
 			if (cost < node.getAttribute('cost')) {
@@ -87,6 +66,8 @@ function changeColor(node, counter, cost) {
 } // End changeColor
 
 export function dijkstra(x1 = 0, y1 = 0, x2 = rowsize - 1, y2 = colsize - 1) {
+	time=slider.value;
+	time= 40 + (time-1)*(-2);
 	console.log(time);
 	container.removeEventListener('mousedown', setWallAttribute);
 	container.removeEventListener('mouseover', setWallAttribute);
@@ -112,7 +93,7 @@ export function dijkstra(x1 = 0, y1 = 0, x2 = rowsize - 1, y2 = colsize - 1) {
 			}
 			return 0;
 		});
-		console.log(checker)
+		// console.log(checker)
 		let curr = checker.pop();
 		// Important to parse string to integer
 		//   console.log(curr);
@@ -137,8 +118,8 @@ export function dijkstra(x1 = 0, y1 = 0, x2 = rowsize - 1, y2 = colsize - 1) {
 	setTimeout(() => {
 		startNode.style.backgroundColor = '#26466D';
 		startNode.style.color = '#000000';
-		startNode.style.color="#ffffff";
-		startNode.style.fontWeight="bolder";
+		startNode.style.color = "#ffffff";
+		startNode.style.fontWeight = "bolder";
 		startNode.style.boxShadow = '3px 3px 5px #006400';
 		while (endNode.getAttribute('parent') != 'null') {
 			endNode.style.backgroundColor = '#00FF00';
@@ -151,8 +132,8 @@ export function dijkstra(x1 = 0, y1 = 0, x2 = rowsize - 1, y2 = colsize - 1) {
 		}
 		endNode = document.querySelector(`div[row="${x2}"][col="${y2}"]`);
 		endNode.style.backgroundColor = '#26466D';
-		endNode.style.color="#ffffff";
-		endNode.style.fontWeight="bolder";
+		endNode.style.color = "#ffffff";
+		endNode.style.fontWeight = "bolder";
 	}, counter * time + 100);
 	// Show refresh button again
 	setTimeout(() => {

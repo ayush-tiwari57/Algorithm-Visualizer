@@ -39,24 +39,16 @@
             </select>
         </div>
         <div class="flex-label-items">
-            <label for="count">Array Count: </label>
-            <select id="count" name="count">
-                <!-- <option value="noneMaze">Choose</option> -->
-                <option value="30">30</option>
-                <option value="60">60</option>
-                <option value="90">90</option>
-                <option value="120">120</option>
-            </select>
+            <label for="count"> Array Count: </label>
+            <div class="slidecontainer">
+                <input type="range" min="30" max="120" value="60" class="slider" id="count">
+            </div>
         </div>
         <div class="flex-label-items">
-            <label for="speed">Visual Speed:</label>
-            <select id="speed" name="speed">
-                <!-- <option value="noneSpeed">Choose</option> -->
-                <option value="fast">Fast</option>
-                <option value="flash">Flash</option>
-                <option value="normal">Normal</option>
-                <option value="sloth">Sloth</option>
-            </select>
+            <label for="speed"> Visual Speed: </label>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="20" value="5" class="slider" id="speed">
+            </div>
         </div>
     </div>
     <div class="flex-buttons">

@@ -1,14 +1,17 @@
-var refreshbtn = document.querySelector('refresh');
-var startbtn = document.querySelector('start');
+var refreshbtn = document.getElementById('refresh');
+var startbtn = document.getElementById('start');
 var container = document.querySelector('ArrayBox');
 var ArrayBox = document.getElementById("ArrayBox");
 var speed_id = document.querySelector('speed');
 var count = document.querySelector('count');
 var arr = [];
 var divs = [];
-
-// refreshbtn.addEventListener('click', refresh);
-// startbtn.addEventListener('click', start);
+var sliderCount = document.getElementById('count');
+var sliderSpeed = document.getElementById('speed');
+console.log(sliderCount.value);
+console.log(sliderSpeed.value);
+refreshbtn.addEventListener('click', refresh);
+startbtn.addEventListener('click', start);
 
 if (count == null) count = 60;
 if (speed_id == null) speed_id = 10;
@@ -23,23 +26,27 @@ function GenerateArr(n) {
         ArrayBox.appendChild(divs[2 * i]);
         ArrayBox.appendChild(divs[2 * i + 1]);
 
-        // var margin_size = 0.2;
         var width = 100 / (2 * n);
         divs[2 * i].style = "width: " + width + "%;";
         divs[2 * i + 1].style =
-            // " margin: 0% " + margin_size + "%;" +
             " background: #808080; width:" + width + "%;" +
-            "box-shadow: 2px -2px 3px #5F5F5F, 2px -2px 3px white; " +
+            "box-shadow: 1px -1px 2px #5F5F5F, 1px -1px 2px white; " +
             " height:" + arr[i] + "%;";
     }
 }
 
 // function start() {
-    
+
 // }
 
-// function refresh(){
-//     location.reload();
-// }
+function refresh() {
+    location.reload();
+}
 
-window.onload = GenerateArr(count);
+sliderCount.oninput= function(){
+    GenerateArr(sliderCount.value);
+}
+
+window.onload = () => {
+    GenerateArr(sliderCount.value);
+};
