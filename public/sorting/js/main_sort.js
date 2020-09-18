@@ -5,7 +5,7 @@ ArrayBox.style = "flex-direction:row";
 
 function GenerateArr(n) {
     ArrayBox.innerHTML = "";
-    ArrayBox.style="width: 50%; margin:auto; ";
+    ArrayBox.style="width: 50%; margin:auto; padding: 10px; box-shadow: 4px 4px 5px grey, 4px 4px 5px white;";
     for (var i = 0; i < n; i++) {
         arr[i] = (Math.floor(Math.random()*500) + 500) % 100;
         divs[i] = document.createElement("div");
