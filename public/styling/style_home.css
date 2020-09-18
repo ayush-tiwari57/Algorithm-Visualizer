@@ -12,6 +12,7 @@ body {
     font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
 }
 
+/* ///////////////////////NavBar Styling ///////////////////////// */
 .navbar {
     width: 100%;
     padding: 5px;
@@ -28,6 +29,14 @@ body {
     box-shadow:
         3px 3px 5px #5A5C5E,
         -3px -3px 5px #ffffff;
+
+}
+
+
+.fas,
+.fab {
+    padding-left: 1px;
+    padding-right: 5px;
 
 }
 
@@ -50,13 +59,6 @@ body {
         inset -2px -2px 3px #ffffff;
 }
 
-.fas,
-.fab {
-    padding-left: 1px;
-    padding-right: 5px;
-
-}
-
 a:link,
 a:visited {
     background: transparent;
@@ -68,8 +70,9 @@ a:visited {
     border: none;
 }
 
+/* ///////////////////////NavBar Styling  ENDS ///////////////////////// */
 
-.flex-container {
+.flex-cards {
     margin-left: auto;
     margin-right: auto;
     margin: auto;
@@ -86,7 +89,7 @@ a:visited {
     border: none;
 }
 
-.flex-item2 {
+.flex-card-items {
     flex: 1 1 0;
     border-radius: 5px;
     margin-left: auto;
@@ -102,7 +105,7 @@ a:visited {
     cursor: pointer;
 }
 
-.flex-item2:hover {
+.flex-card-items:hover {
     box-shadow:
     2px 2px 3px #5A5C5E,
     -2px -2px 3px #ffffff;
@@ -115,16 +118,5 @@ heading {
 
 
 li {
-    padding: 5px;
-}
-
-.flex-container2 {
-    border: none;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
     padding: 5px;
 }
