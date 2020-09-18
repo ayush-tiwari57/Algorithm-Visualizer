@@ -7,7 +7,6 @@ button {
   box-shadow:
     3px 3px 5px #5A5C5E,
     -3px -3px 5px #ffffff;
-  font-size: larger;
   background: transparent;
   align-items: center;
   display: flex;
@@ -91,8 +90,8 @@ button:hover {
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
-  grid-template-rows: repeat(20, 29px);
-  grid-template-columns: repeat(40, 29px);
+  grid-template-rows: repeat(20, 30px);
+  grid-template-columns: repeat(40, 30px);
   grid-row-gap: 5px;
   grid-column-gap: 5px;
   border: none;
@@ -101,7 +100,6 @@ button:hover {
 .node {
   background: transparent;
   text-align: center;
-  font-size: small;
   box-shadow:
     3px 3px 4px #5A5C5E,
     -3px -3px 4px #ffffff;
@@ -128,23 +126,231 @@ button:hover {
 }
 
 
+/* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  /* body {
-    margin-top: 1em;
-    font-size: small;
-  } */
+  select{
+    width: 120px;
+  }
 
+  .flex-labels {
+    width: 90%;
+  }
 
+  button,
+  select,
+  .node,
   .container {
-    display: grid;
+    box-shadow:
+      1px 1px 2px #5A5C5E,
+      -1px -1px 2px #ffffff;
+  }
+
+  button:hover,
+  select:hover{
+    box-shadow:
+      1px 1px 1px #5A5C5E,
+      -1px -1px 1px #ffffff;
+  }
+  
+  .container {
+    border-radius: 1px;
     padding: 5px;
-    grid-template-rows: repeat(20, minmax(10px, 1px));
-    grid-template-columns: repeat(40, minmax(10px, 1px));
-    grid-row-gap: 1px;
-    grid-column-gap: 1px;
+    margin-top: 5px;
+    grid-template-rows: repeat(20, 7px);
+    grid-template-columns: repeat(40, 7px);
+    grid-row-gap: 3px;
+    grid-column-gap: 3px;
+  }
+
+  .node {
+    font-size: 0.7ch;
+    border-radius: 1px;
+  }
+
+  .wall {
+    background-color: #5A5C5E;
+    box-shadow:
+      inset 1px 1px 2px #464849,
+      inset -1px -1px 2px #cccaca;
+    color: #5A5C5E;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 600px) {
+  select{
+    width: 120px;
+  }
+  
+  .flex-labels {
+    width: 90%;
+  }
+
+  button,
+  select,
+  .node,
+  .container {
+    box-shadow:
+      2px 2px 3px #5A5C5E,
+      -2px -2px 3px #ffffff;
+  }
+  button:hover,
+  select:hover{
+    box-shadow:
+      2px 1px 2px #5A5C5E,
+      -2px -1px 2px #ffffff;
+  }
+  .container {
+    border-radius: 3px;
+    padding: 10px;
+    margin-top: 5px;
+    grid-template-rows: repeat(20, 10px);
+    grid-template-columns: repeat(40, 10px);
+    grid-row-gap: 4px;
+    grid-column-gap: 4px;
   }
 
   .node {
     font-size: 0.75ch;
+    border-radius: 3px;
+  }
+
+  .wall {
+    background-color: #5A5C5E;
+    box-shadow:
+      inset 2px 2px 3px #464849,
+      inset -1px -1px 2px #cccaca;
+    color: #5A5C5E;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .flex-labels {
+    width: 80%;
+  }
+
+  button,
+  select,
+  .node,
+  .container {
+    box-shadow:
+      2px 2px 3px #5A5C5E,
+      -2px -2px 3px #ffffff;
+  }
+
+  button:hover,
+  select:hover{
+    box-shadow:
+      2px 1px 2px #5A5C5E,
+      -2px -1px 2px #ffffff;
+  }
+
+  .container {
+    border-radius: 3px;
+    padding: 7px;
+    margin-top: 10px;
+    grid-template-rows: repeat(20, 13px);
+    grid-template-columns: repeat(40, 13px);
+    grid-row-gap: 4px;
+    grid-column-gap: 4px;
+  }
+
+  .node {
+    font-size: 1ch;
+    border-radius: 3px;
+  }
+
+  .wall {
+    background-color: #5A5C5E;
+    box-shadow:
+      inset 2px 2px 4px #464849,
+      inset -1px -1px 3px #cccaca;
+    color: #5A5C5E;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .flex-labels {
+    width: 80%;
+  }
+
+  button,
+  select,
+  .node,
+  .container {
+    box-shadow:
+      3px 3px 4px #5A5C5E,
+      -3px -3px 4px #ffffff;
+  }
+  button:hover,
+  select:hover{
+    box-shadow:
+      2px 2px 3px #5A5C5E,
+      -2px -2px 3px #ffffff;
+  }
+  .container {
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    grid-template-rows: repeat(20, 20px);
+    grid-template-columns: repeat(40, 20px);
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+  }
+
+  .node {
+    font-size: 1.25ch;
+    border-radius: 5px;
+  }
+
+  .wall {
+    background-color: #5A5C5E;
+    box-shadow:
+      inset 3px 3px 5px #464849,
+      inset -2px -2px 3px #cccaca;
+    color: #5A5C5E;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+  button,
+  select,
+  .node,
+  .container {
+    box-shadow:
+      4px 4px 5px #5A5C5E,
+      -4px -4px 5px #ffffff;
+  }
+  button:hover,
+  select:hover{
+    box-shadow:
+      3px 3px 4px #5A5C5E,
+      -3px -3px 4px #ffffff;
+  }
+  .container {
+    border-radius: 5px;
+    padding: 12px;
+    margin-top: 10px;
+    grid-template-rows: repeat(20, 30px);
+    grid-template-columns: repeat(40, 30px);
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+  }
+
+  .node {
+    font-size: 1.5ch;
+    border-radius: 5px;
+  }
+
+  .wall {
+    background-color: #5A5C5E;
+    box-shadow:
+      inset 3px 3px 5px #464849,
+      inset -2px -2px 3px #cccaca;
+    color: #5A5C5E;
   }
 }

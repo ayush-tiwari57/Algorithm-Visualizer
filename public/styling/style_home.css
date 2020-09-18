@@ -13,8 +13,16 @@ body {
 }
 
 /* ///////////////////////NavBar Styling ///////////////////////// */
-.navbar {
+.navlen{
     width: 100%;
+    background: #c6d3e7;
+    box-shadow:
+        3px 3px 5px #5A5C5E,
+        -3px -3px 5px #ffffff;
+}
+.navbar {
+    margin-right: auto;
+    margin-left: auto;
     padding: 5px;
     display: flex;
     flex-wrap: wrap;
@@ -22,14 +30,10 @@ body {
     align-items: center;
     align-content: center;
     border: none;
-    font-size: larger;
+    /* font-size: larger; */
     text-align: center;
     font-weight: inherit;
-    background: #c6d3e7;
-    box-shadow:
-        3px 3px 5px #5A5C5E,
-        -3px -3px 5px #ffffff;
-
+    background: transparent;
 }
 
 
@@ -41,8 +45,6 @@ body {
 }
 
 .element {
-    margin-right: 10px;
-    margin-left: 10px;
     padding-left: 5px;
     padding-right: 5px;
     background: transparent;
@@ -65,7 +67,7 @@ a:visited {
     padding: 5px;
     color: black;
     text-decoration: none;
-    font-size: larger;
+    /* font-size: larger; */
     display: inline-flexbox;
     border: none;
 }
@@ -100,23 +102,74 @@ a:visited {
     align-items: center;
     text-align: center;
     box-shadow:
-    3px 3px 5px #5A5C5E,
-    -3px -3px 5px #ffffff;
+        3px 3px 5px #5A5C5E,
+        -3px -3px 5px #ffffff;
     cursor: pointer;
 }
 
 .flex-card-items:hover {
     box-shadow:
-    2px 2px 3px #5A5C5E,
-    -2px -2px 3px #ffffff;
+        2px 2px 3px #5A5C5E,
+        -2px -2px 3px #ffffff;
 }
 
 heading {
-    font-size: larger;
+    /* font-size: larger; */
     padding: 10px;
 }
 
 
 li {
     padding: 5px;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    body{
+        font-size: small;
+    }
+    .navbar{
+        width: 95%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    body{
+        font-size: small;
+    }
+    .navbar{
+        width: 95%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    body{
+        font-size: large;
+    }
+    .navbar{
+        width: 90%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    body{
+        font-size: larger;
+    }
+    .navbar{
+        width: 90%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    body{
+        font-size: x-large;
+    }
+    .navbar{
+        width: 90%;
+    }
 }
