@@ -1,26 +1,45 @@
+var refreshbtn = document.querySelector('refresh');
+var startbtn = document.querySelector('start');
+var container = document.querySelector('ArrayBox');
 var ArrayBox = document.getElementById("ArrayBox");
-var arr = []
+var speed_id = document.querySelector('speed');
+var count = document.querySelector('count');
+var arr = [];
 var divs = [];
+
+// refreshbtn.addEventListener('click', refresh);
+// startbtn.addEventListener('click', start);
+
+if (count == null) count = 60;
+if (speed_id == null) speed_id = 10;
 ArrayBox.style = "flex-direction:row";
 
 function GenerateArr(n) {
     ArrayBox.innerHTML = "";
-    ArrayBox.style="width: 50%; margin:auto; padding: 10px; box-shadow: 4px 4px 5px grey, 4px 4px 5px white;";
     for (var i = 0; i < n; i++) {
-        arr[i] = (Math.floor(Math.random()*500) + 500) % 100;
-        divs[i] = document.createElement("div");
-        ArrayBox.appendChild(divs[i]);
+        arr[i] = 5 + (Math.floor(Math.random() * 500) + 500) % 96;
+        divs[2 * i] = document.createElement("div");
+        divs[2 * i + 1] = document.createElement("div");
+        ArrayBox.appendChild(divs[2 * i]);
+        ArrayBox.appendChild(divs[2 * i + 1]);
 
-        var margin_size = 0.1;
-        var width = 100 / n - 2 * margin_size;
-
-        divs[i].style =
-            " margin: 0% " + margin_size + "%;" +
+        // var margin_size = 0.2;
+        var width = 100 / (2 * n);
+        divs[2 * i].style = "width: " + width + "%;";
+        divs[2 * i + 1].style =
+            // " margin: 0% " + margin_size + "%;" +
             " background: grey; width:" + width + "%;" +
-            "box-shadow: 3px 3px 5px grey, 3px 3px 5px white; "+
+            "box-shadow: 3px 3px 5px grey, 3px 3px 5px white; " +
             " height:" + arr[i] + "%;";
-        console.log(arr[i])
     }
 }
 
-window.onload = GenerateArr(100);
+// function start() {
+    
+// }
+
+// function refresh(){
+//     location.reload();
+// }
+
+window.onload = GenerateArr(count);
