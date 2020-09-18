@@ -39,10 +39,10 @@ export function speed(event) {
 function checkNode(row, col, curr, checker, seen, counter) {
 	if (row >= 0 && col >= 0 && row < rowsize && col < colsize) {
 		var node = document.querySelector(`div[row="${row}"][col="${col}"]`);
-		if(row==rowsize-1 && col==colsize-1){
-			checker = [node];
-			return false
-		}
+		// if(row==rowsize-1 && col==colsize-1){
+		// 	checker = [node];
+		// 	return false
+		// }
 		let wall = parseInt(node.getAttribute('wall'));
 		// console.log(wall);
 		if (wall != 1) {
@@ -118,7 +118,7 @@ export function dijkstra(x1 = 0, y1 = 0, x2 = rowsize - 1, y2 = colsize - 1) {
 		//   console.log(curr);
 		let row = parseInt(curr.getAttribute('row'));
 		let col = parseInt(curr.getAttribute('col'));
-		if(row==x2 && col==y2 ) break;
+		// if(row==x2 && col==y2 ) break;
 		let wall = parseInt(curr.getAttribute('wall'));
 		if (wall == 1) continue;
 		// Check up down left right
