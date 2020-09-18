@@ -1,6 +1,18 @@
 # Algorithm-Visualiser
 
-Visualize working of standard graph algorithms, and get good grasp of their working and traversal through all the nodes.
+Understanding becomes sharp when we are able to visualise them, so here we have Algrorithm visualiser, that helps you to see working of standarad algorithms, such as:
+<br> 1.) Graph Algorithms
+<br> &emsp;  1.1) Dijkastra's Algorithm
+<br> &emsp;  1.2) A* Algorithm
+<br> &emsp;  1.3) Breath First Search
+<br> &emsp;  1.4) Depth First Search
+<br> 2.) Sorting Algorithms
+<br> &emsp;  2.1) Bubble sort
+<br> &emsp;  2.2) Insertion sort
+<br> &emsp;  2.3) Selection sort
+<br> &emsp;  2.4) Merge sort
+<br> &emsp;  2.5) Quick sort
+<br> &emsp;  2.6) Heap sort
 
 ## Getting Started
 
