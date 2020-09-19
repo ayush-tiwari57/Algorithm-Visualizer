@@ -10,7 +10,7 @@ Click [here](https://servermonk.github.io/Algorithm-Visualizer/) to get directed
 
 ### Prerequisites
 
-Adequate insterest in graph algorithms.```
+Adequate insterest in graph algorithms.
 
 ## Built With
 
