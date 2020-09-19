@@ -1,6 +1,6 @@
 # Algorithm-Visualiser
 
-Understanding becomes sharp when we are able to visualise them, so here we have Algrorithm visualiser, that helps you to see working of standarad algorithms, such as:
+Understanding becomes sharp when we are able to visualise them, so here we have Algrorithm visualiser, that helps you to see working of standard algorithms, such as:
 <br> 1.) Graph Algorithms : Dijkastra's Algorithm, A* Algorithm, Breath First Search, Depth First Search.
 <br> 2.) Sorting Algorithms : Bubble sort, Insertion sort, Selection sort, Merge sort, Quick sort, Heap sort.
 
