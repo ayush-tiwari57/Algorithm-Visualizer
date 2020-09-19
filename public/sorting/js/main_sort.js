@@ -27,7 +27,7 @@ ArrayBox.style = "flex-direction:row";
 function GenerateArr() {
     ArrayBox.innerHTML = "";
     for (var i = 0; i < n; i++) {
-        arr[i] = 5 + (Math.floor(Math.random() * 500) + 500) % 96;
+        arr[i] = 1 + (Math.floor(Math.random() * 500) + 101) % 95;
         divs[2 * i] = document.createElement("div");
         divs[2 * i + 1] = document.createElement("div");
         ArrayBox.appendChild(divs[2 * i]);
@@ -51,6 +51,7 @@ function refresh() {
 
 sliderCount.oninput = function () {
     n=sliderCount.value;
+    width=100/(2*n);
     GenerateArr();
 }
 
