@@ -13,16 +13,14 @@ function div_update(cont, h, color) {
             " background:" + color + "; width:" + width + "%;" +
             "box-shadow: 2px -2px 3px #5F5F5F, 2px -2px 3px white; " +
             " height:" + h + "%;";
-        c_delay++;
-        console.log(c_delay);
-    }, c_delay*delay_time * 1000);
+    }, c_delay+=delay_time);
 }
 
 
 export function bubble(divs, height) {
     c_delay = 0;
-    delay_time = 40 - 2*(speed - 1);
-    // delay_time = Math.floor(10000 / (speed));
+    // delay_time = 40 - 2*(speed - 1);
+    delay_time=10000/(Math.floor(n/30)*speed); 
     console.log(c_delay, delay_time);
     for (var i = 0; i < n - 1; i++) {
         div_update(divs[1], height[j], "red"); //Color update
