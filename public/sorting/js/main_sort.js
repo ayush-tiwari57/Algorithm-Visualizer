@@ -1,4 +1,6 @@
-import { bubble } from "./bubble_sort.js";
+import {
+    bubble
+} from "./bubble_sort.js";
 
 var refreshbtn = document.getElementById('refresh');
 var startbtn = document.getElementById('start');
@@ -14,8 +16,6 @@ var sliderSpeed = document.getElementById('speed');
 export var n = sliderCount.value
 export var speed = sliderSpeed.value
 export var width = 100 / (2 * n);
-console.log(sliderCount.value);
-console.log(sliderSpeed.value);
 refreshbtn.addEventListener('click', refresh);
 startbtn.addEventListener('click', start);
 
@@ -42,15 +42,20 @@ function GenerateArr() {
 }
 
 function start() {
-    if(algo==="bubble") bubble(divs,arr);
+    if (algo === "bubble") bubble(divs, arr);
 }
 
 function refresh() {
     location.reload();
 }
 
-sliderCount.oninput= function(){
+sliderCount.oninput = function () {
+    n=sliderCount.value;
     GenerateArr();
+}
+
+sliderSpeed.oninput = function () {
+    speed = sliderSpeed.value;
 }
 
 window.onload = () => {

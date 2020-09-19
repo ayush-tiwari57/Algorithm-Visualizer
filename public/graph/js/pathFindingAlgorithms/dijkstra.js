@@ -66,9 +66,8 @@ function changeColor(node, counter, cost) {
 } // End changeColor
 
 export function dijkstra(x1 = 0, y1 = 0, x2 = rowsize - 1, y2 = colsize - 1) {
-	time=slider.value;
-	time= 40 + (time-1)*(-2);
-	console.log(time);
+	time = slider.value;
+	time = 40 + (time - 1) * (-2);
 	container.removeEventListener('mousedown', setWallAttribute);
 	container.removeEventListener('mouseover', setWallAttribute);
 	var startNode = document.querySelector(`div[row='${x1}'][col='${y1}']`);
