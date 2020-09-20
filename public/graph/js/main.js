@@ -53,7 +53,13 @@ function refresh() {
 function updateweight() {
 	weighttype = weightbtn.options[weightbtn.selectedIndex].value;
 	if (weighttype == "Unweighted") createEmptyBoard();
-	else createBoard();
+	else{
+		if(algorithm=="Astr"){
+			algobtn.value="Dstr";
+			algorithm=algobtn.options[algobtn.selectedIndex].value;
+		}
+		createBoard();
+	}
 	changeStart(10, 10);
 	changeEnd(10, 30);
 }
