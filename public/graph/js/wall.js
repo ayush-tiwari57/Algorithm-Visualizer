@@ -10,9 +10,9 @@ export function setWallAttribute(event) {
 			let node = document.querySelector('.node');
 			const row = event.target.getAttribute('row');
 			const col = event.target.getAttribute('col');
-			console.log('clicked');
-			console.log(row,col)
-			console.log(startCol,startCol)
+			// console.log('clicked');
+			// console.log(row,col)
+			// console.log(startCol,startCol)
 			if((row==startRow && col==startCol) || (endRow==row && endCol==col)){
 				window.alert('cannot make wall on start node or end node');
 			}

@@ -11,7 +11,9 @@ import {
 import {
 	dijkstra
 } from './pathFindingAlgorithms/dijkstra.js';
-
+import {
+	Astr
+} from './pathFindingAlgorithms/AStar.js';
 //variables
 var refreshbtn = document.querySelector('.refresh');
 var startbtn = document.querySelector('.start');
@@ -70,6 +72,7 @@ function updatealgo() {
 function start() {
 	console.log(algorithm);
 	if (algorithm === 'Dstr') dijkstra(startRow, startCol, endRow, endCol);
+	if (algorithm === 'Astr') Astr(startRow, startCol, endRow, endCol);
 } // End start
 
 // Initialize

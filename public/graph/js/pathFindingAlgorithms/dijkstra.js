@@ -7,7 +7,7 @@ import {
 import {
 	rowsize,
 	colsize,
-	weighttype, algorithm
+	weighttype
 } from '../main.js';
 // variables
 var container = document.querySelector('.container');
@@ -20,31 +20,30 @@ function checkNode(row, col, curr, checker, seen, counter) {
 	if (row >= 0 && col >= 0 && row < rowsize && col < colsize) {
 		var node = document.querySelector(`div[row="${row}"][col="${col}"]`);
 		let wall = parseInt(node.getAttribute('wall'));
+		if (wall == 1) return;
 		let prow = parseInt(curr.getAttribute('row'));
 		let pcol = parseInt(curr.getAttribute('col'));
 		// console.log(wall);
-		if (wall != 1) {
-			if(weighttype=="weighted") var cost = Math.min(
-				parseInt(curr.getAttribute('cost')) +
-				parseInt(node.getAttribute('weight')),
-				node.getAttribute('cost')
+		if (weighttype == "weighted") var cost = Math.min(
+			parseInt(curr.getAttribute('cost')) +
+			parseInt(node.getAttribute('weight')),
+			node.getAttribute('cost')
+		);
+		else var cost = Math.min(
+			parseInt(curr.getAttribute('cost')) +
+			Math.abs(Math.abs(prow - row) + Math.abs(pcol - col)),
+			node.getAttribute('cost')
+		);
+		if (cost < node.getAttribute('cost')) {
+			node.setAttribute(
+				'parent',
+				curr.getAttribute('row') + '|' + curr.getAttribute('col')
 			);
-			else var cost = Math.min(
-				parseInt(curr.getAttribute('cost')) +
-				Math.abs(Math.abs(prow-row)+Math.abs(pcol-col)),
-				node.getAttribute('cost')
-			);
-			if (cost < node.getAttribute('cost')) {
-				node.setAttribute(
-					'parent',
-					curr.getAttribute('row') + '|' + curr.getAttribute('col')
-				);
-				node.setAttribute('cost', cost);
-			}
-
-			// changeColor(node, counter, cost);
-			changeColor(curr, counter, cost);
+			node.setAttribute('cost', cost);
 		}
+
+		// changeColor(node, counter, cost);
+		changeColor(curr, counter, curr.getAttribute('cost'));
 		if (!seen.includes(node)) {
 			checker.push(node);
 		}
@@ -88,24 +87,19 @@ export function dijkstra(x1 = 0, y1 = 0, x2 = rowsize - 1, y2 = colsize - 1) {
 	var counter = 1;
 	while (checker.length != 0) {
 		checker.sort(function (a, b) {
-			if (parseInt(a.getAttribute('cost')) < parseInt(b.getAttribute('cost'))) {
-				return 1;
-			}
-			if (parseInt(a.getAttribute('cost')) > parseInt(b.getAttribute('cost'))) {
-				return -1;
-			}
+			if (parseInt(a.getAttribute('cost')) < parseInt(b.getAttribute('cost'))) return 1;
+			if (parseInt(a.getAttribute('cost')) > parseInt(b.getAttribute('cost'))) return -1;
 			return 0;
 		});
-		// console.log(checker)
 		let curr = checker.pop();
+
 		// Important to parse string to integer
-		//   console.log(curr);
 		let row = parseInt(curr.getAttribute('row'));
 		let col = parseInt(curr.getAttribute('col'));
-		if(weighttype=="Unweighted" && row==x2 && col==y2) break;
-		// if(row==x2 && col==y2 ) break;
+		if (weighttype == "Unweighted" && row == x2 && col == y2) break;
 		let wall = parseInt(curr.getAttribute('wall'));
 		if (wall == 1) continue;
+		
 		// Check up down left right
 		let nextRow = row + 1;
 		let prevRow = row - 1;
