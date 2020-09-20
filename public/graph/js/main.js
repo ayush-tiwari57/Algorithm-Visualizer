@@ -1,12 +1,23 @@
 // importing functions
-import { createBoard,changeStart,changeEnd } from './createGrid.js';
-import { setWallAttribute } from './wall.js';
-import { dijkstra } from './pathFindingAlgorithms/dijkstra.js';
+import {
+	createEmptyBoard,
+	createBoard,
+	changeStart,
+	changeEnd
+} from './createGrid.js';
+import {
+	setWallAttribute
+} from './wall.js';
+import {
+	dijkstra
+} from './pathFindingAlgorithms/dijkstra.js';
 
 //variables
 var refreshbtn = document.querySelector('.refresh');
 var startbtn = document.querySelector('.start');
 var container = document.querySelector('.container');
+var weightbtn = document.getElementById("weight");
+var algobtn = document.getElementById("algo");
 
 // export variables
 export var rowsize = 20;
@@ -15,25 +26,50 @@ export var startRow = 10;
 export var endRow = 10;
 export var startCol = 10;
 export var endCol = 30;
-export var algorithm = 'dijkstra';
-export var mouseIsDown = false;	
+export var mouseIsDown = false;
+export var weighttype = weightbtn.options[weightbtn.selectedIndex].value;
+export var algorithm = algobtn.options[algobtn.selectedIndex].value;
 
 //Initializing eventListeners
 refreshbtn.addEventListener('click', refresh);
 startbtn.addEventListener('click', start);
-container.addEventListener('mousedown', function () {mouseIsDown = true});
-container.addEventListener('mouseup', function () {mouseIsDown = false});
+container.addEventListener('mousedown', function () {
+	mouseIsDown = true
+});
+container.addEventListener('mouseup', function () {
+	mouseIsDown = false
+});
 container.addEventListener('mouseover', setWallAttribute);
+weightbtn.addEventListener('change', updateweight);
+algobtn.addEventListener('change', updatealgo);
 
 // refresh function
 function refresh() {
 	location.reload();
 } // End refresh
 
-// Start path-finding
+function updateweight() {
+	weighttype = weightbtn.options[weightbtn.selectedIndex].value;
+	if (weighttype == "Unweighted") createEmptyBoard();
+	else createBoard();
+	changeStart(10, 10);
+	changeEnd(10, 30);
+}
+
+function updatealgo() {
+	algorithm = algobtn.options[algobtn.selectedIndex].value;
+	if (algorithm == "Astr") {
+		weightbtn.value = "Unweighted";
+		weighttype = weightbtn.options[weightbtn.selectedIndex].value;
+		createEmptyBoard();
+	}
+	changeStart(10, 10);
+	changeEnd(10, 30);
+}
 
 function start() {
-	if (algorithm === 'dijkstra') dijkstra(startRow,startCol,endRow,endCol);
+	console.log(algorithm);
+	if (algorithm === 'Dstr') dijkstra(startRow, startCol, endRow, endCol);
 } // End start
 
 // Initialize
@@ -41,7 +77,8 @@ window.onload = () => {
 	container.addEventListener('mousedown', setWallAttribute);
 	container.addEventListener('mouseup', setWallAttribute);
 	container.addEventListener('mouseover', setWallAttribute);
-	createBoard();
-	changeStart(10,10);
-	changeEnd(10,30);
+	if (weighttype == "Unweighted") createEmptyBoard();
+	else createBoard();
+	changeStart(10, 10);
+	changeEnd(10, 30);
 };

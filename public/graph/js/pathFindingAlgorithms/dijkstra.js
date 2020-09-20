@@ -6,7 +6,8 @@ import {
 } from '../wall.js';
 import {
 	rowsize,
-	colsize
+	colsize,
+	weighttype, algorithm
 } from '../main.js';
 // variables
 var container = document.querySelector('.container');
@@ -18,16 +19,19 @@ console.log(time);
 function checkNode(row, col, curr, checker, seen, counter) {
 	if (row >= 0 && col >= 0 && row < rowsize && col < colsize) {
 		var node = document.querySelector(`div[row="${row}"][col="${col}"]`);
-		// if(row==rowsize-1 && col==colsize-1){
-		// 	checker = [node];
-		// 	return false
-		// }
 		let wall = parseInt(node.getAttribute('wall'));
+		let prow = parseInt(curr.getAttribute('row'));
+		let pcol = parseInt(curr.getAttribute('col'));
 		// console.log(wall);
 		if (wall != 1) {
-			var cost = Math.min(
+			if(weighttype=="weighted") var cost = Math.min(
 				parseInt(curr.getAttribute('cost')) +
 				parseInt(node.getAttribute('weight')),
+				node.getAttribute('cost')
+			);
+			else var cost = Math.min(
+				parseInt(curr.getAttribute('cost')) +
+				Math.abs(Math.abs(prow-row)+Math.abs(pcol-col)),
 				node.getAttribute('cost')
 			);
 			if (cost < node.getAttribute('cost')) {
@@ -38,8 +42,8 @@ function checkNode(row, col, curr, checker, seen, counter) {
 				node.setAttribute('cost', cost);
 			}
 
-			changeColor(node, counter, cost);
-			changeColor(curr, counter, false);
+			// changeColor(node, counter, cost);
+			changeColor(curr, counter, cost);
 		}
 		if (!seen.includes(node)) {
 			checker.push(node);
@@ -98,6 +102,7 @@ export function dijkstra(x1 = 0, y1 = 0, x2 = rowsize - 1, y2 = colsize - 1) {
 		//   console.log(curr);
 		let row = parseInt(curr.getAttribute('row'));
 		let col = parseInt(curr.getAttribute('col'));
+		if(weighttype=="Unweighted" && row==x2 && col==y2) break;
 		// if(row==x2 && col==y2 ) break;
 		let wall = parseInt(curr.getAttribute('wall'));
 		if (wall == 1) continue;
