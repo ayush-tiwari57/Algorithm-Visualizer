@@ -19,7 +19,7 @@ function calc(node, x2, y2) {
     let row = parseInt(node.getAttribute('row'));
     let col = parseInt(node.getAttribute('col'));
     return parseInt(node.getAttribute('cost')) +
-        Math.abs(row - x2) + Math.abs(col - y2);
+        Math.sqrt(Math.pow((row - x2), 2) + Math.pow(col - y2, 2));
 }
 
 function changeColor(node, counter, cost) {
@@ -45,7 +45,7 @@ function checkNode(row, col, curr, checker, seen, counter) {
         // console.log(wall);
         var cost = Math.min(
             parseInt(curr.getAttribute('cost')) +
-            Math.abs(Math.abs(prow - row) + Math.abs(pcol - col)),
+            Math.abs(Math.pow(prow - row, 2) + Math.pow(pcol - col, 2)),
             node.getAttribute('cost')
         );
         if (cost < node.getAttribute('cost')) {
@@ -87,10 +87,7 @@ export function Astr(x1 = 0, y1 = 0, x2 = rowsize - 1, y2 = colsize - 1) {
     var counter = 1;
     while (checker.length != 0) {
         checker.sort(function (a, b) {
-            if (calc(a, x2, y2) < calc(b, x2, y2)) {
-                console.log(calc(a, x2, y2), calc(b, x2, y2));
-                return 1;
-            }
+            if (calc(a, x2, y2) < calc(b, x2, y2)) return 1;
             if (calc(a, x2, y2) > calc(b, x2, y2)) return -1;
             return 0;
         });
