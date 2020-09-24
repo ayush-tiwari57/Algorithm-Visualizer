@@ -1,33 +1,63 @@
+<div align="center"> <img align="center" alt="codeinn" src="Logo1.png" height='150' width='150'></div>
+
+<br /><br />
+
 # Algorithm-Visualiser
 
-Understanding becomes sharp when we are able to visualise them, so here we have Algrorithm visualiser, that helps you to see working of standard algorithms, such as:
-<br> 1.) Graph Algorithms : Dijkastra's Algorithm, A* Algorithm, Breath First Search, Depth First Search.
-<br> 2.) Sorting Algorithms : Bubble sort, Insertion sort, Selection sort, Merge sort, Quick sort, Heap sort.
+Understanding becomes sharp when we are able to visualise them, so here we have Algorithm visualiser, that helps you to see working of standard algorithms, such as:
+
+1.) *Graph Algorithms:* Dijkastra's Algorithm, A\* Algorithm, Breath First Search, Depth First Search.
+
+2.) *Sorting Algorithms:* Bubble sort, Insertion sort, Selection sort, Merge sort, Quick sort, Heap sort.
 
 ## Getting Started
 
-Click [here](https://servermonk.github.io/Algorithm-Visualizer/) to get directed to the hosted page.
+> Click [here](https://servermonk.github.io/Algorithm-Visualizer/) to get directed to the hosted page.
 
-### Prerequisites
+#### GitHub Repository Structure
 
-Adequate insterest in graph algorithms.
+| S.No. | Branch Name                                                              | Purpose                       |
+| ----- | ------------------------------------------------------------------------ | ----------------------------- |
+| 1.    | [master](https://github.com/servermonk/Algorithm-Visualizer/tree/master) | contains the main code        |
+| 2.    | [beta](https://github.com/servermonk/Algorithm-Visualizer/tree/beta)     | contains all development code |
 
-## Built With
+> *Note*: We're not accepting any changes in the `master` branch, make PRs in the `beta` branch only.
 
-* HTML | CSS
-* JS
-* NodeJs (Server hosting)
-* Love and Passion
+## Prerequisites
+
+Adequate interest in algorithms.
+
+## Technology Stack Used
+<img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/>
+<img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/>
+<img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
+<img src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/>
+<img src="https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/>
+
+- HTML | CSS
+- JS
+- NodeJS
 
 ## Versioning
 
 Currently 1.0: Supports only Dijkstra's Algorithm
 
-## Authors
+## Project administrators ✨
 
-* **Anubhav Singhal** - [@anubhavitis](https://github.com/anubhavitis)
-* **Ayush Tiwari** - [@servermonk](https://github.com/servermonk)
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
-## Thanks for visiting
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody><tr>
+    <td align="center"><a href="https://github.com/anubhavitis"><img alt="Anubhav" src="https://avatars1.githubusercontent.com/u/26124625?s=400&u=c411643ffe3db941107eca578ada396c5f8dfa3a&v=4" width="100px;"><br><sub><b>Anubhav Singhal</b></sub></a><br><a href="https://github.com/servermonk/Algorithm-Visualizer/commits?author=anubhavitis" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/servermonk"><img alt="Ayush" src="https://avatars0.githubusercontent.com/u/47775419?s=400&u=8093851c8db10edad1d6a00435989daab20c2bbe&v=4" width="100px;"><br><sub><b>Ayush Tiwari</b></sub></a><br><a href="https://github.com/servermonk/Algorithm-Visualizer/commits?author=servermonk" title="Code">💻</a></td>
+  </tr>
+</tbody></table>
 
-Give us a star if you like it.
+## **Hey ya!**
+
+Like the project?? Give us a star ⭐.
+
+Have a nice day!
