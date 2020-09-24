@@ -28,11 +28,7 @@ Understanding becomes sharp when we are able to visualise them, so here we have 
 Adequate interest in algorithms.
 
 ## Technology Stack Used
-<img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/>
-<img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/>
-<img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
-<img src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/>
-<img src="https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/>
+<img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/> <img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/> <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/> <img src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/> <img src="https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/>
 
 - HTML | CSS
 - JS
@@ -40,7 +36,15 @@ Adequate interest in algorithms.
 
 ## Versioning
 
-Currently 1.0: Supports only Dijkstra's Algorithm
+**Curent Version:** V 4.0 Bubble Sort added.
+
+<details> <summary> <strong> Previous Versions <strong> </summary>
+**V 3.0:** A* Algorithm (Weighted and Unweighted Graph).
+
+**V 2.0:** Dijkstra's Algorithm (Weighted and Unweighted Graph).
+
+**V 1.0:** Dijkstra's Algorithm (Weighted Graph).
+</details>
 
 ## Project administrators ✨
 
