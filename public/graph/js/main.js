@@ -63,7 +63,7 @@ function updateweight() {
 			algobtn.value = 'Dstr';
 			algorithm = algobtn.options[algobtn.selectedIndex].value;
 		}
-		createBoard();
+		refreshBoard();
 	}
 	changeStart(10, 10);
 	changeEnd(10, 30);
@@ -74,7 +74,7 @@ function updatealgo() {
 	if (algorithm == 'Astr') {
 		weightbtn.value = 'Unweighted';
 		weighttype = weightbtn.options[weightbtn.selectedIndex].value;
-		createEmptyBoard();
+		refreshEmptyBoard();
 	}
 	changeStart(10, 10);
 	changeEnd(10, 30);
