@@ -90,6 +90,7 @@ export function refreshBoard() {
 			let weight = Math.round(getRandomArbitrary(5));
 			node.setAttribute('weight', weight);
 			node.innerHTML = weight.toString();
+			node.style.background="transparent";
 		}
 	}
 	changeStart(startRow, startCol);
@@ -107,6 +108,7 @@ export function refreshEmptyBoard() {
 			let weight = 0;
 			node.setAttribute('weight', weight);
 			node.innerHTML = '';
+			node.style.background="transparent";
 		}
 	}
 	changeStart(startRow, startCol);
