@@ -79,7 +79,7 @@ export function dijkstra(x1 = 0, y1 = 0, x2 = rowsize - 1, y2 = colsize - 1) {
 	var btn = document.querySelector('.start');
 	var refreshBtn = document.querySelector('.refresh');
 	btn.style.visibility = 'hidden';
-	// refreshBtn.style.visibility = 'hidden';
+	refreshBtn.style.visibility = 'hidden';
 
 	// Algo here
 	var seen = [startNode];

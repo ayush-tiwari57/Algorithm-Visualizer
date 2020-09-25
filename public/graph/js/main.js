@@ -3,23 +3,20 @@ import {
 	createEmptyBoard,
 	createBoard,
 	changeStart,
-	changeEnd
+	changeEnd,
+	refreshBoard,
+	refreshEmptyBoard,
 } from './createGrid.js';
-import {
-	setWallAttribute
-} from './wall.js';
-import {
-	dijkstra
-} from './pathFindingAlgorithms/dijkstra.js';
-import {
-	Astr
-} from './pathFindingAlgorithms/AStar.js';
+import { setWallAttribute } from './wall.js';
+import { dijkstra } from './pathFindingAlgorithms/dijkstra.js';
+import { Astr } from './pathFindingAlgorithms/AStar.js';
 //variables
+var resetbtn = document.querySelector('.reset');
 var refreshbtn = document.querySelector('.refresh');
 var startbtn = document.querySelector('.start');
 var container = document.querySelector('.container');
-var weightbtn = document.getElementById("weight");
-var algobtn = document.getElementById("algo");
+var weightbtn = document.getElementById('weight');
+var algobtn = document.getElementById('algo');
 
 // export variables
 export var rowsize = 20;
@@ -33,30 +30,38 @@ export var weighttype = weightbtn.options[weightbtn.selectedIndex].value;
 export var algorithm = algobtn.options[algobtn.selectedIndex].value;
 
 //Initializing eventListeners
-refreshbtn.addEventListener('click', refresh);
+resetbtn.addEventListener('click', reset);
 startbtn.addEventListener('click', start);
+refreshbtn.addEventListener('click', refresh);
 container.addEventListener('mousedown', function () {
-	mouseIsDown = true
+	mouseIsDown = true;
 });
 container.addEventListener('mouseup', function () {
-	mouseIsDown = false
+	mouseIsDown = false;
 });
 container.addEventListener('mouseover', setWallAttribute);
 weightbtn.addEventListener('change', updateweight);
 algobtn.addEventListener('change', updatealgo);
 
-// refresh function
-function refresh() {
+// reset function
+function reset() {
 	location.reload();
 } // End refresh
 
+//refresh function
+function refresh() {
+	if (weighttype == 'Unweighted') refreshEmptyBoard();
+	else refreshBoard();
+	startbtn.style.visibility = 'visible'
+} //end refresh function
+
 function updateweight() {
 	weighttype = weightbtn.options[weightbtn.selectedIndex].value;
-	if (weighttype == "Unweighted") createEmptyBoard();
-	else{
-		if(algorithm=="Astr"){
-			algobtn.value="Dstr";
-			algorithm=algobtn.options[algobtn.selectedIndex].value;
+	if (weighttype == 'Unweighted') createEmptyBoard();
+	else {
+		if (algorithm == 'Astr') {
+			algobtn.value = 'Dstr';
+			algorithm = algobtn.options[algobtn.selectedIndex].value;
 		}
 		createBoard();
 	}
@@ -66,8 +71,8 @@ function updateweight() {
 
 function updatealgo() {
 	algorithm = algobtn.options[algobtn.selectedIndex].value;
-	if (algorithm == "Astr") {
-		weightbtn.value = "Unweighted";
+	if (algorithm == 'Astr') {
+		weightbtn.value = 'Unweighted';
 		weighttype = weightbtn.options[weightbtn.selectedIndex].value;
 		createEmptyBoard();
 	}
@@ -86,7 +91,7 @@ window.onload = () => {
 	container.addEventListener('mousedown', setWallAttribute);
 	container.addEventListener('mouseup', setWallAttribute);
 	container.addEventListener('mouseover', setWallAttribute);
-	if (weighttype == "Unweighted") createEmptyBoard();
+	if (weighttype == 'Unweighted') createEmptyBoard();
 	else createBoard();
 	changeStart(10, 10);
 	changeEnd(10, 30);

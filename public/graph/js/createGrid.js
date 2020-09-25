@@ -1,6 +1,10 @@
 import {
 	rowsize,
-	colsize
+	colsize,
+	startCol,
+	startRow,
+	endCol,
+	endRow,
 } from './main.js';
 
 // Returns a random number between min (inclusive) and max (exclusive)
@@ -45,7 +49,6 @@ export function createBoard() {
 			grid.appendChild(temp);
 		}
 	}
-
 }
 
 export function createEmptyBoard() {
@@ -75,3 +78,37 @@ export function changeEnd(x2 = rowsize - 1, y2 = colsize - 1) {
 	endNode.style.color = '#ffffff';
 	endNode.style.fontWeight = 'bolder';
 } // End createBoard
+
+//refreshBoard
+export function refreshBoard() {
+	for (var row = 0; row < rowsize; row++) {
+		for (var col = 0; col < colsize; col++) {
+			var node = document.querySelector(`div[row="${row}"][col="${col}"]`);
+			if (node.getAttribute('wall') == 1) continue;
+			node.setAttribute('cost', Number.POSITIVE_INFINITY);
+			node.setAttribute('parent', null);
+			let weight = Math.round(getRandomArbitrary(5));
+			node.setAttribute('weight', weight);
+			node.innerHTML = weight.toString();
+		}
+	}
+	changeStart(startRow, startCol);
+	changeEnd(endRow, endCol);
+}
+
+//refreshEmptyBoard
+export function refreshEmptyBoard() {
+	for (var row = 0; row < rowsize; row++) {
+		for (var col = 0; col < colsize; col++) {
+			var node = document.querySelector(`div[row="${row}"][col="${col}"]`);
+			if (node.getAttribute('wall') == 1) continue;
+			node.setAttribute('cost', Number.POSITIVE_INFINITY);
+			node.setAttribute('parent', null);
+			let weight = 0;
+			node.setAttribute('weight', weight);
+			node.innerHTML = '';
+		}
+	}
+	changeStart(startRow, startCol);
+	changeEnd(endRow, endCol);
+}
