@@ -91,6 +91,7 @@ export function refreshBoard() {
 			node.setAttribute('weight', weight);
 			node.innerHTML = weight.toString();
 			node.style.background="transparent";
+			node.style.color="black";
 		}
 	}
 	changeStart(startRow, startCol);
