@@ -60,7 +60,7 @@ function refresh() {
 
 function updateweight() {
 	weighttype = weightbtn.options[weightbtn.selectedIndex].value;
-	if (weighttype == 'Unweighted') createEmptyBoard();
+	if (weighttype == 'Unweighted') refreshEmptyBoard();
 	else {
 		if (algorithm == 'Astr') {
 			algobtn.value = 'Dstr';
