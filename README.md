@@ -6,7 +6,7 @@
 
 Understanding becomes sharp when we are able to visualise them, so here we have Algorithm visualiser, that helps you to see working of standard algorithms, such as:
 
-1.) *Graph Algorithms:* Dijkastra's Algorithm, A\* Algorithm, Breath First Search, Depth First Search.
+1.) *Graph Algorithms:* Dijkstra's Algorithm, A\* Algorithm, Breath First Search, Depth First Search.
 
 2.) *Sorting Algorithms:* Bubble sort, Insertion sort, Selection sort, Merge sort, Quick sort, Heap sort.
 
@@ -38,17 +38,53 @@ Adequate interest in algorithms.
 
 **Curent Version:** V 4.0 Bubble Sort added.
 
-<details> <summary> <strong> Previous Versions <strong> </summary>
-**V 3.0:** A* Algorithm (Weighted and Unweighted Graph).
+<details> <summary> <strong> Previous Versions </strong> </summary>
+    
+**V 3.0:** `A*` Algorithm (Weighted and Unweighted Graph).
 
 **V 2.0:** Dijkstra's Algorithm (Weighted and Unweighted Graph).
 
 **V 1.0:** Dijkstra's Algorithm (Weighted Graph).
 </details>
 
+## Project Setup
+- Fork and clone the Repo by typing the following commands in the terminal 
+```
+$ git clone https://github.com/your-username/Algorithm-Visualizer.git
+$ cd Algorithm Viusalizer
+```
+- Change Branch using:
+```
+$ git checkout beta
+```
+- To open the site you can either use [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) of VS-Code or similar tools, or you need to install Node.js 
+    
+    To open site on Localhost:
+    - Install node dependencies using:
+    ```
+    $ npm install
+    ```
+
+    - To start the server, type:
+    ```
+    $ node server
+    ```
+   
+    - Then on your browser type http://localhost:3000/
+
+- Make changes to the code and save your changes
+- Commit your changes using:
+```
+$ git commit -m "add any comment"
+```
+- Push the changes to the forked repository
+- Navigate to the original repository and make a pull request
+
+
 ## Project administrators ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -59,6 +95,13 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/servermonk"><img alt="Ayush" src="https://avatars0.githubusercontent.com/u/47775419?s=400&u=8093851c8db10edad1d6a00435989daab20c2bbe&v=4" width="100px;"><br><sub><b>Ayush Tiwari</b></sub></a><br><a href="https://github.com/servermonk/Algorithm-Visualizer/commits?author=servermonk" title="Code">💻</a></td>
   </tr>
 </tbody></table>
+
+## Project Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+
+[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/0)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/0)[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/1)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/1)[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/2)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/2)[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/3)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/3)[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/4)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/4)[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/5)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/5)[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/6)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/6)[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/7)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/7)
 
 ## **Hey ya!**
 
