@@ -46,6 +46,40 @@ Adequate interest in algorithms.
 **V 1.0:** Dijkstra's Algorithm (Weighted Graph).
 </details>
 
+## Project Setup
+- Fork and clone the Repo by typing the following commands in the terminal 
+```
+$ git clone https://github.com/your-username/Algorithm-Visualizer.git
+$ cd Algorithm Viusalizer
+```
+- Change Branch using:
+```
+$ git checkout beta
+```
+- To open the site you can either use [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) of VS-Code or similar tools, or you need to install Node.js 
+    
+    To open site on Localhost:
+    - Install node dependencies using:
+    ```
+    $ npm install
+    ```
+
+    - To start the server, type:
+    ```
+    $ node server
+    ```
+   
+    - Then on your browser type http://localhost:3000/
+
+- Make changes to the code and save your changes
+- Commit your changes using:
+```
+$ git commit -m "add any comment"
+```
+- Push the changes to the forked repository
+- Navigate to the original repository and make a pull request
+
+
 ## Project administrators ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
