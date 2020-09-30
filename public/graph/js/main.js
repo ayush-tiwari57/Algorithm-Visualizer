@@ -50,6 +50,9 @@ function reset() {
 
 //refresh function
 function refresh() {
+	container.addEventListener('mousedown', setWallAttribute);
+	container.addEventListener('mouseup', setWallAttribute);
+	container.addEventListener('mouseover', setWallAttribute);
 	if (weighttype == 'Unweighted') refreshEmptyBoard();
 	else refreshBoard();
 	startbtn.style.visibility = 'visible'
