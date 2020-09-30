@@ -7,9 +7,15 @@ import {
 	refreshBoard,
 	refreshEmptyBoard,
 } from './createGrid.js';
-import { setWallAttribute } from './wall.js';
-import { dijkstra } from './pathFindingAlgorithms/dijkstra.js';
-import { Astr } from './pathFindingAlgorithms/AStar.js';
+import {
+	setWallAttribute
+} from './wall.js';
+import {
+	dijkstra
+} from './pathFindingAlgorithms/dijkstra.js';
+import {
+	Astr
+} from './pathFindingAlgorithms/AStar.js';
 //variables
 var resetbtn = document.querySelector('.reset');
 var refreshbtn = document.querySelector('.refresh');
@@ -50,6 +56,9 @@ function reset() {
 
 //refresh function
 function refresh() {
+	container.addEventListener('mousedown', setWallAttribute);
+	container.addEventListener('mouseup', setWallAttribute);
+	container.addEventListener('mouseover', setWallAttribute);
 	if (weighttype == 'Unweighted') refreshEmptyBoard();
 	else refreshBoard();
 	startbtn.style.visibility = 'visible'
@@ -57,13 +66,13 @@ function refresh() {
 
 function updateweight() {
 	weighttype = weightbtn.options[weightbtn.selectedIndex].value;
-	if (weighttype == 'Unweighted') createEmptyBoard();
+	if (weighttype == 'Unweighted') refreshEmptyBoard();
 	else {
 		if (algorithm == 'Astr') {
 			algobtn.value = 'Dstr';
 			algorithm = algobtn.options[algobtn.selectedIndex].value;
 		}
-		createBoard();
+		refreshBoard();
 	}
 	changeStart(10, 10);
 	changeEnd(10, 30);
@@ -74,7 +83,11 @@ function updatealgo() {
 	if (algorithm == 'Astr') {
 		weightbtn.value = 'Unweighted';
 		weighttype = weightbtn.options[weightbtn.selectedIndex].value;
-		createEmptyBoard();
+		refreshEmptyBoard();
+	}
+	if (algorithm == 'Dstr') {
+		if (weightbtn.value == 'Unweighted') refreshEmptyBoard();
+		else refreshBoard();
 	}
 	changeStart(10, 10);
 	changeEnd(10, 30);

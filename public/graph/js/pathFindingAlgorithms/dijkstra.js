@@ -57,14 +57,13 @@ function checkNode(row, col, curr, checker, seen, counter) {
 // Animate the nodes
 function changeColor(node, counter, cost) {
 	setTimeout(() => {
-		node.style.backgroundColor = '#00FF00';
+		node.setAttribute('class','Path_green');
 		if (cost) {
 			node.innerHTML = cost;
 		}
 	}, counter * time);
 	setTimeout(() => {
-		node.style.backgroundColor = '#DC143C';
-		node.style.color = '#ffffff';
+		node.setAttribute('class','Path_red');
 	}, counter * time + 100);
 } // End changeColor
 
@@ -114,24 +113,16 @@ export function dijkstra(x1 = 0, y1 = 0, x2 = rowsize - 1, y2 = colsize - 1) {
 
 	// Draw out best route
 	setTimeout(() => {
-		startNode.style.backgroundColor = '#26466D';
-		startNode.style.color = '#000000';
-		startNode.style.color = "#ffffff";
-		startNode.style.fontWeight = "bolder";
-		startNode.style.boxShadow = '3px 3px 5px #006400';
+		startNode.setAttribute('class','ends')
 		while (endNode.getAttribute('parent') != 'null') {
-			endNode.style.backgroundColor = '#00FF00';
-			endNode.style.color = '#000000';
-			endNode.style.boxShadow = '3px 3px 5px #006400';
+			endNode.setAttribute('class','Path_green')
 			var coor = endNode.getAttribute('parent').split('|');
 			var prow = parseInt(coor[0]);
 			var pcol = parseInt(coor[1]);
 			endNode = document.querySelector(`div[row="${prow}"][col="${pcol}"]`);
 		}
 		endNode = document.querySelector(`div[row="${x2}"][col="${y2}"]`);
-		endNode.style.backgroundColor = '#26466D';
-		endNode.style.color = "#ffffff";
-		endNode.style.fontWeight = "bolder";
+		endNode.setAttribute('class','ends');
 	}, counter * time + 100);
 	// Show refresh button again
 	setTimeout(() => {
