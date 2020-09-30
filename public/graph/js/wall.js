@@ -4,10 +4,9 @@ import { mouseIsDown, startCol, startRow, endCol, endRow } from './main.js';
 
 // function for setting wall attribute
 export function setWallAttribute(event) {
-	// console.log(event);
 	if (mouseIsDown) {
-		if (event.target.classList.contains('node')) {
-			let node = document.querySelector('.node');
+		if (event.target.classList.contains('before_start')) {
+			let node = document.querySelector('.before_start');
 			const row = event.target.getAttribute('row');
 			const col = event.target.getAttribute('col');
 			// console.log('clicked');
