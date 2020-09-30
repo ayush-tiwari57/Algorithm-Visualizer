@@ -166,6 +166,12 @@ button:hover {
     inset 5px 5px 7px #464849,
     inset -1px -1px 2px #cccaca;
   color: #5A5C5E;
+  text-align: center;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: cell;
   border: none;
 }
 

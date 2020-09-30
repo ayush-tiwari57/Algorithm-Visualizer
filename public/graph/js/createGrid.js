@@ -26,15 +26,20 @@ function createNode(row, col, weight) {
 	return node;
 } // End createNode
 
-function updateNode(node, row, col, weight) {
-	node.setAttribute('class', 'before_start');
+function updateNode(node, row, col, weight, wall) {
+
 	node.setAttribute('row', row);
 	node.setAttribute('col', col);
-	node.setAttribute('wall', 0);
 	node.setAttribute('cost', Number.POSITIVE_INFINITY);
 	node.setAttribute('parent', null);
 	node.setAttribute('weight', weight);
+	node.setAttribute('class', 'before_start');
 	node.innerText = weight.toString();
+	if (wall == 1) {
+		node.setAttribute('wall', 1);
+		node.className+=' wall';
+	}
+	else node.setAttribute('wall', 0);
 	return node;
 }
 
@@ -51,15 +56,20 @@ function createEmptyNode(row, col) {
 	return node;
 }
 
-function updateEmptyNode(node, row, col) {
-	node.setAttribute('class', 'before_start');
+function updateEmptyNode(node, row, col, wall) {
+
 	node.setAttribute('row', row);
 	node.setAttribute('col', col);
-	node.setAttribute('wall', 0);
 	node.setAttribute('cost', Number.POSITIVE_INFINITY);
 	node.setAttribute('parent', null);
 	node.setAttribute('border', '1px solid black');
+	node.setAttribute('class', 'before_start');
 	node.innerText = '';
+	if (wall == 1) {
+		node.setAttribute('wall', 1);
+		node.className+=" wall";
+	}
+	else node.setAttribute('wall', 0);
 	return node;
 }
 
@@ -107,10 +117,8 @@ export function refreshBoard() {
 		for (var col = 0; col < colsize; col++) {
 			var node = document.querySelector(`div[row="${row}"][col="${col}"]`);
 			let weight = Math.round(getRandomArbitrary(5));
-			if (node.getAttribute('wall') == 1) {
-				updateEmptyNode(node, row, col, weight);
-				node.setAttribute('wall', 1);
-			} else updateNode(node, row, col, weight);
+			if (node.getAttribute('wall') == 1) updateNode(node, row, col, weight, 1);
+			else updateNode(node, row, col, weight, 0);
 		}
 	}
 	changeStart(startRow, startCol);
@@ -122,10 +130,8 @@ export function refreshEmptyBoard() {
 	for (var row = 0; row < rowsize; row++) {
 		for (var col = 0; col < colsize; col++) {
 			var node = document.querySelector(`div[row="${row}"][col="${col}"]`);
-			if (node.getAttribute('wall') == 1) {
-				updateEmptyNode(node, row, col);
-				node.setAttribute('wall', 1);
-			} else updateEmptyNode(node, row, col);
+			if (node.getAttribute('wall') == 1) updateEmptyNode(node, row, col, 1);
+			else updateEmptyNode(node, row, col, 0);
 			// node.style.background="transparent";
 		}
 	}
