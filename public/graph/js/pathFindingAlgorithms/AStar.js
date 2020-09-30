@@ -8,7 +8,7 @@ import {
     rowsize,
     colsize
 } from '../main.js';
-import {changeColor} from './dijkstra.js';
+
 
 // variables
 var container = document.querySelector('.container');
@@ -22,6 +22,19 @@ function calc(node, x2, y2) {
     return parseInt(node.getAttribute('cost')) +
         Math.sqrt(Math.pow((row - x2), 2) + Math.pow(col - y2, 2));
 }
+
+// Animate the nodes
+function changeColor(node, counter, cost) {
+	setTimeout(() => {
+		node.setAttribute('class','Path_green');
+		if (cost) {
+			node.innerHTML = cost;
+		}
+	}, counter * time);
+	setTimeout(() => {
+		node.setAttribute('class','Path_red');
+	}, counter * time + 100);
+} // End changeColor
 
 function checkNode(row, col, curr, checker, seen, counter) {
     if (row >= 0 && col >= 0 && row < rowsize && col < colsize) {
@@ -103,22 +116,16 @@ export function Astr(x1 = 0, y1 = 0, x2 = rowsize - 1, y2 = colsize - 1) {
 
     // Draw out best route
     setTimeout(() => {
-        startNode.style.backgroundColor = '#26466D';
-        startNode.style.color = '#000000';
-        startNode.style.color = "#ffffff";
-        startNode.style.fontWeight = "bolder";
+        startNode.setAttribute('class', 'ends');
         while (endNode.getAttribute('parent') != 'null') {
-            endNode.style.backgroundColor = '#00FF00';
-            endNode.style.color = '#000000';
+            endNode.setAttribute('class', 'Path_green');
             var coor = endNode.getAttribute('parent').split('|');
             var prow = parseInt(coor[0]);
             var pcol = parseInt(coor[1]);
             endNode = document.querySelector(`div[row="${prow}"][col="${pcol}"]`);
         }
         endNode = document.querySelector(`div[row="${x2}"][col="${y2}"]`);
-        endNode.style.backgroundColor = '#26466D';
-        endNode.style.color = "#ffffff";
-        endNode.style.fontWeight = "bolder";
+        endNode.setAttribute('class','ends');
     }, counter * time + 100);
     // Show refresh button again
     setTimeout(() => {
