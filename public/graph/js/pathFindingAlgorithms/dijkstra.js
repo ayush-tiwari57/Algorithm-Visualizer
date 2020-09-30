@@ -55,7 +55,7 @@ function checkNode(row, col, curr, checker, seen, counter) {
 } // End checkNode
 
 // Animate the nodes
-function changeColor(node, counter, cost) {
+export function changeColor(node, counter, cost) {
 	setTimeout(() => {
 		node.setAttribute('class','Path_green');
 		if (cost) {

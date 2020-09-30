@@ -8,6 +8,7 @@ import {
     rowsize,
     colsize
 } from '../main.js';
+import {changeColor} from './dijkstra.js';
 
 // variables
 var container = document.querySelector('.container');
@@ -20,19 +21,6 @@ function calc(node, x2, y2) {
     let col = parseInt(node.getAttribute('col'));
     return parseInt(node.getAttribute('cost')) +
         Math.sqrt(Math.pow((row - x2), 2) + Math.pow(col - y2, 2));
-}
-
-function changeColor(node, counter, cost) {
-    setTimeout(() => {
-        node.style.backgroundColor = '#00FF00';
-        if (cost) {
-            node.innerHTML = cost;
-        }
-    }, counter * time);
-    setTimeout(() => {
-        node.style.backgroundColor = '#DC143C';
-        node.style.color = '#ffffff';
-    }, counter * time + 100);
 }
 
 function checkNode(row, col, curr, checker, seen, counter) {
