@@ -51,8 +51,7 @@ function createEmptyNode(row, col) {
 	return node;
 }
 
-function updateEmptyNode(node, row, col) {
-	var node = document.createElement('div');
+function updateEmptyNode(node, row, col) {	
 	node.setAttribute('class', 'before_start');
 	node.setAttribute('row', row);
 	node.setAttribute('col', col);
@@ -60,6 +59,7 @@ function updateEmptyNode(node, row, col) {
 	node.setAttribute('cost', Number.POSITIVE_INFINITY);
 	node.setAttribute('parent', null);
 	node.setAttribute('border', '1px solid black');
+	node.innerText='';
 	return node;
 }
 
