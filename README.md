@@ -38,8 +38,9 @@ Adequate interest in algorithms.
 
 **Curent Version:** V 4.0 Bubble Sort added.
 
-<details> <summary> <strong> Previous Versions <strong> </summary>
-**V 3.0:** A* Algorithm (Weighted and Unweighted Graph).
+<details> <summary> <strong> Previous Versions </strong> </summary>
+    
+**V 3.0:** `A*` Algorithm (Weighted and Unweighted Graph).
 
 **V 2.0:** Dijkstra's Algorithm (Weighted and Unweighted Graph).
 
