@@ -85,6 +85,7 @@ $ git commit -m "add any comment"
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
+
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
@@ -94,6 +95,13 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/servermonk"><img alt="Ayush" src="https://avatars0.githubusercontent.com/u/47775419?s=400&u=8093851c8db10edad1d6a00435989daab20c2bbe&v=4" width="100px;"><br><sub><b>Ayush Tiwari</b></sub></a><br><a href="https://github.com/servermonk/Algorithm-Visualizer/commits?author=servermonk" title="Code">💻</a></td>
   </tr>
 </tbody></table>
+
+## Project Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+
+[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/0)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/0)[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/1)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/1)[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/2)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/2)[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/3)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/3)[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/4)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/4)[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/5)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/5)[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/6)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/6)[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/7)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/7)
 
 ## **Hey ya!**
 
