@@ -51,7 +51,7 @@ function createEmptyNode(row, col) {
 	return node;
 }
 
-function updateEmptyNode(node, row, col) {	
+function updateEmptyNode(node, row, col) {
 	node.setAttribute('class', 'before_start');
 	node.setAttribute('row', row);
 	node.setAttribute('col', col);
@@ -59,7 +59,7 @@ function updateEmptyNode(node, row, col) {
 	node.setAttribute('cost', Number.POSITIVE_INFINITY);
 	node.setAttribute('parent', null);
 	node.setAttribute('border', '1px solid black');
-	node.innerText='';
+	node.innerText = '';
 	return node;
 }
 
@@ -106,10 +106,11 @@ export function refreshBoard() {
 	for (var row = 0; row < rowsize; row++) {
 		for (var col = 0; col < colsize; col++) {
 			var node = document.querySelector(`div[row="${row}"][col="${col}"]`);
-			if (node.getAttribute('wall') == 1) continue;
-
 			let weight = Math.round(getRandomArbitrary(5));
-			updateNode(node, row, col, weight);
+			if (node.getAttribute('wall') == 1) {
+				updateEmptyNode(node, row, col, weight);
+				node.setAttribute('wall', 1);
+			} else updateNode(node, row, col, weight);
 		}
 	}
 	changeStart(startRow, startCol);
@@ -121,8 +122,10 @@ export function refreshEmptyBoard() {
 	for (var row = 0; row < rowsize; row++) {
 		for (var col = 0; col < colsize; col++) {
 			var node = document.querySelector(`div[row="${row}"][col="${col}"]`);
-			if (node.getAttribute('wall') == 1) continue;
-			updateEmptyNode(node, row, col);
+			if (node.getAttribute('wall') == 1) {
+				updateEmptyNode(node, row, col);
+				node.setAttribute('wall', 1);
+			} else updateEmptyNode(node, row, col);
 			// node.style.background="transparent";
 		}
 	}
