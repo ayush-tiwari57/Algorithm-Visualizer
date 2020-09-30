@@ -79,6 +79,9 @@ button:hover {
   border: none;
 }
 
+/*------------------------------------------------------------------*/
+/*----------------------Grid and Node CSS---------------------------*/
+
 .container {
   display: grid;
   box-shadow:
@@ -96,8 +99,54 @@ button:hover {
   border: none;
 }
 
-.node {
+.ends {
+  background: #26466D;
+  color: white;
+  font-weight: bolder;
+  text-align: center;
+  box-shadow:
+    3px 3px 4px #5A5C5E,
+    -3px -3px 4px #ffffff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: cell;
+  border: none;
+}
+
+.before_start {
   background: transparent;
+  text-align: center;
+  box-shadow:
+    3px 3px 4px #5A5C5E,
+    -3px -3px 4px #ffffff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: cell;
+  border: none;
+}
+
+.Path_green {
+  background: #00FF00;
+  color: black;
+  text-align: center;
+  box-shadow:
+    5px 5px 9px #5A5C5E,
+    -5px -5px 9px #ffffff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: cell;
+  border: none;
+}
+
+.Path_red {
+  background: #DC143C;
+  color: white;
   text-align: center;
   box-shadow:
     3px 3px 4px #5A5C5E,
@@ -117,13 +166,12 @@ button:hover {
     inset 5px 5px 7px #464849,
     inset -1px -1px 2px #cccaca;
   color: #5A5C5E;
+  border: none;
 }
 
-.pathcell {
-  background-color: #00FF00;
-  color: #000000;
-}
-/* ------------Slider CSS------------- */
+
+/*------------------------------------------------------------*/
+/* ---------------------Slider CSS--------------------------- */
 .slidecontainer {
   width: 50%;
 }
@@ -136,8 +184,8 @@ button:hover {
   border-radius: 5px;
   background: transparent;
   box-shadow:
-      inset 3px 3px 4px #5A5C5E,
-      inset -3px -3px 4px white;
+    inset 3px 3px 4px #5A5C5E,
+    inset -3px -3px 4px white;
   outline: none;
   opacity: 0.7;
   -webkit-transition: .2s;
@@ -146,8 +194,8 @@ button:hover {
 
 .slider:hover {
   box-shadow:
-      inset 5px 5px 5px #5A5C5E,
-      inset -5px -5px 5px white;
+    inset 5px 5px 5px #5A5C5E,
+    inset -5px -5px 5px white;
 }
 
 .slider::-moz-range-thumb,
@@ -159,8 +207,8 @@ button:hover {
   background: #E0E5EC;
   border: none;
   box-shadow:
-      4px 4px 5px #5A5C5E,
-      -2px -2px 5px white;
+    4px 4px 5px #5A5C5E,
+    -2px -2px 5px white;
   cursor: pointer;
 }
 
@@ -168,7 +216,7 @@ button:hover {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  select{
+  select {
     width: 120px;
   }
 
@@ -186,12 +234,12 @@ button:hover {
   }
 
   button:hover,
-  select:hover{
+  select:hover {
     box-shadow:
       1px 1px 1px #5A5C5E,
       -1px -1px 1px #ffffff;
   }
-  
+
   .container {
     border-radius: 1px;
     padding: 5px;
@@ -218,10 +266,10 @@ button:hover {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (min-width: 600px) {
-  select{
+  select {
     width: 120px;
   }
-  
+
   .flex-labels {
     width: 90%;
   }
@@ -234,12 +282,14 @@ button:hover {
       2px 2px 3px #5A5C5E,
       -2px -2px 3px #ffffff;
   }
+
   button:hover,
-  select:hover{
+  select:hover {
     box-shadow:
       1px 1px 2px #5A5C5E,
       -1px -1px 2px #ffffff;
   }
+
   .container {
     border-radius: 3px;
     padding: 10px;
@@ -280,7 +330,7 @@ button:hover {
   }
 
   button:hover,
-  select:hover{
+  select:hover {
     box-shadow:
       2px 1px 2px #5A5C5E,
       -2px -1px 2px #ffffff;
@@ -324,12 +374,14 @@ button:hover {
       3px 3px 4px #5A5C5E,
       -3px -3px 4px #ffffff;
   }
+
   button:hover,
-  select:hover{
+  select:hover {
     box-shadow:
       2px 2px 3px #5A5C5E,
       -2px -2px 3px #ffffff;
   }
+
   .container {
     border-radius: 5px;
     padding: 10px;
@@ -365,12 +417,14 @@ button:hover {
       4px 4px 5px #5A5C5E,
       -4px -4px 5px #ffffff;
   }
+
   button:hover,
-  select:hover{
+  select:hover {
     box-shadow:
       3px 3px 4px #5A5C5E,
       -3px -3px 4px #ffffff;
   }
+
   .container {
     border-radius: 5px;
     padding: 12px;

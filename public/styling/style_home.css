@@ -13,13 +13,14 @@ body {
 }
 
 /* ///////////////////////NavBar Styling ///////////////////////// */
-.navlen{
+.navlen {
     width: 100%;
     background: #c6d3e7;
     box-shadow:
         3px 3px 5px #5A5C5E,
         -3px -3px 5px #ffffff;
 }
+
 .navbar {
     margin-right: auto;
     margin-left: auto;
@@ -36,12 +37,9 @@ body {
     background: transparent;
 }
 
-
-.fas,
 .fab {
     padding-left: 1px;
     padding-right: 5px;
-
 }
 
 .element {
@@ -63,6 +61,7 @@ body {
 
 a:link,
 a:visited {
+    margin: auto;
     background: transparent;
     padding: 5px;
     color: black;
@@ -126,50 +125,55 @@ li {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    body{
+    body {
         font-size: small;
     }
-    .navbar{
+
+    .navbar {
         width: 95%;
     }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    body{
+    body {
         font-size: small;
     }
-    .navbar{
+
+    .navbar {
         width: 95%;
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    body{
+    body {
         font-size: large;
     }
-    .navbar{
+
+    .navbar {
         width: 90%;
     }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    body{
+    body {
         font-size: larger;
     }
-    .navbar{
+
+    .navbar {
         width: 90%;
     }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    body{
+    body {
         font-size: larger;
     }
-    .navbar{
+
+    .navbar {
         width: 90%;
     }
 }

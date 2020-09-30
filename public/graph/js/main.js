@@ -50,6 +50,7 @@ function reset() {
 
 //refresh function
 function refresh() {
+	console.log("Ba bye!");
 	if (weighttype == 'Unweighted') refreshEmptyBoard();
 	else refreshBoard();
 	startbtn.style.visibility = 'visible'
