@@ -1,7 +1,10 @@
+// Imported Functions
 import {
     bubble
 } from "./bubble_sort.js";
 
+
+// variables
 var refreshbtn = document.getElementById('refresh');
 var startbtn = document.getElementById('start');
 var container = document.querySelector('ArrayBox');
@@ -16,14 +19,19 @@ var sliderSpeed = document.getElementById('speed');
 export var n = sliderCount.value
 export var speed = sliderSpeed.value
 export var width = 100 / (2 * n);
+
+
+// Event Listeners
 refreshbtn.addEventListener('click', refresh);
 startbtn.addEventListener('click', start);
 
+// Assigning Default values to Array size and Visual Speed
 if (count == null) count = 60;
 if (speed_id == null) speed_id = 10;
+
 ArrayBox.style = "flex-direction:row";
 
-
+// Function for Generating Array
 function GenerateArr() {
     ArrayBox.innerHTML = "";
     for (var i = 0; i < n; i++) {
@@ -49,12 +57,14 @@ function refresh() {
     location.reload();
 }
 
+// Changing the size of array on changing the array count slider
 sliderCount.oninput = function () {
     n=sliderCount.value;
     width=100/(2*n);
     GenerateArr();
 }
 
+// Changing the speed of array on changing the value of Visuaal Speed Slider
 sliderSpeed.oninput = function () {
     speed = sliderSpeed.value;
 }
