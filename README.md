@@ -6,7 +6,7 @@
 
 Understanding becomes sharp when we are able to visualise them, so here we have Algorithm visualiser, that helps you to see working of standard algorithms, such as:
 
-1.) *Graph Algorithms:* Dijkastra's Algorithm, A\* Algorithm, Breath First Search, Depth First Search.
+1.) *Graph Algorithms:* Dijkstra's Algorithm, A\* Algorithm, Breath First Search, Depth First Search.
 
 2.) *Sorting Algorithms:* Bubble sort, Insertion sort, Selection sort, Merge sort, Quick sort, Heap sort.
 
