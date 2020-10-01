@@ -10,7 +10,7 @@ A web application, that lets you play with complex algorithms. User's gets to vi
 ![star](https://img.shields.io/github/stars/servermonk/Algorithm-Visualizer?style=social)
 ![fork](https://img.shields.io/github/forks/servermonk/Algorithm-Visualizer?style=social)
 
-![Hacktober](https://img.shields.io/github/hacktoberfest/2020/servermonk/Algorithm-Visualizer?suggestion_label=help-wanted) [![chat on slack](https://img.shields.io/badge/chat-on%20slack-brightgreen)](https://join.slack.com/t/newworkspace-fy37144/shared_invite/zt-hvk62rhv-1ysq_VTpavJqhnpfYXdBow)
+![Hacktober](https://img.shields.io/github/hacktoberfest/2020/servermonk/Algorithm-Visualizer?suggestion_label=help-wanted) [![chat on slack](https://img.shields.io/badge/chat-on%20slack-brightgreen)](https://join.slack.com/t/algorithmvisu-e2k7997/shared_invite/zt-hvk62rhv-1ysq_VTpavJqhnpfYXdBow)
 
 
 </div>
@@ -58,7 +58,7 @@ A web application, that lets you play with complex algorithms. User's gets to vi
 > *Note*: We're not accepting any changes in the `master` branch, make PRs in the `beta` branch only.
 
 
-> Slack Discussion Channel for contributors: [![chat on slack](https://img.shields.io/badge/chat-on%20slack-brightgreen)](https://join.slack.com/t/newworkspace-fy37144/shared_invite/zt-hvk62rhv-1ysq_VTpavJqhnpfYXdBow)
+> Slack Discussion Channel for contributors: [![chat on slack](https://img.shields.io/badge/chat-on%20slack-brightgreen)](https://join.slack.com/t/algorithmvisu-e2k7997/shared_invite/zt-hvk62rhv-1ysq_VTpavJqhnpfYXdBow)
 
 ## Technology Stack Used
 <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/> <img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/> <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/> <img src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/> <img src="https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/>
