@@ -19,6 +19,23 @@ function div_update(cont, h, color) {
 
 export function insertion(divs, height) {
     
-    // Write your code here
+    
+    c_delay = 0;
+    // delay_time = 40 - 2*(speed - 1);
+    delay_time=10000/(Math.floor(n/30)*speed); 
+    console.log(c_delay, delay_time);
+    for (let i = 1; i < n ; i++) {
+        let cur=height[i]
+        let j=i-1;
+        while((j>-1)&& (cur<height[j]))
+        {
+            height[j+1]=height[j]
+            j--
+        }
+        height[j+1]=cur
+        div_update(divs[1], height[i], "green"); //Color update
+        
+    }
+ 
 
 }
