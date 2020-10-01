@@ -19,6 +19,26 @@ function div_update(cont, h, color) {
 
 export function selection(divs, height) {
     
-    // Write your code here
+    c_delay = 0;
+    // delay_time = 40 - 2*(speed - 1);
+    delay_time=10000/(Math.floor(n/30)*speed); 
+    console.log(c_delay, delay_time);
+    for (var i = 0; i < n ; i++) {
+        let min=i;
+        for (let j = 0; j < n ; j++) {
+            if (height[j] < height[min]) {
+                min=j
+            } 
+        }
+        if(min!=i)
+        {
+            let temp=height[i]
+            height[i]=height[min]
+            height[min]=temp
+        }
+        div_update(divs[1], height[i], "green"); //Color update
+        
+    }
+  
 
 }
