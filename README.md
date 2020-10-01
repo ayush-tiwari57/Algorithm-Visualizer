@@ -41,7 +41,9 @@ A web application, that lets you play with complex algorithms. User's gets to vi
   </ul>
   </details>
 </li>
-</ul>
+</ul> 
+
+
 ## Getting Started
 
 > Click [here](https://servermonk.github.io/Algorithm-Visualizer/) to get directed to the hosted page.
