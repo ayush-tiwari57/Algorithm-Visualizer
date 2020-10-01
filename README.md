@@ -13,6 +13,7 @@
 </div>
 
 Understanding becomes sharp when we are able to visualise them, so here we have `Algorithm-Visualizer`, A web application that helps you to see working of standard algorithms, and play with them.
+<hr>
 
 ## Algorithms Supported
 
