@@ -29,7 +29,7 @@ A web application, that lets you play with complex algorithms. User's gets to vi
   </ul>
   </details>
 </li>
-<li> Soritng Algorihtms
+<li> Sorting Algorihtms
   <details>
   <ul>
     <li> Bubble Sort </li>
