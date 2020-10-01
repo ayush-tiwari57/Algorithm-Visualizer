@@ -1,16 +1,19 @@
-<div align="center"> <img align="center" alt="algorithm-visualizer" src="Logo1.png" height='150' width='150'></div>
+<p align="center">
 
+<div> <img align="center" alt="algorithm-visualizer" src="Logo1.png" height='150' width='150'></div>
+<h1> Algorithm-Visualizer</h1>
 <br /><br />
 
-# Algorithm-Visualiser
 ![Issues](https://img.shields.io/github/issues/servermonk/Algorithm-Visualizer)
 ![PRs](https://img.shields.io/github/issues-pr/servermonk/Algorithm-Visualizer)
 ![Maintenance](https://img.shields.io/maintenance/yes/2020)
 ![star](https://img.shields.io/github/stars/servermonk/Algorithm-Visualizer?style=social)
 ![fork](https://img.shields.io/github/forks/servermonk/Algorithm-Visualizer?style=social)
 ![Hacktober](https://img.shields.io/github/hacktoberfest/2020/servermonk/Algorithm-Visualizer?suggestion_label=help-wanted)
+</p>
 
-Understanding becomes sharp when we are able to visualise them, so here we have Algorithm visualiser, that helps you to see working of standard algorithms, such as:
+Understanding becomes sharp when we are able to visualise them, so here we have `Algorithm visualizer`, that helps you to see working of standard algorithms, and play with them.
+
 
 1.) *Graph Algorithms:* Dijkstra's Algorithm, A\* Algorithm, Breath First Search, Depth First Search.
 
