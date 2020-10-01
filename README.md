@@ -12,7 +12,6 @@ A web application, that lets you play with complex algorithms. User's gets to vi
 
 ![Hacktober](https://img.shields.io/github/hacktoberfest/2020/servermonk/Algorithm-Visualizer?suggestion_label=help-wanted) [![chat on slack](https://img.shields.io/badge/chat-on%20slack-brightgreen)](https://join.slack.com/t/algorithmvisu-e2k7997/shared_invite/zt-hvk62rhv-1ysq_VTpavJqhnpfYXdBow)
 
-
 </div>
 <hr>
 
@@ -41,7 +40,7 @@ A web application, that lets you play with complex algorithms. User's gets to vi
   </ul>
   </details>
 </li>
-</ul> 
+</ul>
 
 ## Getting Started
 
@@ -54,12 +53,12 @@ A web application, that lets you play with complex algorithms. User's gets to vi
 | 1.    | [master](https://github.com/servermonk/Algorithm-Visualizer/tree/master) | contains the main code        |
 | 2.    | [beta](https://github.com/servermonk/Algorithm-Visualizer/tree/beta)     | contains all development code |
 
-> *Note*: We're not accepting any changes in the `master` branch, make PRs in the `beta` branch only.
-
+> _Note_: We're not accepting any changes in the `master` branch, make PRs in the `beta` branch only.
 
 > Slack Discussion Channel for contributors: [![chat on slack](https://img.shields.io/badge/chat-on%20slack-brightgreen)](https://join.slack.com/t/algorithmvisu-e2k7997/shared_invite/zt-hvk62rhv-1ysq_VTpavJqhnpfYXdBow)
 
 ## Technology Stack Used
+
 <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/> <img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/> <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/> <img src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/> <img src="https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/>
 
 - <strong> FrontEnd Design: </strong> HTML & CSS
@@ -67,46 +66,52 @@ A web application, that lets you play with complex algorithms. User's gets to vi
 - <strong> Server hosting: </strong> NodeJS
 - <strong> Web hosting: </strong> Netlify
 
-
 ## Project Setup
-- Fork and clone the Repo by typing the following commands in the terminal 
+
+- Fork and clone the Repo by typing the following commands in the terminal
+
 ```
 $ git clone https://github.com/your-username/Algorithm-Visualizer.git
 $ cd Algorithm Viusalizer
 ```
+
 - Change Branch using:
+
 ```
 $ git checkout beta
 ```
-- To open the site you can either use [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) of VS-Code or similar tools, or you need to install Node.js 
+
+- To open the site you can either use [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) of VS-Code or similar tools, or you need to install Node.js
     <details>
     To open site on Localhost:
     - Install node dependencies using:
 
-    ```
-    $ npm install
-    ```
+  ```
+  $ npm install
+  ```
 
-    - To start the server, type:
-    ```
-    $ node server
-    ```
-   
-    - Then on your browser type http://localhost:3000/
+  - To start the server, type:
+
+  ```
+  $ node server
+  ```
+
+  - Then on your browser type http://localhost:3000/
   </details>
+
 - Make changes to the code and save your changes
 - Commit your changes using:
+
 ```
 $ git commit -m "add any comment"
 ```
+
 - Push the changes to the forked repository
 - Navigate to the original repository and make a pull request
-
 
 ## Project administrators ✨
 
 <!-- Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)): -->
-
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -131,10 +136,10 @@ $ git commit -m "add any comment"
 
 Thanks goes to these wonderful people:
 
-
 [![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/0)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/0)[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/1)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/1)[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/2)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/2)[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/3)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/3)[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/4)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/4)[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/5)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/5)[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/6)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/6)[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/7)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/7)
 
-
 ## **Thank You**
-Made with Love ❤️️  &  Passion 🙏.
+
+Made with Love ❤️️ & Passion 🙏.
+
 > Like the project?? Give us a star ⭐. Have a nice day!
