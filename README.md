@@ -1,22 +1,17 @@
-<div align="center"> <img align="center" alt="algorithm-visualizer" src="Logo1.png" height='150' width='150'></div>
+<div align="center"> <img align="center" alt="algorithm-visualizer" src="Logo1.png" height='150' width='150'>
 
 <h1 align="center"> Algorithm-Visualizer</h1>
-<p align="center">
 
 ![Issues](https://img.shields.io/github/issues/servermonk/Algorithm-Visualizer)
-
 ![PRs](https://img.shields.io/github/issues-pr/servermonk/Algorithm-Visualizer)
-
 ![Maintenance](https://img.shields.io/maintenance/yes/2020)
-
 ![star](https://img.shields.io/github/stars/servermonk/Algorithm-Visualizer?style=social)
-
 ![fork](https://img.shields.io/github/forks/servermonk/Algorithm-Visualizer?style=social)
-<br>
+
 ![Hacktober](https://img.shields.io/github/hacktoberfest/2020/servermonk/Algorithm-Visualizer?suggestion_label=help-wanted)
 
 <br /><br />
-</p>
+</div>
 
 Understanding becomes sharp when we are able to visualise them, so here we have `Algorithm visualizer`, that helps you to see working of standard algorithms, and play with them.
 
