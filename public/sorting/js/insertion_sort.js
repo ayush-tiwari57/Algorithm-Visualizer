@@ -15,8 +15,6 @@ function div_update(cont, h, color) {
             " height:" + h + "%;";
     }, c_delay+=delay_time);
 }
-
-
 export function insertion(divs, height) {
     c_delay = 0;
     // delay_time = 40 - 2*(speed - 1);
