@@ -1,4 +1,4 @@
-<div align="center"> <img align="center" alt="algorithm-visualizer" src="Logo1.png" height='150' width='150'>
+<div align="center"> <img align="center" alt="algorithm-visualizer" src="public/img/Logo1.png" height='150' width='150'>
 
 <h1 align="center"> Algorithm-Visualizer</h1>
 
