@@ -2,6 +2,8 @@
 
 <h1 align="center"> Algorithm-Visualizer</h1>
 
+A web application, that lets you play with complex algorithms. User's gets to visualize working of algorithms, at different speeds, and different setups.
+
 ![Issues](https://img.shields.io/github/issues/servermonk/Algorithm-Visualizer)
 ![PRs](https://img.shields.io/github/issues-pr/servermonk/Algorithm-Visualizer)
 ![Maintenance](https://img.shields.io/maintenance/yes/2020)
@@ -11,8 +13,6 @@
 ![Hacktober](https://img.shields.io/github/hacktoberfest/2020/servermonk/Algorithm-Visualizer?suggestion_label=help-wanted)
 
 </div>
-
-Understanding becomes sharp when we are able to visualise them, so here we have `Algorithm-Visualizer`, A web application that helps you to see working of standard algorithms, and play with them.
 <hr>
 
 ## Algorithms Supported
