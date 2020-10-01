@@ -56,6 +56,8 @@ A web application, that lets you play with complex algorithms. User's gets to vi
 | 2.    | [beta](https://github.com/servermonk/Algorithm-Visualizer/tree/beta)     | contains all development code |
 
 > *Note*: We're not accepting any changes in the `master` branch, make PRs in the `beta` branch only.
+
+
 > Slack Discussion Channel for contributors: [![chat on slack](https://img.shields.io/badge/chat-on%20slack-brightgreen)](https://join.slack.com/t/newworkspace-fy37144/shared_invite/zt-hvk62rhv-1ysq_VTpavJqhnpfYXdBow)
 
 ## Technology Stack Used
