@@ -12,19 +12,24 @@ body {
     font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
 }
 
+.body-index{
+    background: white;
+}
+
 /* ///////////////////////NavBar Styling ///////////////////////// */
 .navlen {
     width: 100%;
-    background: #c6d3e7;
+    background: rgb(50, 50, 50);
     box-shadow:
-        3px 3px 5px #5A5C5E,
-        -3px -3px 5px #ffffff;
+        2px 2px 3px #5A5C5E,
+        -2px -2px 3px #ffffff;
 }
 
 .navbar {
+    height: 5vh;
+    color: white;
     margin-right: auto;
     margin-left: auto;
-    padding: 5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -42,80 +47,87 @@ body {
     padding-right: 5px;
 }
 
-.element {
-    padding-left: 5px;
-    padding-right: 5px;
-    background: transparent;
-    align-items: center;
-    border-radius: 5px;
+/* /////////////////////// Main content of Index ///////////////////////// */
+.main-content{
+    width: 80%;
+    height: 95vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    border: none;
+    align-items: center;
+    align-content: center;
+
+    margin-right: 10%;
+    margin-left: 10%;
 }
 
-.element:hover {
-    box-shadow:
-        inset 2px 2px 3px #5A5C5E,
-        inset -2px -2px 3px #ffffff;
+.main-content-logo{
+    align-self: flex-start;
+    min-width: 50%;
+
+    margin-bottom: 30px;
 }
+
+.main-content-logo img{
+    height: auto;
+    width: 100%;
+}
+
+.flex-cards{
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+
+    margin-top: 30px;
+    margin-bottom: 5%;
+}
+
+.flex-card-items{
+    min-width: 40%;
+    padding: 20px;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.flex-card-items:hover{
+    cursor: pointer;
+    transform: scale(0.99);
+}
+
+.flex-card-items heading{
+    font-size: 2rem;
+}
+
+.first-card{
+    background: #78A1BB;
+}
+
+.second-card{
+    background: #353A47;
+    margin-left: 5%;
+}
+
 
 a:link,
 a:visited {
     margin: auto;
     background: transparent;
     padding: 5px;
-    color: black;
+    color: white;
     text-decoration: none;
-    /* font-size: larger; */
+    /* font-size: larger;  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
     display: inline-flexbox;
     border: none;
 }
 
 /* ///////////////////////NavBar Styling  ENDS ///////////////////////// */
 
-.flex-cards {
-    margin-left: auto;
-    margin-right: auto;
-    margin: auto;
-    width: 80%;
-    border: none;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
-    padding: 5px;
-    margin-top: 20px;
-    border: none;
-}
 
-.flex-card-items {
-    flex: 1 1 0;
-    border-radius: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5px;
-    margin: 10px;
-    border: none;
-    align-items: center;
-    text-align: center;
-    box-shadow:
-        3px 3px 5px #5A5C5E,
-        -3px -3px 5px #ffffff;
-    cursor: pointer;
-}
-
-.flex-card-items:hover {
-    box-shadow:
-        2px 2px 3px #5A5C5E,
-        -2px -2px 3px #ffffff;
-}
-
-heading {
-    /* font-size: larger; */
-    padding: 10px;
-}
 
 
 li {
@@ -176,4 +188,5 @@ li {
     .navbar {
         width: 90%;
     }
+    
 }
