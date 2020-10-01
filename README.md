@@ -1,7 +1,7 @@
 <div align="center"> <img align="center" alt="algorithm-visualizer" src="Logo1.png" height='150' width='150'></div>
 
+<h1 align="center"> Algorithm-Visualizer</h1>
 <p align="center">
-<h1> Algorithm-Visualizer</h1>
 
 ![Issues](https://img.shields.io/github/issues/servermonk/Algorithm-Visualizer)
 
