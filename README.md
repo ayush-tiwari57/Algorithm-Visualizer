@@ -1,18 +1,51 @@
-<div align="center"> <img align="center" alt="codeinn" src="Logo1.png" height='150' width='150'></div>
+<div align="center"> <img align="center" alt="algorithm-visualizer" src="Logo1.png" height='150' width='150'>
 
-<br /><br />
+<h1 align="center"> Algorithm-Visualizer</h1>
 
-# Algorithm-Visualiser
+A web application, that lets you play with complex algorithms. User's gets to visualize working of algorithms, at different speeds, and different setups.
 
-Understanding becomes sharp when we are able to visualise them, so here we have Algorithm visualiser, that helps you to see working of standard algorithms, such as:
+![Issues](https://img.shields.io/github/issues/servermonk/Algorithm-Visualizer)
+![PRs](https://img.shields.io/github/issues-pr/servermonk/Algorithm-Visualizer)
+![Maintenance](https://img.shields.io/maintenance/yes/2020)
+![star](https://img.shields.io/github/stars/servermonk/Algorithm-Visualizer?style=social)
+![fork](https://img.shields.io/github/forks/servermonk/Algorithm-Visualizer?style=social)
 
-1.) *Graph Algorithms:* Dijkstra's Algorithm, A\* Algorithm, Breath First Search, Depth First Search.
+![Hacktober](https://img.shields.io/github/hacktoberfest/2020/servermonk/Algorithm-Visualizer?suggestion_label=help-wanted) [![chat on slack](https://img.shields.io/badge/chat-on%20slack-brightgreen)](https://join.slack.com/t/algorithmvisu-e2k7997/shared_invite/zt-hvk62rhv-1ysq_VTpavJqhnpfYXdBow)
 
-2.) *Sorting Algorithms:* Bubble sort, Insertion sort, Selection sort, Merge sort, Quick sort, Heap sort.
+
+</div>
+<hr>
+
+## Algorithms Supported
+
+<ul>
+<li> Graph Algorihtms
+  <details>
+  <ul>
+    <li> Dijkstra's path finding algorihtm. </li>
+    <li> A-Star path finding algorihtm. </li>
+    <li> Breadth First Search (BFS) traversal algorihtm. </li>
+    <li> Depth First Search (DFS) traversal algorithm. </li>
+  </ul>
+  </details>
+</li>
+<li> Sorting Algorihtms
+  <details>
+  <ul>
+    <li> Bubble Sort </li>
+    <li> Selection Sort </li>
+    <li> Insertion Sort </li>
+    <li> Quick Sort </li>
+    <li> Merge Sort </li>
+    <li> Heap Sort </li>
+  </ul>
+  </details>
+</li>
+</ul> 
 
 ## Getting Started
 
-> Click [here](https://servermonk.github.io/Algorithm-Visualizer/) to get directed to the hosted page.
+> Click [here](https://vizalgo.netlify.app/) to get directed to the hosted page.
 
 #### GitHub Repository Structure
 
@@ -23,29 +56,17 @@ Understanding becomes sharp when we are able to visualise them, so here we have 
 
 > *Note*: We're not accepting any changes in the `master` branch, make PRs in the `beta` branch only.
 
-## Prerequisites
 
-Adequate interest in algorithms.
+> Slack Discussion Channel for contributors: [![chat on slack](https://img.shields.io/badge/chat-on%20slack-brightgreen)](https://join.slack.com/t/algorithmvisu-e2k7997/shared_invite/zt-hvk62rhv-1ysq_VTpavJqhnpfYXdBow)
 
 ## Technology Stack Used
 <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/> <img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/> <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/> <img src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/> <img src="https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/>
 
-- HTML | CSS
-- JS
-- NodeJS
+- <strong> FrontEnd Design: </strong> HTML & CSS
+- <strong> Algorithms and animations: </strong> JavaScript
+- <strong> Server hosting: </strong> NodeJS
+- <strong> Web hosting: </strong> Netlify
 
-## Versioning
-
-**Curent Version:** V 4.0 Bubble Sort added.
-
-<details> <summary> <strong> Previous Versions </strong> </summary>
-    
-**V 3.0:** `A*` Algorithm (Weighted and Unweighted Graph).
-
-**V 2.0:** Dijkstra's Algorithm (Weighted and Unweighted Graph).
-
-**V 1.0:** Dijkstra's Algorithm (Weighted Graph).
-</details>
 
 ## Project Setup
 - Fork and clone the Repo by typing the following commands in the terminal 
@@ -58,9 +79,10 @@ $ cd Algorithm Viusalizer
 $ git checkout beta
 ```
 - To open the site you can either use [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) of VS-Code or similar tools, or you need to install Node.js 
-    
+    <details>
     To open site on Localhost:
     - Install node dependencies using:
+
     ```
     $ npm install
     ```
@@ -71,7 +93,7 @@ $ git checkout beta
     ```
    
     - Then on your browser type http://localhost:3000/
-
+  </details>
 - Make changes to the code and save your changes
 - Commit your changes using:
 ```
@@ -83,28 +105,36 @@ $ git commit -m "add any comment"
 
 ## Project administrators ✨
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+<!-- Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)): -->
 
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
-  <tbody><tr>
-    <td align="center"><a href="https://github.com/anubhavitis"><img alt="Anubhav" src="https://avatars1.githubusercontent.com/u/26124625?s=400&u=c411643ffe3db941107eca578ada396c5f8dfa3a&v=4" width="100px;"><br><sub><b>Anubhav Singhal</b></sub></a><br><a href="https://github.com/servermonk/Algorithm-Visualizer/commits?author=anubhavitis" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/servermonk"><img alt="Ayush" src="https://avatars0.githubusercontent.com/u/47775419?s=400&u=8093851c8db10edad1d6a00435989daab20c2bbe&v=4" width="100px;"><br><sub><b>Ayush Tiwari</b></sub></a><br><a href="https://github.com/servermonk/Algorithm-Visualizer/commits?author=servermonk" title="Code">💻</a></td>
-  </tr>
-</tbody></table>
+  <tbody>
+    <tr>
+      <td align="center">
+        <a href="https://github.com/anubhavitis"><img alt="Anubhav" src="https://avatars1.githubusercontent.com/u/26124625?s=400&u=c411643ffe3db941107eca578ada396c5f8dfa3a&v=4" width="100px;"><br><sub><b>Anubhav Singhal</b></sub></a><br>
+      </td>
+      <td align="center">
+        <a href="https://github.com/servermonk">
+          <img alt="Ayush" src="https://avatars0.githubusercontent.com/u/47775419?s=400&u=8093851c8db10edad1d6a00435989daab20c2bbe&v=4" width="100px;"> <br>
+          <sub><b>Ayush Tiwari</b></sub></a>  <br>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-## Project Contributors
+## Beloved Contributors ✨
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Thanks goes to these wonderful people:
 
 
 [![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/0)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/0)[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/1)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/1)[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/2)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/2)[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/3)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/3)[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/4)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/4)[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/5)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/5)[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/6)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/6)[![](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/images/7)](https://sourcerer.io/fame/servermonk/servermonk/Algorithm-Visualizer/links/7)
 
-## **Hey ya!**
 
-Like the project?? Give us a star ⭐.
-
-Have a nice day!
+## **Thank You**
+Made with Love ❤️️  &  Passion 🙏.
+> Like the project?? Give us a star ⭐. Have a nice day!
