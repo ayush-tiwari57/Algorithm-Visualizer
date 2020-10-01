@@ -19,7 +19,6 @@ A web application, that lets you play with complex algorithms. User's gets to vi
 ## Algorithms Supported
 
 <ul>
-<<<<<<< Updated upstream
 <li> Graph Algorihtms
   <details>
   <ul>
@@ -44,32 +43,6 @@ A web application, that lets you play with complex algorithms. User's gets to vi
 </li>
 </ul> 
 
-
-=======
-  <li> Graph Algorihtms
-    <details>
-    <ul>
-      <li> Dijkstra's path finding algorihtm. </li>
-      <li> A-Star path finding algorihtm. </li>
-      <li> Breadth First Search (BFS) traversal algorihtm. </li>
-      <li> Depth First Search (DFS) traversal algorithm. </li>
-    </ul>
-    </details>
-  </li>
-  <li> Soritng Algorihtms
-    <details>
-    <ul>
-      <li> Bubble Sort </li>
-      <li> Selection Sort </li>
-      <li> Insertion Sort </li>
-      <li> Quick Sort </li>
-      <li> Merge Sort </li>
-      <li> Heap Sort </li>
-    </ul>
-    </details>
-  </li>
-</ul>
->>>>>>> Stashed changes
 ## Getting Started
 
 > Click [here](https://vizalgo.netlify.app/) to get directed to the hosted page.
