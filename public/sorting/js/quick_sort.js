@@ -20,22 +20,24 @@ function partition(divs, height, l, r){
     var p = l;
     var i = l;
     var j = r;
-    div_update(divs[2*(l-1)+1], height[l-1],'yellow');
-    div_update(divs[2*(l)+1], height[l],'yellow');
-    div_update(divs[2*(r-1)+1], height[r-1],'blue');
-    div_update(divs[2*(r)+1], height[r],'blue');
     while(i<=j)
     {
         while(height[p] >= height[i]){
         i++;
-        div_update(divs[2*(i-1)+1], height[i-1],'red');
-        div_update(divs[2*(i)+1], height[i],'red');
+         div_update(divs[2*(i-1)+1], height[i-1],'red');
+         div_update(divs[2*(i)+1], height[i],'red');
+         
+         div_update(divs[2*(i-1)+1], height[i-1],'#808080');
+         div_update(divs[2*(i)+1], height[i],'#808080');
         }
 
         while(height[p] < height[j]){
         j--;
-        div_update(divs[2*(j-1)+1], height[j-1],'red');
-        div_update(divs[2*(j)+1], height[j],'red');
+         div_update(divs[2*(j-1)+1], height[j-1],'red');
+         div_update(divs[2*(j)+1], height[j],'red');
+         
+         div_update(divs[2*(j-1)+1], height[j-1],'#808080');
+         div_update(divs[2*(j)+1], height[j],'#808080');
         }
 
         if(i < j)
@@ -56,16 +58,29 @@ function partition(divs, height, l, r){
 
 function quicksort(divs,height, l, r){
     if(l<=r){
+        div_update(divs[2*(l-1)+1], height[l-1],'yellow');
+        div_update(divs[2*(l)+1], height[l],'yellow');
+        
+        div_update(divs[2*(r-1)+1], height[l-1],'blue');
+        div_update(divs[2*(r)+1], height[l],'blue');
+        
         var p = partition(divs,height,l,r);
+        
+        div_update(divs[2*(l-1)+1], height[l-1],'#808080');
+        div_update(divs[2*(l)+1], height[l],'#808080');
+        
+        div_update(divs[2*(r-1)+1], height[l-1],'#808080');
+        div_update(divs[2*(r)+1], height[l],'#808080');
+        
         quicksort(divs,height,l,p-1)
         quicksort(divs,height,p+1,r);
-        div_update(divs[2*(p-1)+1], height[p-1],'green');
+        
+        div_update(divs[2*(p-1)+1], height[p-1],"green");
         div_update(divs[2*(p)+1], height[p],'green');
     }
 }
 
 export function quick(divs, height) {
-    c_delay = 1;
-    delay_time=10000/(Math.floor(n/30)*speed);
+    delay_time=20000/(Math.floor(n/30)*speed); 
     quicksort(divs,height,0,height.length-1);
 }
