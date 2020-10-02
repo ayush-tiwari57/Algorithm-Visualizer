@@ -81,6 +81,7 @@ function quicksort(divs,height, l, r){
 }
 
 export function quick(divs, height) {
-    delay_time=30000/(Math.floor(n/30)*speed); 
+    delay_time=30000/(Math.floor(n/30)*speed);
+    
     quicksort(divs,height,0,height.length-1);
 }
