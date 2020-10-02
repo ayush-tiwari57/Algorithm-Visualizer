@@ -12,10 +12,6 @@ body {
     font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
 }
 
-.body-index{
-    background: white;
-}
-
 /* ///////////////////////NavBar Styling ///////////////////////// */
 .navlen {
     width: 100%;
@@ -41,6 +37,18 @@ body {
     font-weight: inherit;
     background: transparent;
 }
+.element-left{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.element-left img{
+    height: 30px;
+}
+
 
 .fab {
     padding-left: 1px;
@@ -104,11 +112,11 @@ body {
 }
 
 .first-card{
-    background: #78A1BB;
+    background: rgb(50, 50, 50);
 }
 
 .second-card{
-    background: #353A47;
+    background: rgb(50, 50, 50);
     margin-left: 5%;
 }
 
