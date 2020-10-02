@@ -2,17 +2,20 @@
 
 <h1 align="center"> Algorithm-Visualizer</h1>
 
+
+A web application, that lets you play with complex algorithms. User's gets to visualize working of algorithms, at different speeds, and different setups.
+
 ![Issues](https://img.shields.io/github/issues/servermonk/Algorithm-Visualizer)
 ![PRs](https://img.shields.io/github/issues-pr/servermonk/Algorithm-Visualizer)
 ![Maintenance](https://img.shields.io/maintenance/yes/2020)
 ![star](https://img.shields.io/github/stars/servermonk/Algorithm-Visualizer?style=social)
 ![fork](https://img.shields.io/github/forks/servermonk/Algorithm-Visualizer?style=social)
 
-![Hacktober](https://img.shields.io/github/hacktoberfest/2020/servermonk/Algorithm-Visualizer?suggestion_label=help-wanted)
+
+![Hacktober](https://img.shields.io/github/hacktoberfest/2020/servermonk/Algorithm-Visualizer?suggestion_label=help-wanted) [![chat on slack](https://img.shields.io/badge/chat-on%20slack-brightgreen)](https://join.slack.com/t/algorithmvisu-e2k7997/shared_invite/zt-hvk62rhv-1ysq_VTpavJqhnpfYXdBow)
+
 
 </div>
-
-Understanding becomes sharp when we are able to visualise them, so here we have `Algorithm-Visualizer`, A web application that helps you to see working of standard algorithms, and play with them.
 <hr>
 
 ## Algorithms Supported
@@ -28,7 +31,7 @@ Understanding becomes sharp when we are able to visualise them, so here we have 
   </ul>
   </details>
 </li>
-<li> Soritng Algorihtms
+<li> Sorting Algorihtms
   <details>
   <ul>
     <li> Bubble Sort </li>
@@ -40,10 +43,11 @@ Understanding becomes sharp when we are able to visualise them, so here we have 
   </ul>
   </details>
 </li>
-</ul>
+</ul> 
+
 ## Getting Started
 
-> Click [here](https://servermonk.github.io/Algorithm-Visualizer/) to get directed to the hosted page.
+> Click [here](https://vizalgo.netlify.app/) to get directed to the hosted page.
 
 #### GitHub Repository Structure
 
@@ -54,13 +58,15 @@ Understanding becomes sharp when we are able to visualise them, so here we have 
 
 > *Note*: We're not accepting any changes in the `master` branch, make PRs in the `beta` branch only.
 
+> Slack Discussion Channel for contributors: [![chat on slack](https://img.shields.io/badge/chat-on%20slack-brightgreen)](https://join.slack.com/t/algorithmvisu-e2k7997/shared_invite/zt-hvk62rhv-1ysq_VTpavJqhnpfYXdBow)
+
 ## Technology Stack Used
 <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/> <img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/> <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/> <img src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/> <img src="https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/>
 
 - <strong> FrontEnd Design: </strong> HTML & CSS
 - <strong> Algorithms and animations: </strong> JavaScript
 - <strong> Server hosting: </strong> NodeJS
-- <strong> Web hosting: </strong> GitHub Pages
+- <strong> Web hosting: </strong> Netlify
 
 
 ## Project Setup
