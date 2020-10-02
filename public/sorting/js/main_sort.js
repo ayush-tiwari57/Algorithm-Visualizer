@@ -2,6 +2,9 @@
 import {
     bubble
 } from "./bubble_sort.js";
+import {
+    quick
+} from './quick_sort.js';
 
 
 // variables
@@ -51,6 +54,7 @@ function GenerateArr() {
 
 function start() {
     if (algo === "bubble") bubble(divs, arr);
+    if(algo === "quick") quick(divs, arr);
 }
 
 function refresh() {
