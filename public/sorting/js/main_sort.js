@@ -3,6 +3,9 @@ import {
     bubble
 } from "./bubble_sort.js";
 
+import {
+    selection
+} from "./selection_sort";
 
 // variables
 var refreshbtn = document.getElementById('refresh');
