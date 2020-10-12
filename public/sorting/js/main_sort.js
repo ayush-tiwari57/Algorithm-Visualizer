@@ -10,10 +10,6 @@ import {
     quick
 } from './quick_sort.js';
 
-import {
-    selection
-} from "./selection_sort";
-
 // variables
 var refreshbtn = document.getElementById('refresh');
 var startbtn = document.getElementById('start');
