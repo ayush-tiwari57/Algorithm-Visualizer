@@ -41,8 +41,8 @@ export function selection(divs, height) {
             height[s] = height[i];
             height[i] = temp
         }
+        div_update(divs[2*(s)+1], height[s],'#808080');
         div_update(divs[2*(i)+1], height[i],'green');
         div_update(divs[2*(i-1)+1], height[i-1],'green');
-        div_update(divs[2*(s)+1], height[s],'#808080');
     }
 }
