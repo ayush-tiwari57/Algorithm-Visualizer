@@ -9,7 +9,9 @@ import {
 import {
     quick
 } from './quick_sort.js';
-
+import {
+    selection
+} from './selection_sort.js';
 
 // variables
 var refreshbtn = document.getElementById('refresh');
@@ -68,6 +70,7 @@ function start() {
     if (algo === "bubble") bubble(divs, arr);
     else if (algo === "quick") quick(divs, arr);
     else if (algo === "heap") heap(divs, arr);
+    else if (algo === "selection") selection(divs, arr);
     console.log(algo);
 }
 
