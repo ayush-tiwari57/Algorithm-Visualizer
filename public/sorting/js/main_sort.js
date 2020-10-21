@@ -1,4 +1,3 @@
-
 // Imported Functions
 import {
     bubble
@@ -9,6 +8,9 @@ import {
 import {
     quick
 } from './quick_sort.js';
+import {
+    insertion
+} from './insertion_sort.js';
 import {
     selection
 } from './selection_sort.js';
@@ -71,6 +73,7 @@ function start() {
     else if (algo === "quick") quick(divs, arr);
     else if (algo === "heap") heap(divs, arr);
     else if (algo === "selection") selection(divs, arr);
+    else if (algo === "insertion") insertion(divs, arr);
     console.log(algo);
 }
 
@@ -80,14 +83,14 @@ function refresh() {
 }
 
 // Changing the size of array on changing the array count slider
-sliderCount.oninput = function () {
+sliderCount.oninput = function() {
     n = sliderCount.value;
     width = 100 / (2 * n);
     GenerateArr();
 }
 
 // Changing the speed of array on changing the value of Visuaal Speed Slider
-sliderSpeed.oninput = function () {
+sliderSpeed.oninput = function() {
     speed = sliderSpeed.value;
 }
 
