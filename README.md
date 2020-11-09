@@ -10,8 +10,6 @@ A web application, that lets you play with complex algorithms. User's gets to vi
 ![star](https://img.shields.io/github/stars/servermonk/Algorithm-Visualizer?style=social)
 ![fork](https://img.shields.io/github/forks/servermonk/Algorithm-Visualizer?style=social)
 
-![Hacktober](https://img.shields.io/github/hacktoberfest/2020/servermonk/Algorithm-Visualizer?suggestion_label=help-wanted) [![chat on slack](https://img.shields.io/badge/chat-on%20slack-brightgreen)](https://join.slack.com/t/algorithmvisu-e2k7997/shared_invite/zt-hvk62rhv-1ysq_VTpavJqhnpfYXdBow)
-
 
 </div>
 <hr>
