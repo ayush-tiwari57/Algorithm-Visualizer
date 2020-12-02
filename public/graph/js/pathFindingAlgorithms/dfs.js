@@ -7,7 +7,6 @@ import {
 import {
 	rowsize,
 	colsize,
-	weighttype
 } from '../main.js';
 // variables
 var container = document.querySelector('.container');
@@ -20,68 +19,39 @@ function check(row, col) {
 	if (row >= 0 && col >= 0 && row < rowsize && col < colsize) return true;
 	return false;
 }
-
-function traverse(node, seen, counter) {
+let fl=false;
+function traverse(node, seen, counter, endnode) {
 	let row = parseInt(node.getAttribute('row'));
 	let col = parseInt(node.getAttribute('col'));
+	if(fl || node==endnode) {
+		fl=true;
+		return;
+	}
 	let wall = parseInt(node.getAttribute('wall'));
-	console.log(wall)
 	if (wall == 1) return;
 	seen.push(node);
 	changeColor(node, counter);
-	
+
 	// Check up down left right
 	let cr = row, cc = col;
 
-	if (check(cr, cc - 1)) {
-		var child = document.querySelector(`div[row="${cr}"][col="${cc - 1}"]`);
-		if (!seen.includes(child)) traverse(child, seen, counter+1);
-	}
 	if (check(cr + 1, cc)) {
 		var child = document.querySelector(`div[row="${cr + 1}"][col="${cc}"]`);
-		if (!seen.includes(child)) traverse(child, seen, counter+1);
+		if (!seen.includes(child)) traverse(child, seen, counter + 1, endnode);
 	}
 	if (check(cr, cc + 1)) {
 		var child = document.querySelector(`div[row="${cr}"][col="${cc + 1}"]`);
-		if (!seen.includes(child)) traverse(child, seen, counter+1);
+		if (!seen.includes(child)) traverse(child, seen, counter + 1, endnode);
 	}
 	if (check(cr - 1, cc)) {
 		var child = document.querySelector(`div[row="${cr - 1}"][col="${cc}"]`);
-		if (!seen.includes(child)) traverse(child, seen, counter+1);
+		if (!seen.includes(child)) traverse(child, seen, counter + 1, endnode);
+	}
+	if (check(cr, cc - 1)) {
+		var child = document.querySelector(`div[row="${cr}"][col="${cc - 1}"]`);
+		if (!seen.includes(child)) traverse(child, seen, counter + 1, endnode);
 	}
 }
-// function checkNode(row, col, curr, checker, seen, counter) {
-// 	if (row >= 0 && col >= 0 && row < rowsize && col < colsize) {
-// 		var node = document.querySelector(`div[row="${row}"][col="${col}"]`);
-// 		let wall = parseInt(node.getAttribute('wall'));
-// 		if (wall == 1) return;
-// 		let prow = parseInt(curr.getAttribute('row'));
-// 		let pcol = parseInt(curr.getAttribute('col'));
-// 		// console.log(wall);
-// 		var cost = Math.min(
-// 			parseInt(curr.getAttribute('cost')) +
-// 			Math.abs(Math.abs(prow - row) + Math.abs(pcol - col)),
-// 			node.getAttribute('cost')
-// 		);
-// 		if (cost < node.getAttribute('cost')) {
-// 			node.setAttribute(
-// 				'parent',
-// 				curr.getAttribute('row') + '|' + curr.getAttribute('col')
-// 			);
-// 			node.setAttribute('cost', cost);
-// 		}
-
-// 		// changeColor(node, counter, cost);
-// 		changeColor(curr, counter, curr.getAttribute('cost'));
-// 		if (!seen.includes(node)) {
-// 			checker.push(node);
-// 		}
-// 		seen.push(node);
-// 		return node;
-// 	} else {
-// 		return false;
-// 	}
-// } // End checkNode
 
 // Animate the nodes
 function changeColor(node, counter) {
@@ -111,8 +81,9 @@ export function dfs(x1 = 0, y1 = 0, x2 = rowsize - 1, y2 = colsize - 1) {
 	/* ################################### Algo here ############################3*/
 
 	var seen = [];
-	let counter=1;
-	traverse(startNode, seen, counter);
+	let counter = 1;
+	fl=false;
+	traverse(startNode, seen, counter, endNode);
 
 	// Draw out best route
 	setTimeout(() => {
