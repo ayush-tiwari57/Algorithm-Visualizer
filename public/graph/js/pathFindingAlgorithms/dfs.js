@@ -22,13 +22,14 @@ function check(row, col) {
 }
 
 function traverse(node, seen, counter) {
+	let row = parseInt(node.getAttribute('row'));
+	let col = parseInt(node.getAttribute('col'));
+	let wall = parseInt(node.getAttribute('wall'));
+	console.log(wall)
+	if (wall == 1) return;
 	seen.push(node);
 	changeColor(node, counter);
-	let row = parseInt(curr.getAttribute('row'));
-	let col = parseInt(curr.getAttribute('col'));
-	let wall = parseInt(curr.getAttribute('wall'));
-	if (wall == 1) return;
-
+	
 	// Check up down left right
 	let cr = row, cc = col;
 
@@ -110,7 +111,8 @@ export function dfs(x1 = 0, y1 = 0, x2 = rowsize - 1, y2 = colsize - 1) {
 	/* ################################### Algo here ############################3*/
 
 	var seen = [];
-	traverse(startNode, seen, 1);
+	let counter=1;
+	traverse(startNode, seen, counter);
 
 	// Draw out best route
 	setTimeout(() => {
