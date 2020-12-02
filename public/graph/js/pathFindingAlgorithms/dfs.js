@@ -16,51 +16,78 @@ var time = slider.value;
 // console.log(time);
 
 // Check and update node
-function checkNode(row, col, curr, checker, seen, counter) {
-	if (row >= 0 && col >= 0 && row < rowsize && col < colsize) {
-		var node = document.querySelector(`div[row="${row}"][col="${col}"]`);
-		let wall = parseInt(node.getAttribute('wall'));
-		if (wall == 1) return;
-		let prow = parseInt(curr.getAttribute('row'));
-		let pcol = parseInt(curr.getAttribute('col'));
-		// console.log(wall);
-		if (weighttype == "weighted") var cost = Math.min(
-			parseInt(curr.getAttribute('cost')) +
-			parseInt(node.getAttribute('weight')),
-			node.getAttribute('cost')
-		);
-		else var cost = Math.min(
-			parseInt(curr.getAttribute('cost')) +
-			Math.abs(Math.abs(prow - row) + Math.abs(pcol - col)),
-			node.getAttribute('cost')
-		);
-		if (cost < node.getAttribute('cost')) {
-			node.setAttribute(
-				'parent',
-				curr.getAttribute('row') + '|' + curr.getAttribute('col')
-			);
-			node.setAttribute('cost', cost);
-		}
+function check(row, col) {
+	if (row >= 0 && col >= 0 && row < rowsize && col < colsize) return true;
+	return false;
+}
 
-		// changeColor(node, counter, cost);
-		changeColor(curr, counter, curr.getAttribute('cost'));
-		if (!seen.includes(node)) {
-			checker.push(node);
-		}
-		seen.push(node);
-		return node;
-	} else {
-		return false;
+function traverse(node, seen, counter) {
+	seen.push(node);
+	changeColor(node, counter);
+	let row = parseInt(curr.getAttribute('row'));
+	let col = parseInt(curr.getAttribute('col'));
+	let wall = parseInt(curr.getAttribute('wall'));
+	if (wall == 1) return;
+
+	// Check up down left right
+	let cr = row, cc = col;
+
+	if (check(cr, cc - 1)) {
+		var child = document.querySelector(`div[row="${cr}"][col="${cc - 1}"]`);
+		if (!seen.includes(child)) traverse(child, seen, counter+1);
 	}
-} // End checkNode
+	if (check(cr + 1, cc)) {
+		var child = document.querySelector(`div[row="${cr + 1}"][col="${cc}"]`);
+		if (!seen.includes(child)) traverse(child, seen, counter+1);
+	}
+	if (check(cr, cc + 1)) {
+		var child = document.querySelector(`div[row="${cr}"][col="${cc + 1}"]`);
+		if (!seen.includes(child)) traverse(child, seen, counter+1);
+	}
+	if (check(cr - 1, cc)) {
+		var child = document.querySelector(`div[row="${cr - 1}"][col="${cc}"]`);
+		if (!seen.includes(child)) traverse(child, seen, counter+1);
+	}
+}
+// function checkNode(row, col, curr, checker, seen, counter) {
+// 	if (row >= 0 && col >= 0 && row < rowsize && col < colsize) {
+// 		var node = document.querySelector(`div[row="${row}"][col="${col}"]`);
+// 		let wall = parseInt(node.getAttribute('wall'));
+// 		if (wall == 1) return;
+// 		let prow = parseInt(curr.getAttribute('row'));
+// 		let pcol = parseInt(curr.getAttribute('col'));
+// 		// console.log(wall);
+// 		var cost = Math.min(
+// 			parseInt(curr.getAttribute('cost')) +
+// 			Math.abs(Math.abs(prow - row) + Math.abs(pcol - col)),
+// 			node.getAttribute('cost')
+// 		);
+// 		if (cost < node.getAttribute('cost')) {
+// 			node.setAttribute(
+// 				'parent',
+// 				curr.getAttribute('row') + '|' + curr.getAttribute('col')
+// 			);
+// 			node.setAttribute('cost', cost);
+// 		}
+
+// 		// changeColor(node, counter, cost);
+// 		changeColor(curr, counter, curr.getAttribute('cost'));
+// 		if (!seen.includes(node)) {
+// 			checker.push(node);
+// 		}
+// 		seen.push(node);
+// 		return node;
+// 	} else {
+// 		return false;
+// 	}
+// } // End checkNode
 
 // Animate the nodes
-function changeColor(node, counter, cost) {
+function changeColor(node, counter) {
 	setTimeout(() => {
 		node.setAttribute('class', 'Path_green');
-		if (cost) {
-			node.innerHTML = cost;
-		}
+		node.innerHTML = counter;
+
 	}, counter * time);
 	setTimeout(() => {
 		node.setAttribute('class', 'Path_red');
@@ -82,30 +109,8 @@ export function dfs(x1 = 0, y1 = 0, x2 = rowsize - 1, y2 = colsize - 1) {
 
 	/* ################################### Algo here ############################3*/
 
-	var seen = [startNode];
-	// Checker Array implemented as Queue
-	var checker = [startNode];
-	var counter = 1;
-	while (checker.length != 0) {
-		if (counter==100) { console.log(checker); break; }
-		let curr = checker.pop();
-		// Important to parse string to integer
-		let row = parseInt(curr.getAttribute('row'));
-		let col = parseInt(curr.getAttribute('col'));
-		let wall = parseInt(curr.getAttribute('wall'));
-		if (wall == 1) continue;
-
-		// Check up down left right
-		let right = row + 1;
-		let left = row - 1;
-		let down = col - 1;
-		let up = col + 1;
-		let d = checkNode(row, up, curr, checker, seen, counter);
-		let a = checkNode(right, col, curr, checker, seen, counter);
-		let c = checkNode(row, down, curr, checker, seen, counter);
-		let b = checkNode(left, col, curr, checker, seen, counter);
-		counter++;
-	}
+	var seen = [];
+	traverse(startNode, seen, 1);
 
 	// Draw out best route
 	setTimeout(() => {
