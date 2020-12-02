@@ -16,6 +16,10 @@ import {
 import {
 	Astr
 } from './pathFindingAlgorithms/AStar.js';
+
+import {
+	dfs
+} from './pathFindingAlgorithms/dfs.js';
 //variables
 var resetbtn = document.querySelector('.reset');
 var refreshbtn = document.querySelector('.refresh');
@@ -68,7 +72,7 @@ function updateweight() {
 	weighttype = weightbtn.options[weightbtn.selectedIndex].value;
 	if (weighttype == 'Unweighted') refreshEmptyBoard();
 	else {
-		if (algorithm == 'Astr') {
+		if (algorithm != 'Dstr') {
 			algobtn.value = 'Dstr';
 			algorithm = algobtn.options[algobtn.selectedIndex].value;
 		}
@@ -80,12 +84,12 @@ function updateweight() {
 
 function updatealgo() {
 	algorithm = algobtn.options[algobtn.selectedIndex].value;
-	if (algorithm == 'Astr') {
+	if (algorithm != 'Dstr') {
 		weightbtn.value = 'Unweighted';
 		weighttype = weightbtn.options[weightbtn.selectedIndex].value;
 		refreshEmptyBoard();
 	}
-	if (algorithm == 'Dstr') {
+	else if (algorithm == 'Dstr') {
 		if (weightbtn.value == 'Unweighted') refreshEmptyBoard();
 		else refreshBoard();
 	}
@@ -96,7 +100,9 @@ function updatealgo() {
 function start() {
 	console.log(algorithm);
 	if (algorithm === 'Dstr') dijkstra(startRow, startCol, endRow, endCol);
-	if (algorithm === 'Astr') Astr(startRow, startCol, endRow, endCol);
+	else if (algorithm === 'Astr') Astr(startRow, startCol, endRow, endCol);
+	else if (algorithm === 'bfs') dijkstra(startRow, startCol, endRow, endCol);
+	else if (algorithm === 'dfs') dfs(startRow, startCol, endRow, endCol);
 } // End start
 
 // Initialize
